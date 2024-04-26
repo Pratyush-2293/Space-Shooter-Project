@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : Menu
 {
@@ -16,5 +17,23 @@ public class MainMenu : Menu
         }
 
         instance = this;
+    }
+
+    public void OnPlayButton()
+    {
+        TurnOff(true);
+        PlayMenu.instance.TurnOn(this);
+    }
+
+    public void OnPracticeButton()
+    {
+        TurnOff(true);
+        PracticeMenu.instance.TurnOn(this);
+    }
+
+    public void OnOptionsButton()
+    {
+        TurnOff(true);
+        OptionsMenu.instance.TurnOn(this);
     }
 }

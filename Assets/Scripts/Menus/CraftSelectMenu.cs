@@ -17,4 +17,9 @@ public class CraftSelectMenu : Menu
 
         instance = this;
     }
+
+    public void OnBackButton()
+    {
+        TurnOff(true);
+    }
 }

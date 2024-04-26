@@ -17,4 +17,21 @@ public class PlayMenu : Menu
 
         instance = this;
     }
+
+    public void OnNormalButton()
+    {
+        TurnOff(false);
+        CraftSelectMenu.instance.TurnOn(this);
+    }
+
+    public void OnBulletHellButton()
+    {
+        TurnOff(false);
+        CraftSelectMenu.instance.TurnOn(this);
+    }
+
+    public void OnBackButton()
+    {
+        TurnOff(true);
+    }
 }

@@ -17,4 +17,10 @@ public class TitleScreenMenu : Menu
 
         instance = this;
     }
+
+    public void OnStartButton()
+    {
+        TurnOff(false);
+        MainMenu.instance.TurnOn(null);
+    }
 }

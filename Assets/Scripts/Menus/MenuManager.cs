@@ -47,5 +47,6 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("AudioOptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControlsOptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("YesNoMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("TitleScreenMenu", LoadSceneMode.Additive);
     }
 }
