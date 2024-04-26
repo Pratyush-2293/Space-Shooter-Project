@@ -5,7 +5,58 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SplashScene.unity
+    guid: fdb6d0b2ff21d1c46ada657c665975fc
+  - enabled: 1
+    path: Assets/Scenes/MainMenuScene.unity
+    guid: f57c7c18539078c40bb0cfd8d0d92be2
+  - enabled: 1
+    path: Assets/Scenes/GameplayScene.unity
+    guid: aa632b79055fca346bcdd73acd5a0186
+  - enabled: 1
+    path: Assets/Scenes/Menus/MainMenu.unity
+    guid: 0c6f74d7507634a4693565c3ae9810aa
+  - enabled: 1
+    path: Assets/Scenes/Menus/AudioOptionsMenu.unity
+    guid: c0359ac6c3e330b449515cdc7dd25ba4
+  - enabled: 1
+    path: Assets/Scenes/Menus/ControlsOptionsMenu.unity
+    guid: c64ed1b3b67126d419a7bc14185171bb
+  - enabled: 1
+    path: Assets/Scenes/Menus/CraftSelectMenu.unity
+    guid: abcfb77c53dddcd40be259bb05177337
+  - enabled: 1
+    path: Assets/Scenes/Menus/CreditsMenu.unity
+    guid: bd40e26238f21bb4ca2d093aa7f66c74
+  - enabled: 1
+    path: Assets/Scenes/Menus/GraphicsOptionsMenu.unity
+    guid: 744b74bd72720324886ee3cb62a67b2e
+  - enabled: 1
+    path: Assets/Scenes/Menus/MedalsMenu.unity
+    guid: 4c5f0eab0c790c64fbebc378f3e77b12
+  - enabled: 1
+    path: Assets/Scenes/Menus/OptionsMenu.unity
+    guid: 1a515cdc2bade534e8da8745fdec27db
+  - enabled: 1
+    path: Assets/Scenes/Menus/PlayMenu.unity
+    guid: 1da6eaf51c3e822449fa1258eb0c8440
+  - enabled: 1
+    path: Assets/Scenes/Menus/PracticeArenaMenu.unity
+    guid: 68c4d794da85bbc43a03989f2f1c72a8
+  - enabled: 1
+    path: Assets/Scenes/Menus/PracticeMenu.unity
+    guid: 1c4e893ecf2223849a6515f076d52a7d
+  - enabled: 1
+    path: Assets/Scenes/Menus/PracticeStageMenu.unity
+    guid: 92c75a2627a776a408f0c461255283e1
+  - enabled: 1
+    path: Assets/Scenes/Menus/ScoresMenu.unity
+    guid: 24b1a664e7fb1164cb65e73886aeed1e
+  - enabled: 1
+    path: Assets/Scenes/Menus/YesNoMenu.unity
+    guid: e4d1f3a6a25a040469c20063ebca6ffd
   m_configObjects: {}
