@@ -30,6 +30,8 @@ public class InputManager : MonoBehaviour
                                             {"J5_Horizontal", "J5_Vertical"},
                                             {"J6_Horizontal", "J6_Vertical"}};
 
+    public string[] oldJoystick = null;
+
     private void Start()
     {
         if (instance)
@@ -54,6 +56,64 @@ public class InputManager : MonoBehaviour
 
         playerState[0] = new InputState();
         playerState[1] = new InputState();
+
+        oldJoystick = Input.GetJoystickNames();
+
+        StartCoroutine(CheckControllers());
+    }
+
+    private bool PlayerIsUsingController(int i)
+    {
+        if (playerController[0] == i)
+        {
+            return true;
+        }
+
+        if (GameManager.instance.twoPlayer && playerController[1] == i)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    IEnumerator CheckControllers()
+    {
+        while (true)
+        {
+            yield return new WaitForSecondsRealtime(1f);
+
+            string[] currentJoysticks = Input.GetJoystickNames();
+
+            for(int i=0; i < currentJoysticks.Length; i++)
+            {
+                if (i < oldJoystick.Length)
+                {
+                    if (currentJoysticks[i] != oldJoystick[i])
+                    {
+                        if (string.IsNullOrEmpty(currentJoysticks[i])) // disconnected
+                        {
+                            Debug.Log("Controller " + i + " has been disconnected.");
+                            if(PlayerIsUsingController(i))
+                            {
+                                ControllerMenu.instance.whichPlayer = i;
+                                ControllerMenu.instance.playerText.text = "Player " + (i+1) + " controller disconnected!";
+                                ControllerMenu.instance.TurnOn(null);
+                                // Gamemanger.instance.PauseGameplay();
+                            }
+                        }
+                        else // connected
+                        {
+                            Debug.Log("Controller " + i + " is connected using: " + currentJoysticks[i]);
+                        }
+                    }
+                }
+                else
+                {
+                    Debug.Log("New controller connected.");
+                }
+            }
+        }
     }
 
     private void FixedUpdate()

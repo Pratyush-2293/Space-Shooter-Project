@@ -62,4 +62,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/TitleScreenMenu.unity
     guid: bc14dc126060d9d4884efcd470d6404d
+  - enabled: 1
+    path: Assets/Scenes/Menus/ControllerMenu.unity
+    guid: 9ee204794efa2eb4db9799dcb4c2e676
   m_configObjects: {}
