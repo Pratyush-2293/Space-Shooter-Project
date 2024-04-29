@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
+
+    public bool twoPlayer = false;
     void Start()
     {
         if(instance != null)

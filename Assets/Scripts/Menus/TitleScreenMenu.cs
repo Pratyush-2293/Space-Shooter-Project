@@ -18,9 +18,12 @@ public class TitleScreenMenu : Menu
         instance = this;
     }
 
-    public void OnStartButton()
+    private void Update()
     {
-        TurnOff(false);
-        MainMenu.instance.TurnOn(null);
+        if (InputManager.instance.CheckForPlayerInput(0))
+        {
+            TurnOff(false);
+            MainMenu.instance.TurnOn(null);
+        }
     }
 }
