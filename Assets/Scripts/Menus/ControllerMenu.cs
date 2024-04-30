@@ -23,10 +23,13 @@ public class ControllerMenu : Menu
 
     private void Update()
     {
-        if (InputManager.instance.CheckForPlayerInput(whichPlayer))
+        if(ROOT.gameObject.activeInHierarchy)
         {
-            TurnOff(false);
-            // GameManager.instance.ResumeGameplay();
+            if (InputManager.instance.CheckForPlayerInput(whichPlayer))
+            {
+                TurnOff(false);
+                // GameManager.instance.ResumeGameplay();
+            }
         }
     }
 }

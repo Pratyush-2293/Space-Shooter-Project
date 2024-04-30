@@ -20,10 +20,13 @@ public class TitleScreenMenu : Menu
 
     private void Update()
     {
-        if (InputManager.instance.CheckForPlayerInput(0))
+        if(ROOT.gameObject.activeInHierarchy)
         {
-            TurnOff(false);
-            MainMenu.instance.TurnOn(null);
+            if (InputManager.instance.CheckForPlayerInput(0))
+            {
+                TurnOff(false);
+                MainMenu.instance.TurnOn(null);
+            }
         }
     }
 }
