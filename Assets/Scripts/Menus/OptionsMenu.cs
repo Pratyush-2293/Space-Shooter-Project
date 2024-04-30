@@ -22,4 +22,10 @@ public class OptionsMenu : Menu
     {
         TurnOff(true);
     }
+
+    public void OnControlsButton()
+    {
+        TurnOff(false);
+        ControlsOptionsMenu.instance.TurnOn(this);
+    }
 }
