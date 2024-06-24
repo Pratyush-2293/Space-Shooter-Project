@@ -46,6 +46,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   twoPlayer: 0
+  craftPrefabs:
+  - {fileID: 1520049054882664807, guid: 12c71e89bef76594880d9e8598ac0af6, type: 3}
 --- !u!114 &-4788296126084840385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -71,3 +73,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerController: 0000000000000000
+  playerUsingKeys: 0000
+  oldJoystick: []
