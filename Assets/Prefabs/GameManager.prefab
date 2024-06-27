@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7683753385420137249}
   - component: {fileID: -4788296126084840385}
   - component: {fileID: -6492065359062134315}
+  - component: {fileID: 8016616628631438343}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -75,3 +76,18 @@ MonoBehaviour:
   playerController: 0000000000000000
   playerUsingKeys: 0000
   oldJoystick: []
+--- !u!114 &8016616628631438343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092216254167470474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c5bf5e0dbe8d88418f8b426dd610d05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftExplosionPrefab: {fileID: 2669981302849460683, guid: 0352732ea64853845ade7cffaa0db522, type: 3}
+  craftParticlesPrefab: {fileID: 7548326850561407954, guid: c21e638ceae5c474db491324f142d1a1, type: 3}
+  craftDebrisParticlesPrefab: {fileID: 7548326850561407954, guid: bf60ad8052996d342a11080eaadd4038, type: 3}

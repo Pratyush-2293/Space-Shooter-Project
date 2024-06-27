@@ -21,8 +21,9 @@ public class MainMenu : Menu
 
     public void OnPlayButton()
     {
-        TurnOff(true);
-        PlayMenu.instance.TurnOn(this);
+        //TurnOff(true);
+        //PlayMenu.instance.TurnOn(this);
+        SceneManager.LoadScene("GameplayScene");
     }
 
     public void OnPracticeButton()

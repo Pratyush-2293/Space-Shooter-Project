@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public bool twoPlayer = false;
     public GameObject[] craftPrefabs;
-    Craft playerOneCraft = null;
+    public Craft playerOneCraft = null;
     void Start()
     {
         if(instance != null)
@@ -37,6 +37,14 @@ public class GameManager : MonoBehaviour
             if (!playerOneCraft)
             {
                 SpawnPlayer(1, 0);
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (playerOneCraft)
+            {
+                playerOneCraft.Explode();
             }
         }
     }
