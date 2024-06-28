@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6f7f7b5ef841e4e809c5b759973f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameMode: 2
+  gameMode: 0
   gameManagerPrefab: {fileID: 1092216254167470474, guid: 59ddcd58186bf0e47a4321a28f29cdb0, type: 3}
 --- !u!4 &373634995
 Transform:
@@ -254,7 +254,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 540
+  orthographic size: 180
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
