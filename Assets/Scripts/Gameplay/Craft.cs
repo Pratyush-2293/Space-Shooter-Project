@@ -44,6 +44,7 @@ public class Craft : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //Invulnerable Flashing
         if (invulnerable)
         {
             if (invulnerableTimer % 12 < 6)
@@ -64,6 +65,20 @@ public class Craft : MonoBehaviour
             }
         }
 
+        //Hit Detection
+        int maxColliders = 10;
+        Collider[] hits = new Collider[maxColliders];
+        Vector2 halfSize = new Vector2(3f, 4f); //Acts as hitbox
+        int noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits);
+        if (noOfHits > 0)
+        {
+            if (!invulnerable)
+            {
+                Explode();
+            }
+        }
+
+        //Movement
         if (InputManager.instance && alive)
         {
             craftData.positionX += InputManager.instance.playerState[0].movement.x * config.speed;
