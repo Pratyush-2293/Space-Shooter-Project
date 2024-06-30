@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 94571742811959629}
   - component: {fileID: 2173119904294434893}
+  - component: {fileID: -6001138188835940839}
+  - component: {fileID: -7823318732861225841}
   m_Layer: 0
   m_Name: B15_S3
   m_TagString: Untagged
@@ -82,3 +84,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &-6001138188835940839
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520368371208346983}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 12, y: 25, z: 0.2}
+  m_Center: {x: 0, y: 12.5, z: 0}
+--- !u!114 &-7823318732861225841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520368371208346983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba8a045590ce368498f397a38c91e005, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
