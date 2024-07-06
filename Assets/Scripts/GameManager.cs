@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public bool twoPlayer = false;
     public GameObject[] craftPrefabs;
     public Craft playerOneCraft = null;
-    private BulletManager bulletManager = null;
+    public BulletManager bulletManager = null;
     void Start()
     {
         if(instance != null)
@@ -43,11 +43,19 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.B))
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (playerOneCraft && playerOneCraft.craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER)
+            {
+                playerOneCraft.craftData.shotPower++;
+            }
+        }
+
+        if (Input.GetKeyDown(KeyCode.O))
         {
             if (playerOneCraft)
             {
-                playerOneCraft.Explode();
+                playerOneCraft.AddOption();
             }
         }
 

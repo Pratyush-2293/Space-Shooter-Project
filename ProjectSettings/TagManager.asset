@@ -11,10 +11,10 @@ TagManager:
   - DisplayRender
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
+  - Player
+  - Enemy
+  - PlayerBullets
+  - EnemyBullets
   - 
   - 
   - 

@@ -5,7 +5,7 @@ using System;
 
 public class Bullet : MonoBehaviour
 {
-    
+    public int index; // Index into the bullet pool
 }
 
 [Serializable]

@@ -115,6 +115,7 @@ public class BulletManager : MonoBehaviour
             for(int b=0; b < MAX_BULLET_PER_TYPE; b++)
             {
                 Bullet newBullet = Instantiate(bulletPrefabs[bulletType]).GetComponent<Bullet>();
+                newBullet.index = index;
                 newBullet.gameObject.SetActive(false);
                 newBullet.transform.SetParent(transform);
                 bullets[index] = newBullet;
@@ -148,7 +149,7 @@ public class BulletManager : MonoBehaviour
     public Bullet SpawnBullet(BulletType type, float x, float y, float dX, float dY, float angle)
     {
         int bulletIndex = NextFreeBulletIndex(type);
-        if (bulletIndex > -1)
+        if (bulletIndex >= 0)
         {
             Bullet result = bullets[bulletIndex];
             result.gameObject.SetActive(true);
@@ -229,5 +230,18 @@ public class BulletManager : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(dX, dY, 0));
             }
         }
+    }
+
+    public void DeActivateBullet(int index)
+    {
+        bullets[index].gameObject.SetActive(false);
+
+        float x = bulletData[index].positionX;
+        float y = bulletData[index].positionY;
+        float dX = bulletData[index].dX;
+        float dY = bulletData[index].dY;
+        float angle = bulletData[index].angle;
+        int type = bulletData[index].type;
+        bulletData[index] = new BulletData(x, y, dX, dY, angle, type, false);
     }
 }
