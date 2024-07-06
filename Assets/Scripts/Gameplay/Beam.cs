@@ -33,7 +33,10 @@ public class Beam : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdateBeam();
+        if (craft.craftData.beamFiring)
+        {
+            UpdateBeam();
+        } 
     }
 
     public void HideHits()
@@ -50,10 +53,10 @@ public class Beam : MonoBehaviour
         if (craft.craftData.beamTimer==0) //Beam finished
         {
             craft.craftData.beamFiring = false;
+            HideHits();
             gameObject.SetActive(false);
             beamFlash.SetActive(false);
-
-            HideHits();
+            return;
         }
 
         int maxColliders = 20;
@@ -102,7 +105,7 @@ public class Beam : MonoBehaviour
                         pos.y += Random.Range(-3f, 3f);
                         beamHits[h].transform.position = pos;
                         beamHits[h].SetActive(true);
-                        lowestShootable.TakeDamage(craft.craftData.beamPower);
+                        lowestShootable.TakeDamage(craft.craftData.beamPower+1);
                     }
                     else
                     {

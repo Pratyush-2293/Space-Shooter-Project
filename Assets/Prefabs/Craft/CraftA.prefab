@@ -773,6 +773,7 @@ MonoBehaviour:
   - {fileID: 5297892601048130451}
   - {fileID: 1691766907556498446}
   beam: {fileID: 3175303287926300319}
+  bombPrefab: {fileID: 6023031918159866742, guid: 4008929f8552a8b47bb59035765992be, type: 3}
 --- !u!95 &8655027750514915545
 Animator:
   serializedVersion: 3

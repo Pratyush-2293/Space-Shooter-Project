@@ -33,6 +33,7 @@ public class Craft : MonoBehaviour
     public GameObject[] optionMarkersL4 = new GameObject[4];
 
     public Beam beam = null;
+    public GameObject bombPrefab = null;
 
     int layerMask = 0;
 
@@ -183,6 +184,12 @@ public class Craft : MonoBehaviour
             {
                 beam.Fire();
             }
+
+            //Bomb
+            if(!InputManager.instance.playerPrevState[0].bomb && InputManager.instance.playerState[0].bomb)
+            {
+                FireBomb();
+            }
         }
     }
 
@@ -259,6 +266,13 @@ public class Craft : MonoBehaviour
     void UpdateBeam()
     {
         beam.beamWidth = (craftData.beamPower + 2) * 8f;
+    }
+
+    void FireBomb()
+    {
+        Vector3 pos = transform.position;
+        pos.y += 100;
+        Instantiate(bombPrefab, pos, Quaternion.identity);
     }
 }
 

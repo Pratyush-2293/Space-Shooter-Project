@@ -23,12 +23,19 @@ public class Shootable : MonoBehaviour
         {
             for(int h = 0; h < noOfHits; h++)
             {
-                TakeDamage(1);
-
                 Bullet b = hits[h].GetComponent<Bullet>();
                 if(b != null)
                 {
+                    TakeDamage(1);
                     GameManager.instance.bulletManager.DeActivateBullet(b.index);
+                }
+                else
+                {
+                    Bomb bomb = hits[h].GetComponent<Bomb>();
+                    if (bomb != null)
+                    {
+                        TakeDamage(bomb.power);
+                    }
                 }
             }
         }
