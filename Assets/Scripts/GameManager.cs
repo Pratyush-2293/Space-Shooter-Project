@@ -59,6 +59,14 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.RightBracket))
+        {
+            if (playerOneCraft)
+            {
+                playerOneCraft.IncreaseBeamStrength();
+            }
+        }
+
         if (Input.GetKey(KeyCode.S))
         {
             if (bulletManager)

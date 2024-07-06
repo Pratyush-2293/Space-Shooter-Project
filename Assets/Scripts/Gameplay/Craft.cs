@@ -246,6 +246,20 @@ public class Craft : MonoBehaviour
             }
         }
     }
+
+    public void IncreaseBeamStrength()
+    {
+        if (craftData.beamPower<5)
+        {
+            craftData.beamPower++;
+            UpdateBeam();
+        }
+    }
+
+    void UpdateBeam()
+    {
+        beam.beamWidth = (craftData.beamPower + 2) * 8f;
+    }
 }
 
 public class CraftData
