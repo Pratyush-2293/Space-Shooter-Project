@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8758034070249148000}
   - component: {fileID: -3971027896673842037}
   - component: {fileID: 281183573168733092}
+  - component: {fileID: 2856880677665237860}
   m_Layer: 9
   m_Name: B15_S4
   m_TagString: Untagged
@@ -109,3 +110,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba8a045590ce368498f397a38c91e005, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  index: 0
+--- !u!114 &2856880677665237860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3893250829890479136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 2
+  radiusOrWidth: 8
+  height: 17
+  box: 1

@@ -17,6 +17,8 @@ public class BulletSpawner : MonoBehaviour
     public float endAngle = 0;
     public int radialNumber = 1;
 
+    public float dAngle = 0; // change in angle
+
     public bool autoFireActive = false;
     private bool firing = false;
     private int frame = 0;
@@ -25,11 +27,34 @@ public class BulletSpawner : MonoBehaviour
     public bool fireAtTarget = false;
     public GameObject target = null;
 
+    public bool homing = false;
+
     public void Shoot(int size)
     {
         if (size < 0)
         {
             return;
+        }
+
+        Vector2 primaryDirection = transform.up;
+
+        if (fireAtPlayer || fireAtTarget)
+        {
+            Vector2 targetPosition = Vector2.zero;
+            if (fireAtPlayer)
+            {
+                if (GameManager.instance.playerOneCraft)
+                {
+                    targetPosition = GameManager.instance.playerOneCraft.transform.position;
+                }
+            }
+            else if(fireAtTarget && target != null)
+            {
+                targetPosition = target.transform.position;
+            }
+
+            primaryDirection = targetPosition - (Vector2)transform.position;
+            primaryDirection.Normalize();
         }
 
         if (firing || timer == 0)
@@ -38,9 +63,9 @@ public class BulletSpawner : MonoBehaviour
             for(int a = 0; a < radialNumber; a++)
             {
                 Quaternion myRotation = Quaternion.AngleAxis(angle, Vector3.forward);
-                Vector3 velocity = myRotation * transform.up * speed;
+                Vector3 velocity = myRotation * primaryDirection * speed;
                 BulletManager.BulletType bulletToShoot = bulletType + size;
-                GameManager.instance.bulletManager.SpawnBullet(bulletToShoot, transform.position.x, transform.position.y, velocity.x, velocity.y, 0);
+                GameManager.instance.bulletManager.SpawnBullet(bulletToShoot, transform.position.x, transform.position.y, velocity.x, velocity.y, angle, dAngle, homing);
 
                 angle = angle + ((endAngle - startAngle) / (radialNumber - 1));
             }

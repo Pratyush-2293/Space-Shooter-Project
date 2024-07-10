@@ -46,7 +46,7 @@ public class Craft : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         Debug.Assert(spriteRenderer);
 
-        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("PlayerBombs");
+        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("PlayerBombs") & ~LayerMask.GetMask("Player");
 
         craftData.beamCharge = (char)100;
     }
@@ -87,10 +87,7 @@ public class Craft : MonoBehaviour
         int noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
         if (noOfHits > 0)
         {
-            if (!invulnerable)
-            {
-                Explode();
-            }
+            Hit();
         }
 
         //Movement
@@ -190,6 +187,14 @@ public class Craft : MonoBehaviour
             {
                 FireBomb();
             }
+        }
+    }
+
+    public void Hit()
+    {
+        if (!invulnerable)
+        {
+            Explode();
         }
     }
 

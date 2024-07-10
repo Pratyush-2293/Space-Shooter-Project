@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
         {
             if (bulletManager)
             {
-                bulletManager.SpawnBullet(BulletManager.BulletType.Bullet1_Size3, 0, 150, Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0);
+                bulletManager.SpawnBullet(BulletManager.BulletType.Bullet1_Size3, 0, 150, Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0, 0, false);
             }
         }
     }
