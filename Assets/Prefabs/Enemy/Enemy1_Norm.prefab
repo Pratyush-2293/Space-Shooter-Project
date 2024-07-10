@@ -45,9 +45,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletType: 6
   muzzleFlash: {fileID: 0}
+  sequence:
+    emmitFrames: 000000000200000004000000
+    totalFrames: 10
   rate: 30
   speed: 5
+  startAngle: -45
+  endAngle: 45
+  radialNumber: 3
   autoFireActive: 0
+  fireAtPlayer: 1
+  fireAtTarget: 0
+  target: {fileID: 0}
 --- !u!1 &811328204375240654
 GameObject:
   m_ObjectHideFlags: 0

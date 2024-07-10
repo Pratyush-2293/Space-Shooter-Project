@@ -895,29 +895,8 @@ MonoBehaviour:
     - Shooting
     deActivateStates:
     - Shooting
-  - movement: 2
-    direction: {x: 100, y: 0}
-    movementSpeed: 2
-    framesToWait: 30
-    activateStates: []
-    deActivateStates: []
-  - movement: 1
-    direction: {x: 0, y: 0}
-    movementSpeed: 0
-    framesToWait: 30
-    activateStates:
-    - Shooting
-    deActivateStates:
-    - Shooting
-  - movement: 2
-    direction: {x: 0, y: -100}
-    movementSpeed: 2
-    framesToWait: 30
-    activateStates: []
-    deActivateStates:
-    - Shooting
   enemyPrefab: {fileID: 2663116449067483935, guid: 88e12189106236341b3493848e325df6, type: 3}
-  stayOnLast: 1
+  stayOnLast: 0
 --- !u!4 &1121973891
 Transform:
   m_ObjectHideFlags: 0
