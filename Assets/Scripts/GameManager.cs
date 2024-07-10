@@ -67,6 +67,12 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EnemyPattern testPattern =  GameObject.FindObjectOfType<EnemyPattern>();
+            testPattern.Spawn();
+        }
+
         if (Input.GetKey(KeyCode.S))
         {
             if (bulletManager)
