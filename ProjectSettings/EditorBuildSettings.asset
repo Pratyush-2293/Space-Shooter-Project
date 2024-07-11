@@ -65,4 +65,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menus/ControllerMenu.unity
     guid: 9ee204794efa2eb4db9799dcb4c2e676
+  - enabled: 1
+    path: Assets/Scenes/DisplayScene.unity
+    guid: 62cdf640ccd78984eb0106f3312875ad
+  - enabled: 1
+    path: Assets/Scenes/Stages/Stage01.unity
+    guid: 22801fe2515d64247aef267b1d574d09
+  - enabled: 1
+    path: Assets/Scenes/Menus/PauseMenu.unity
+    guid: 089a32b1689daa0439cf00706745d07d
   m_configObjects: {}

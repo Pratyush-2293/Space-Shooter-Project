@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameInitialiser : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class GameInitialiser : MonoBehaviour
     public GameMode gameMode;
     public GameObject gameManagerPrefab = null;
     private bool menuLoaded = false;
+
+    private Scene displayScene;
     
     void Start()
     {
@@ -21,6 +24,7 @@ public class GameInitialiser : MonoBehaviour
             if (gameManagerPrefab)
             {
                 Instantiate(gameManagerPrefab);
+                displayScene = SceneManager.GetSceneByName("DisplayScene");
             }
             else
             {
@@ -33,6 +37,11 @@ public class GameInitialiser : MonoBehaviour
     {
         if (!menuLoaded)
         {
+            if (!displayScene.isLoaded)
+            {
+                SceneManager.LoadScene("DisplayScene", LoadSceneMode.Additive);
+            }
+
             switch (gameMode)
             {
                 case GameMode.Menus:

@@ -186,8 +186,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 10
   radiusOrWidth: 10
-  height: 10
-  box: 0
+  height: 18
+  box: 1
 --- !u!1 &843621282448340565
 GameObject:
   m_ObjectHideFlags: 0

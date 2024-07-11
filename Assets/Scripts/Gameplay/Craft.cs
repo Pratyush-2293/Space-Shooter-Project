@@ -95,8 +95,17 @@ public class Craft : MonoBehaviour
         {
             craftData.positionX += InputManager.instance.playerState[0].movement.x * config.speed;
             craftData.positionY += InputManager.instance.playerState[0].movement.y * config.speed;
+            if (craftData.positionX < -145) { craftData.positionX = -145; } // Limiting to playfield
+            if (craftData.positionX > 145) { craftData.positionX = 145; }
             newPosition.x = (int)craftData.positionX;
-            newPosition.y = (int)craftData.positionY;
+            if (GameManager.instance.progressWindow)
+            {
+                newPosition.y = (int)craftData.positionY + GameManager.instance.progressWindow.transform.position.y;
+            }
+            else
+            {
+                newPosition.y = (int)craftData.positionY;
+            }
             gameObject.transform.position = newPosition;
 
             if (InputManager.instance.playerState[0].up)
