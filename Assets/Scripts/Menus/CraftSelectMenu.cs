@@ -18,6 +18,61 @@ public class CraftSelectMenu : Menu
         instance = this;
     }
 
+    public void OnPlayButton()
+    {
+        GameManager.instance.StartGame();
+    }
+
+    public void OnCraftA_P1Button()
+    {
+
+    }
+
+    public void OnCraftB_P1Button()
+    {
+
+    }
+
+    public void OnCraftC_P1Button()
+    {
+
+    }
+
+    public void OnCraftX_P1Button()
+    {
+
+    }
+
+    public void OnCraftZ_P1Button()
+    {
+
+    }
+
+    public void OnCraftA_P2Button()
+    {
+
+    }
+
+    public void OnCraftB_P2Button()
+    {
+
+    }
+
+    public void OnCraftC_P2Button()
+    {
+
+    }
+
+    public void OnCraftX_P2Button()
+    {
+
+    }
+
+    public void OnCraftZ_P2Button()
+    {
+
+    }
+
     public void OnBackButton()
     {
         TurnOff(true);

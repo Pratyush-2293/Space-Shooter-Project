@@ -98,6 +98,10 @@ public class Craft : MonoBehaviour
             if (craftData.positionX < -145) { craftData.positionX = -145; } // Limiting to playfield
             if (craftData.positionX > 145) { craftData.positionX = 145; }
             newPosition.x = (int)craftData.positionX;
+            if (!GameManager.instance.progressWindow)
+            {
+                GameManager.instance.progressWindow = GameObject.FindObjectOfType<LevelProgress>();
+            }
             if (GameManager.instance.progressWindow)
             {
                 newPosition.y = (int)craftData.positionY + GameManager.instance.progressWindow.transform.position.y;
