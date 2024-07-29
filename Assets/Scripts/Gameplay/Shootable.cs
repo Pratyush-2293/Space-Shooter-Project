@@ -13,6 +13,10 @@ public class Shootable : MonoBehaviour
 
     private Vector2 halfExtent;
 
+    public bool damagedByBullets = true;
+    public bool damagedByBeams = true;
+    public bool damagedByBombs = true;
+
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets");
@@ -38,13 +42,16 @@ public class Shootable : MonoBehaviour
         {
             for(int h = 0; h < noOfHits; h++)
             {
-                Bullet b = hits[h].GetComponent<Bullet>();
-                if(b != null)
+                if (damagedByBullets)
                 {
-                    TakeDamage(1);
-                    GameManager.instance.bulletManager.DeActivateBullet(b.index);
+                    Bullet b = hits[h].GetComponent<Bullet>();
+                    if (b != null)
+                    {
+                        TakeDamage(1);
+                        GameManager.instance.bulletManager.DeActivateBullet(b.index);
+                    }
                 }
-                else
+                if (damagedByBombs)
                 {
                     Bomb bomb = hits[h].GetComponent<Bomb>();
                     if (bomb != null)

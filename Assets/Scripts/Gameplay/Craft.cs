@@ -46,7 +46,7 @@ public class Craft : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         Debug.Assert(spriteRenderer);
 
-        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("PlayerBombs") & ~LayerMask.GetMask("Player");
+        layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("PlayerBombs") & ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("GroundEnemy");
 
         craftData.beamCharge = (char)100;
     }
@@ -97,6 +97,8 @@ public class Craft : MonoBehaviour
             craftData.positionY += InputManager.instance.playerState[0].movement.y * config.speed;
             if (craftData.positionX < -145) { craftData.positionX = -145; } // Limiting to playfield
             if (craftData.positionX > 145) { craftData.positionX = 145; }
+            if (craftData.positionY < -180) { craftData.positionY = -180; }
+            if (craftData.positionY > 180) { craftData.positionY = 180; }
             newPosition.x = (int)craftData.positionX;
             if (!GameManager.instance.progressWindow)
             {

@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public Craft playerOneCraft = null;
     public BulletManager bulletManager = null;
     public LevelProgress progressWindow = null;
+    public Session gameSession = new Session();
 
     void Start()
     {

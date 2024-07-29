@@ -137,7 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2a430db8ff466f145bceb667853f0cf2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fb428b653b4f92e42807add1fb033247, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -171,8 +171,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 23.092464, y: 28, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 34.127068, y: 28, z: 0.2}
+  m_Center: {x: 0.06983948, y: 0, z: 0}
 --- !u!114 &8903364767848967563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 6598907069490723503}
   - component: {fileID: 2663116449067483935}
   m_Layer: 7
-  m_Name: Enemy1_Norm
+  m_Name: Enemy2_Norm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
