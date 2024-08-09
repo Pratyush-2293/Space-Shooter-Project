@@ -37,6 +37,7 @@ public class Enemy : MonoBehaviour
         {
             OutOfBounds();
         }
+
     }
 
     void OutOfBounds()

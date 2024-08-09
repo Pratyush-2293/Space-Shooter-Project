@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 4
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 00000000050000000a000000
@@ -71,8 +71,8 @@ GameObject:
   - component: {fileID: 811328204375240652}
   - component: {fileID: 811328204375240653}
   - component: {fileID: 5765107658832201210}
-  - component: {fileID: 4130251858417946177}
   - component: {fileID: 8903364767848967563}
+  - component: {fileID: 2751398545753622038}
   m_Layer: 7
   m_Name: MainPart
   m_TagString: Untagged
@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811328204375240654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -31.954227, y: 0.86706877, z: 89.94595}
+  m_LocalPosition: {x: -31.954227, y: 0.86706877, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7951882394333637972}
@@ -160,19 +160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece4e010e0219fc49ab281fc9c2ad065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &4130251858417946177
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811328204375240654}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 23.092464, y: 28, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8903364767848967563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -192,6 +179,19 @@ MonoBehaviour:
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
+--- !u!65 &2751398545753622038
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811328204375240654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 27, y: 28, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &843621282448340565
 GameObject:
   m_ObjectHideFlags: 0
@@ -217,7 +217,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 843621282448340565}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.954227, y: -0.86706877, z: -89.94595}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6465162519680015636}
