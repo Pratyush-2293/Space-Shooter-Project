@@ -156,7 +156,7 @@ MonoBehaviour:
   - movement: 1
     direction: {x: 0, y: 0}
     spline: {fileID: 0}
-    movementSpeed: 0
+    movementSpeed: 0.5
     framesToWait: 0
     activateStates:
     - Shooting
@@ -38323,19 +38323,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].direction.x
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].direction.y
-      value: -100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].framesToWait
-      value: 30
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].movementSpeed
-      value: 4
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].activateStates.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].deActivateStates.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179587, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: m_Name

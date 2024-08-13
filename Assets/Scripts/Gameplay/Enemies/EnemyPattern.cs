@@ -163,4 +163,20 @@ public class EnemyPattern : MonoBehaviour
         steps.Add(newStep);
         return newStep;
     }
+
+    private void OnValidate()
+    {
+        foreach(EnemyStep step in steps)
+        {
+            if (step.movementSpeed < 0.5f)
+            {
+                step.movementSpeed = 0.5f;
+            }
+
+            if(step.movement == EnemyStep.MovementType.spline)
+            {
+                step.spline.CalculatePoints(step.movementSpeed);
+            }
+        }
+    }
 }

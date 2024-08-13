@@ -10,6 +10,7 @@ public class EnemyPatternEditor : Editor
         if (pattern)
         {
             UpdatePreview(pattern);
+            ProcessInput(pattern);
         }
     }
 
@@ -35,7 +36,20 @@ public class EnemyPatternEditor : Editor
         }
     }
 
-    Vector2 DrawSpline(Spline spline, Vector2 endOfLastStep, float speed)
+    void ProcessInput(EnemyPattern pattern)
+    {
+        Event guiEvent = Event.current;
+        Vector2 mousePos = HandleUtility.GUIPointToWorldRay(guiEvent.mousePosition).origin;
+        if(guiEvent.type == EventType.MouseDown && guiEvent.button == 0 && guiEvent.shift)
+        {
+            Spline path = pattern.steps[0].spline;
+            Vector2 offset = pattern.transform.position;
+            path.AddSegment(mousePos - offset);
+            path.CalculatePoints(pattern.steps[0].movementSpeed);
+        }
+    }
+
+    Vector2 DrawSpline(Spline spline, Vector2 endOfLastStep, float speed) 
     {
         // Draw control lines
         Handles.color = Color.black;

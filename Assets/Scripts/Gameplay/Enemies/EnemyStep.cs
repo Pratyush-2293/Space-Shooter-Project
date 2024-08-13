@@ -62,6 +62,11 @@ public class EnemyStep
         {
             return framesToWait;
         }
+        else if(movement == MovementType.spline)
+        {
+            return spline.Length() / movementSpeed;
+
+        }
 
         Debug.LogError("TimeToComplete unable to process movement type, returning 1.");
         return 1;
@@ -80,6 +85,11 @@ public class EnemyStep
         {
             return startPosition;
         }
+        else if (movement == MovementType.spline)
+        {
+            result += (spline.LastPoint() - spline.StartPoint());
+            return result;
+        }
 
         Debug.LogError("EndPosition unable to process movement type, returning 1.");
         return result;
@@ -87,6 +97,12 @@ public class EnemyStep
 
     public Vector3 CalculatePosition(Vector2 startPos, float stepTime)
     {
+        float normalizedTime = stepTime / TimeToComplete();
+        if(normalizedTime < 0)
+        {
+            normalizedTime = 0;
+        }
+
         if (movement == MovementType.direction)
         {
             float timeToTravel = direction.magnitude / movementSpeed;
@@ -98,6 +114,10 @@ public class EnemyStep
         else if (movement == MovementType.none)
         {
             return startPos;
+        }
+        else if(movement == MovementType.spline)
+        {
+            return spline.GetPosition(normalizedTime) + startPos;
         }
 
         Debug.LogError("CalculatePosition unable to process movement type, returning startPosition.");

@@ -46,12 +46,23 @@ public class Spline : MonoBehaviour
     public void CalculatePoints(float speed)
     {
         linearPoints.Clear();
+        linearPoints.Add(controlPoints[0]);
+        Vector2 prevPoint = controlPoints[0];
+        float disSinceLast = 0;
 
         for(int s = 0; s < NoOfSegments(); s++)
         {
             Vector2[] segPoints = GetSegmentPoints(s, Vector2.zero);
 
-            int divisions = 50;
+            float netLength = Vector2.Distance(segPoints[0], segPoints[1]) + Vector2.Distance(segPoints[1], segPoints[2]) + Vector2.Distance(segPoints[2], segPoints[3]);
+            float curveLength = Vector2.Distance(segPoints[0], segPoints[3]) + (netLength / 2);
+            float spacing = speed;
+
+            int divisions = Mathf.CeilToInt(curveLength / spacing);
+            if (divisions > 1000) // division cap to preserve resources
+            {
+                divisions = 1000;
+            }
 
             float t = 0;
             while (t <= 1)
@@ -59,7 +70,17 @@ public class Spline : MonoBehaviour
                 t += 1f / divisions;
                 Vector2 pointOnCurve = Bezier.CalculateCubic(segPoints[0], segPoints[1], segPoints[2], segPoints[3], t);
 
-                linearPoints.Add(pointOnCurve);
+                disSinceLast += Vector2.Distance(prevPoint, pointOnCurve);
+
+                while (disSinceLast >= spacing)
+                {
+                    float overshoot = disSinceLast - spacing;
+                    Vector2 newEvenlySpacedPoint = pointOnCurve + (prevPoint - pointOnCurve).normalized * overshoot;
+                    linearPoints.Add(newEvenlySpacedPoint);
+                    disSinceLast = overshoot;
+                    prevPoint = newEvenlySpacedPoint;
+                }
+                prevPoint = pointOnCurve;
             }
         }
     }
@@ -80,5 +101,83 @@ public class Spline : MonoBehaviour
                 controlPoints[index - 1] += dPos;
             }
         }
+        else // angle tangent point
+        {
+            bool nextPointIsAnchor = (index + 1) % 3 == 0;
+            int anchorIndex = (nextPointIsAnchor) ? index + 1 : index - 1;
+            int controlIndex = (nextPointIsAnchor) ? index + 2 : index -2;
+
+            if(controlIndex>=0 && controlIndex < controlPoints.Count)
+            {
+                float dist = (controlPoints[controlIndex] - controlPoints[anchorIndex]).magnitude;
+                Vector2 dir = (controlPoints[anchorIndex] - newPosition).normalized;
+                controlPoints[controlIndex] = controlPoints[anchorIndex] + dir * dist;
+            }
+        }
+    }
+
+    public void AddSegment(Vector2 position)
+    {
+        Vector2 point1 = controlPoints[controlPoints.Count - 1] + controlPoints[controlPoints.Count - 1] - controlPoints[controlPoints.Count - 2];
+        Vector2 point2 = (point1 + position) * 0.5f;
+        controlPoints.Add(point1);
+        controlPoints.Add(point2);
+        controlPoints.Add(position);
+    }
+
+    public Vector2 GetPosition(float normalisedTime)
+    {
+        if (normalisedTime < 0)
+        {
+            Debug.LogWarning("GetPosition sent -ve time!");
+            return Vector2.zero;
+        }
+        if (normalisedTime > 1)
+        {
+            Debug.LogWarning("GetPosition sent time > 1!");
+            return Vector2.zero;
+        }
+
+        if (linearPoints.Count > 0)
+        {
+            float fIndex = (linearPoints.Count - 1) * normalisedTime;
+
+            int indexA = (int)fIndex;
+            int indexB = Mathf.CeilToInt(fIndex);
+
+            float d = fIndex - indexA;
+
+            return Vector2.Lerp(linearPoints[indexA], linearPoints[indexB], d);
+        }
+
+        Debug.LogWarning("GetPosition has zero points!");
+        return Vector2.zero;
+    }
+
+    public Vector2 StartPoint()
+    {
+        return controlPoints[0];
+    }
+
+    public Vector2 LastPoint()
+    {
+        return controlPoints[controlPoints.Count - 1];
+    }
+
+    public float Length()
+    {
+        float length = 0;
+
+        for(int s = 0; s < NoOfSegments(); s++)
+        {
+            Vector2[] segPoints = GetSegmentPoints(s, Vector2.zero);
+
+            float netLength = Vector2.Distance(segPoints[0], segPoints[1]) + Vector2.Distance(segPoints[1], segPoints[2]) + Vector2.Distance(segPoints[2], segPoints[3]);
+
+            float curveLength = Vector2.Distance(segPoints[0], segPoints[3]) + (netLength / 2);
+            length += curveLength;
+        }
+
+        return length;
     }
 }
