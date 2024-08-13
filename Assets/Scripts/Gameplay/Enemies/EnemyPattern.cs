@@ -156,4 +156,11 @@ public class EnemyPattern : MonoBehaviour
 
         return result;
     }
+
+    public EnemyStep AddStep(EnemyStep.MovementType movement)
+    {
+        EnemyStep newStep = new EnemyStep(movement);
+        steps.Add(newStep);
+        return newStep;
+    }
 }

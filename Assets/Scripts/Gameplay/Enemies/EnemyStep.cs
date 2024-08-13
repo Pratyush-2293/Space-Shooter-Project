@@ -28,6 +28,9 @@ public class EnemyStep
     public Vector2 direction;
 
     [SerializeField]
+    public Spline spline;
+
+    [SerializeField]
     [Range(1, 20)]
     public float movementSpeed = 4;
 
@@ -36,6 +39,17 @@ public class EnemyStep
 
     public List<string> activateStates = new List<string>();
     public List<string> deActivateStates = new List<string>();
+
+    public EnemyStep(MovementType inMovement)
+    {
+        movement = inMovement;
+        direction = Vector2.zero;
+
+        if(inMovement == MovementType.spline)
+        {
+            spline = new Spline();
+        }
+    }
 
     public float TimeToComplete()
     {
