@@ -110,7 +110,7 @@ public class EnemyPattern : MonoBehaviour
 
         Vector3 startPos = EndPosition(currentStateIndex - 1);
 
-        currentPosition = step.CalculatePosition(startPos, stepTime);
+        currentPosition = step.CalculatePosition(startPos, stepTime, lastPosition, lastAngle);
 
         return currentPosition;
     }

@@ -43302,12 +43302,40 @@ PrefabInstance:
     m_TransformParent: {fileID: 1520800526}
     m_Modifications:
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: lastPosition.x
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: lastPosition.y
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: currentPosition.x
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: currentPosition.y
+      value: NaN
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].rotate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].movement
-      value: 2
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].angleSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].direction.y
-      value: -100
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].movementSpeed
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179587, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: m_Name

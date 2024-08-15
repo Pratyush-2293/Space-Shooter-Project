@@ -93,8 +93,12 @@ public class EnemyStep
             return spline.Length() / movementSpeed;
 
         }
+        else if (movement == MovementType.homing)
+        {
+            return framesToWait;
+        }
 
-        Debug.LogError("TimeToComplete unable to process movement type, returning 1.");
+            Debug.LogError("TimeToComplete unable to process movement type, returning 1.");
         return 1;
     }
 
@@ -116,12 +120,23 @@ public class EnemyStep
             result += (spline.LastPoint() - spline.StartPoint());
             return result;
         }
+        else if(movement == MovementType.homing)
+        {
+            if(GameManager.instance && GameManager.instance.playerOneCraft)
+            {
+                return GameManager.instance.playerOneCraft.transform.position;
+            }
+            else
+            {
+                return startPosition;
+            }
+        }
 
         Debug.LogError("EndPosition unable to process movement type, returning 1.");
         return result;
     }
 
-    public Vector3 CalculatePosition(Vector2 startPos, float stepTime)
+    public Vector3 CalculatePosition(Vector2 startPos, float stepTime, Vector2 oldPosition, Quaternion oldAngle)
     {
         float normalizedTime = stepTime / TimeToComplete();
         if(normalizedTime < 0)
@@ -144,6 +159,13 @@ public class EnemyStep
         else if(movement == MovementType.spline)
         {
             return spline.GetPosition(normalizedTime) + startPos;
+        }
+        else if(movement == MovementType.homing) // homing towards player
+        {
+            Vector2 dir = (oldAngle * Vector2.down);
+            Vector2 mov = (dir * movementSpeed);
+            Vector2 pos = oldPosition + mov;
+            return pos;
         }
 
         Debug.LogError("CalculatePosition unable to process movement type, returning startPosition.");

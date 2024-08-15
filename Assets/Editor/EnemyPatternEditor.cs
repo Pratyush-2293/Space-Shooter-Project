@@ -91,6 +91,15 @@ public class EnemyPatternEditor : Editor
                         endOfLastStep = DrawSpline(step.spline, endOfLastStep, step.movementSpeed);
                         break;
                     }
+                case EnemyStep.MovementType.homing:
+                    {
+                        if(GameManager.instance && GameManager.instance.playerOneCraft)
+                        {
+                            Handles.DrawDottedLine(endOfLastStep, GameManager.instance.playerOneCraft.transform.position, 1);
+                            endOfLastStep = GameManager.instance.playerOneCraft.transform.position;
+                        }
+                        break;
+                    }
             };
         }
 
