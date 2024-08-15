@@ -37760,12 +37760,52 @@ PrefabInstance:
     m_TransformParent: {fileID: 1041544695}
     m_Modifications:
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: lastAngle.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: lastAngle.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: lastPosition.x
+      value: -174.09486
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: lastPosition.y
+      value: 519.5172
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: currentPosition.x
+      value: -173.99898
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: currentPosition.y
+      value: 519.73755
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].rotate
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].endAngle
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].movement
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].noOfSpins
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
+      propertyPath: steps.Array.data[0].angleSpeed
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7607702483463179586, guid: 7d0f105c816497241927c80b0d8759ae, type: 3}
       propertyPath: steps.Array.data[0].framesToWait

@@ -28,7 +28,8 @@ public class EnemyStep
         none,
         setAngle,
         lookAhead,
-        faceTarget,
+        spinning,
+        facePlayer,
 
         NOOFROTATIONS
     }
@@ -163,5 +164,59 @@ public class EnemyStep
         {
             enemy.DisableState(state);
         }
+    }
+
+    public float EndRotation()
+    {
+        return endAngle;
+    }
+
+    public Quaternion CalculateRotation(float startRotation, Vector3 currentPosition, Vector3 oldPosition, float time)
+    {
+        float normalizedTime = time / TimeToComplete();
+        if (normalizedTime < 0)
+        {
+            normalizedTime = 0;
+        }
+
+        if (rotate == RotationType.setAngle)
+        {
+            Quaternion result = Quaternion.Euler(0, 0, endAngle);
+            return result;
+        }
+        else if(rotate == RotationType.spinning)
+        {
+            float start = endAngle - (noOfSpins * 360);
+            float angle = Mathf.Lerp(start, endAngle, normalizedTime);
+            Quaternion result = Quaternion.Euler(0, 0, angle);
+            return result;
+        }
+        else if (rotate == RotationType.facePlayer)
+        {
+            float angle = 0;
+            Transform target = null;
+            if(GameManager.instance && GameManager.instance.playerOneCraft)
+            {
+                target = GameManager.instance.playerOneCraft.transform;
+            }
+
+            if (target != null)
+            {
+                Vector2 currentDir = (currentPosition - oldPosition).normalized;
+                Vector2 targetDir = (target.transform.position - oldPosition).normalized;
+                Vector2 newDir = Vector2.Lerp(currentDir, targetDir, angleSpeed);
+                angle = Vector2.SignedAngle(Vector2.down, newDir);
+            }
+
+            return Quaternion.Euler(0, 0, angle);
+        }
+        else if (rotate == RotationType.lookAhead)
+        {
+            Vector2 dir = (currentPosition - oldPosition).normalized;
+            float angle = Vector2.SignedAngle(Vector2.down, dir);
+            return Quaternion.Euler(0, 0, angle);
+        }
+
+        return Quaternion.Euler(0, 0, 0);
     }
 }

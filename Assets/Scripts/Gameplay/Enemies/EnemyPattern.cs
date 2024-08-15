@@ -117,7 +117,17 @@ public class EnemyPattern : MonoBehaviour
 
     public Quaternion CalculateRotation(float progressTimer)
     {
-        return Quaternion.identity;
+        currentStateIndex = WhichStep(progressTimer);
+        float startRotation = 0;
+        if (currentStateIndex > 0)
+        {
+            startRotation = steps[currentStateIndex - 1].EndRotation();
+        }
+
+        float stepTime = progressTimer - StartTime(currentStateIndex);
+        lastAngle = steps[currentStateIndex].CalculateRotation(startRotation, currentPosition, lastPosition, stepTime);
+
+        return lastAngle;
     }
 
     int WhichStep(float timer)
