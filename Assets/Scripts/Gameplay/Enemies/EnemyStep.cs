@@ -21,6 +21,31 @@ public class EnemyStep
         NOOFMOVEMENTTYPES
     }
 
+    public enum RotationType
+    {
+        INVALID,
+
+        none,
+        setAngle,
+        lookAhead,
+        faceTarget,
+
+        NOOFROTATIONS
+    }
+
+    [SerializeField]
+    public RotationType rotate = RotationType.lookAhead;
+
+    [SerializeField]
+    public float endAngle = 0f;
+
+    [SerializeField]
+    [Range(0.01f, 4f)]
+    public float angleSpeed = 1;
+
+    [SerializeField]
+    public float noOfSpins = 1;
+
     [SerializeField]
     public MovementType movement;
 

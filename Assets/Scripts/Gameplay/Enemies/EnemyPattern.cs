@@ -19,6 +19,13 @@ public class EnemyPattern : MonoBehaviour
     public bool spawnOnHard = false;
     public bool spawnOnInsane = false;
 
+    [HideInInspector]
+    public Vector3 lastPosition = Vector3.zero;
+    [HideInInspector]
+    public Vector3 currentPosition = Vector3.zero;
+    [HideInInspector]
+    public Quaternion lastAngle = Quaternion.identity;
+
     #if UNITY_EDITOR
     [MenuItem("GameObject/SHMUP/EnemyPattern", false, 10)]
     static void CreateEnemyPatternObject(MenuCommand menuCommand)
@@ -56,6 +63,9 @@ public class EnemyPattern : MonoBehaviour
         {
             spawnedEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation).GetComponent<Enemy>();
             spawnedEnemy.SetPattern(this);
+
+            lastPosition = spawnedEnemy.transform.position;
+            currentPosition = lastPosition;
         }
     }
 
@@ -93,12 +103,16 @@ public class EnemyPattern : MonoBehaviour
             return spawnedEnemy.transform.position;
         }
 
+        lastPosition = currentPosition;
+
         EnemyStep step = steps[currentStateIndex];
         float stepTime = progressTimer - StartTime(currentStateIndex);
 
         Vector3 startPos = EndPosition(currentStateIndex - 1);
 
-        return step.CalculatePosition(startPos, stepTime);
+        currentPosition = step.CalculatePosition(startPos, stepTime);
+
+        return currentPosition;
     }
 
     public Quaternion CalculateRotation(float progressTimer)
@@ -178,5 +192,16 @@ public class EnemyPattern : MonoBehaviour
                 step.spline.CalculatePoints(step.movementSpeed);
             }
         }
+    }
+
+    public float TotalTime()
+    {
+        float result = 0f;
+        foreach(EnemyStep step in steps)
+        {
+            result += step.TimeToComplete();
+        }
+
+        return result;
     }
 }
