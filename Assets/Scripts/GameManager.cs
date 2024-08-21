@@ -8,9 +8,11 @@ public class GameManager : MonoBehaviour
     public bool twoPlayer = false;
     public GameObject[] craftPrefabs;
     public Craft playerOneCraft = null;
+    //public Craft[] playerCrafts = new Craft[2];
     public BulletManager bulletManager = null;
     public LevelProgress progressWindow = null;
     public Session gameSession = new Session();
+    public PlayerData[] playerDatas;
 
     void Start()
     {
@@ -20,6 +22,10 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
+
+        playerDatas = new PlayerData[2];
+        playerDatas[0] = new PlayerData();
+        playerDatas[1] = new PlayerData();
 
         instance = this;
         DontDestroyOnLoad(gameObject);
@@ -44,7 +50,7 @@ public class GameManager : MonoBehaviour
         {
             if (!playerOneCraft)
             {
-                SpawnPlayer(1, 0);
+                SpawnPlayer(0, 0);
             }
         }
 

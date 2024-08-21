@@ -36,6 +36,7 @@ public class Craft : MonoBehaviour
     public GameObject bombPrefab = null;
 
     int layerMask = 0;
+    int pickUpLayer = 0;
 
     private void Start()
     {
@@ -47,6 +48,8 @@ public class Craft : MonoBehaviour
         Debug.Assert(spriteRenderer);
 
         layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("PlayerBombs") & ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("GroundEnemy");
+
+        pickUpLayer = LayerMask.NameToLayer("PickUp");
 
         craftData.beamCharge = (char)100;
     }
@@ -85,9 +88,19 @@ public class Craft : MonoBehaviour
         Collider[] hits = new Collider[maxColliders];
         Vector2 halfSize = new Vector2(3f, 4f); //Acts as hitbox
         int noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
-        if (noOfHits > 0)
+        foreach(Collider hit in hits)
         {
-            Hit();
+            if (hit)
+            {
+                if (hit.gameObject.layer == pickUpLayer)
+                {
+                    PickUp(hit.GetComponent<PickUp>());
+                }
+                else
+                {
+                    Hit();
+                }
+            }
         }
 
         //Movement
@@ -205,6 +218,14 @@ public class Craft : MonoBehaviour
         }
     }
 
+    public void PickUp(PickUp pickUp)
+    {
+        if (pickUp)
+        {
+            pickUp.ProcessPickup(craftData);
+        }
+    }
+
     public void Hit()
     {
         if (!invulnerable)
@@ -293,6 +314,20 @@ public class Craft : MonoBehaviour
         Vector3 pos = transform.position;
         pos.y += 100;
         Instantiate(bombPrefab, pos, Quaternion.identity);
+    }
+
+    public void PowerUp(char powerLevel)
+    {
+        craftData.shotPower += powerLevel;
+        if (craftData.shotPower > 8)
+        {
+            craftData.shotPower = (char)8;
+        }
+    }
+
+    public void IncreaseScore(int value)
+    {
+        GameManager.instance.playerDatas[playerIndex].score += value;
     }
 }
 
