@@ -93,10 +93,10 @@ public class EnemyPatternEditor : Editor
                     }
                 case EnemyStep.MovementType.homing:
                     {
-                        if(GameManager.instance && GameManager.instance.playerOneCraft)
+                        if(GameManager.instance && GameManager.instance.playerCrafts[0])
                         {
-                            Handles.DrawDottedLine(endOfLastStep, GameManager.instance.playerOneCraft.transform.position, 1);
-                            endOfLastStep = GameManager.instance.playerOneCraft.transform.position;
+                            Handles.DrawDottedLine(endOfLastStep, GameManager.instance.playerCrafts[0].transform.position, 1);
+                            endOfLastStep = GameManager.instance.playerCrafts[0].transform.position;
                         }
                         break;
                     }

@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
     public static GameManager instance = null;
     public bool twoPlayer = false;
     public GameObject[] craftPrefabs;
-    public Craft playerOneCraft = null;
-    //public Craft[] playerCrafts = new Craft[2];
+    //public Craft playerOneCraft = null;
+    public Craft[] playerCrafts = new Craft[2];
     public BulletManager bulletManager = null;
     public LevelProgress progressWindow = null;
     public Session gameSession = new Session();
@@ -40,15 +40,15 @@ public class GameManager : MonoBehaviour
     {
         Debug.Assert(craftType < craftPrefabs.Length);
         Debug.Log("Spawning Player " + playerIndex);
-        playerOneCraft = Instantiate(craftPrefabs[craftType]).GetComponent<Craft>();
-        playerOneCraft.playerIndex = playerIndex;
+        playerCrafts[playerIndex] = Instantiate(craftPrefabs[craftType]).GetComponent<Craft>();
+        playerCrafts[playerIndex].playerIndex = playerIndex;
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            if (!playerOneCraft)
+            if (!playerCrafts[0])
             {
                 SpawnPlayer(0, 0);
             }
@@ -56,25 +56,25 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (playerOneCraft && playerOneCraft.craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER)
+            if (playerCrafts[0] && playerCrafts[0].craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER)
             {
-                playerOneCraft.craftData.shotPower++;
+                playerCrafts[0].craftData.shotPower++;
             }
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
-            if (playerOneCraft)
+            if (playerCrafts[0])
             {
-                playerOneCraft.AddOption();
+                playerCrafts[0].AddOption();
             }
         }
 
         if (Input.GetKeyDown(KeyCode.RightBracket))
         {
-            if (playerOneCraft)
+            if (playerCrafts[0])
             {
-                playerOneCraft.IncreaseBeamStrength();
+                playerCrafts[0].IncreaseBeamStrength();
             }
         }
 

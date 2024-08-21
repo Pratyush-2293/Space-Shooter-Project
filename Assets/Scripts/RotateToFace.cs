@@ -29,12 +29,12 @@ public class RotateToFace : MonoBehaviour
 
                 if (facePlayer)
                 {
-                    if(!GameManager.instance || !GameManager.instance.playerOneCraft)
+                    if(!GameManager.instance || !GameManager.instance.playerCrafts[0])
                     {
                         return;
                     }
 
-                    targetPosition = GameManager.instance.playerOneCraft.transform.position;
+                    targetPosition = GameManager.instance.playerCrafts[0].transform.position;
                 }
                 else if (faceTarget)
                 {

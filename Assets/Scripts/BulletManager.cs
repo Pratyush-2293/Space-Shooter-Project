@@ -162,9 +162,9 @@ public class BulletManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(GameManager.instance && GameManager.instance.playerOneCraft)
+        if(GameManager.instance && GameManager.instance.playerCrafts[0])
         {
-            jobProcessor.player1Position = GameManager.instance.playerOneCraft.transform.position;
+            jobProcessor.player1Position = GameManager.instance.playerCrafts[0].transform.position;
         }
         else
         {

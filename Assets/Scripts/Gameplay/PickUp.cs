@@ -36,18 +36,18 @@ public class PickUp : MonoBehaviour
         transform.position = position;
     }
 
-    public void ProcessPickup(CraftData craftData) // int playerIndex
+    public void ProcessPickup(int playerIndex, CraftData craftData)
     {
         switch (config.type)
         {
             case PickUpType.Coin:
                 {
-                    GameManager.instance.playerOneCraft.IncreaseScore(config.coinValue); // temp fix in playerindex
+                    GameManager.instance.playerCrafts[playerIndex].IncreaseScore(config.coinValue); // temp fix in playerindex
                     break;
                 }
             case PickUpType.PowerUp:
                 {
-                    GameManager.instance.playerOneCraft.PowerUp((char)config.powerLevel); // temp fix in player index
+                    GameManager.instance.playerCrafts[playerIndex].PowerUp((char)config.powerLevel); // temp fix in player index
                     break;
                 }
             default:

@@ -58,9 +58,9 @@ public class BulletSpawner : MonoBehaviour
             Vector2 targetPosition = Vector2.zero;
             if (fireAtPlayer)
             {
-                if (GameManager.instance.playerOneCraft)
+                if (GameManager.instance.playerCrafts[0])
                 {
-                    targetPosition = GameManager.instance.playerOneCraft.transform.position;
+                    targetPosition = GameManager.instance.playerCrafts[0].transform.position;
                 }
             }
             else if(fireAtTarget && target != null)

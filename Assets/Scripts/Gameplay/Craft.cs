@@ -222,7 +222,7 @@ public class Craft : MonoBehaviour
     {
         if (pickUp)
         {
-            pickUp.ProcessPickup(craftData);
+            pickUp.ProcessPickup(playerIndex, craftData);
         }
     }
 
@@ -253,7 +253,7 @@ public class Craft : MonoBehaviour
 
         EffectSystem.instance.CraftExplosion(transform.position);
         Destroy(gameObject);
-        GameManager.instance.playerOneCraft = null;
+        GameManager.instance.playerCrafts[playerIndex] = null;
 
         yield return null;
     }

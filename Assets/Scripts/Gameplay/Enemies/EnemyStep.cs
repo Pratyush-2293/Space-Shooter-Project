@@ -122,9 +122,9 @@ public class EnemyStep
         }
         else if(movement == MovementType.homing)
         {
-            if(GameManager.instance && GameManager.instance.playerOneCraft)
+            if(GameManager.instance && GameManager.instance.playerCrafts[0])
             {
-                return GameManager.instance.playerOneCraft.transform.position;
+                return GameManager.instance.playerCrafts[0].transform.position;
             }
             else
             {
@@ -217,9 +217,9 @@ public class EnemyStep
         {
             float angle = 0;
             Transform target = null;
-            if(GameManager.instance && GameManager.instance.playerOneCraft)
+            if(GameManager.instance && GameManager.instance.playerCrafts[0])
             {
-                target = GameManager.instance.playerOneCraft.transform;
+                target = GameManager.instance.playerCrafts[0].transform;
             }
 
             if (target != null)
