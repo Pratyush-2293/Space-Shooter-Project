@@ -179,6 +179,8 @@ MonoBehaviour:
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
+  spawnCyclicPickup: 1
+  spawnSpecificPickup: []
 --- !u!65 &2751398545753622038
 BoxCollider:
   m_ObjectHideFlags: 0

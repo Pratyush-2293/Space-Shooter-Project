@@ -225,7 +225,7 @@ public class EnemyStep
             if (target != null)
             {
                 Vector2 currentDir = (currentPosition - oldPosition).normalized;
-                Vector2 targetDir = (target.transform.position - oldPosition).normalized;
+                Vector2 targetDir = (target.transform.position - currentPosition).normalized;
                 Vector2 newDir = Vector2.Lerp(currentDir, targetDir, angleSpeed);
                 angle = Vector2.SignedAngle(Vector2.down, newDir);
             }

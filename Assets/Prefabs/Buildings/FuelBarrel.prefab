@@ -100,9 +100,13 @@ MonoBehaviour:
   radiusOrWidth: 10
   height: 10
   box: 0
-  damagedByBullets: 0
+  damagedByBullets: 1
   damagedByBeams: 0
   damagedByBombs: 1
+  spawnCyclicPickup: 0
+  spawnSpecificPickup:
+  - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
+  - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
 --- !u!135 &8365834714054307751
 SphereCollider:
   m_ObjectHideFlags: 0

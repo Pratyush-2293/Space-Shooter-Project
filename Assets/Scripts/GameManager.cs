@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     public LevelProgress progressWindow = null;
     public Session gameSession = new Session();
     public PlayerData[] playerDatas;
+    public PickUp[] cyclicDrops = new PickUp[15];
+    public PickUp[] medals = new PickUp[10];
+    private int currentDropIndex = 0;
+    private int currentMedalIndex = 0;
 
     void Start()
     {
@@ -96,5 +100,36 @@ public class GameManager : MonoBehaviour
     public void StartGame()
     {
         UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
+    }
+
+    public void PickUpFallOffScreen(PickUp pickup)
+    {
+        if(pickup.config.type == PickUp.PickUpType.Medal)
+        {
+            currentMedalIndex = 0;
+        }
+    }
+
+    public PickUp GetNextDrop()
+    {
+        PickUp result = cyclicDrops[currentDropIndex];
+
+        if(result.config.type == PickUp.PickUpType.Medal)
+        {
+            result = medals[currentMedalIndex];
+            currentMedalIndex++;
+            if (currentMedalIndex > 9)
+            {
+                currentMedalIndex = 0;
+            }
+        }
+
+        currentDropIndex++;
+        if (currentDropIndex > 14)
+        {
+            currentDropIndex = 0;
+        }
+
+        return result;
     }
 }

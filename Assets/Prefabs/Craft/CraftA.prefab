@@ -759,6 +759,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdb94c9a9751c884e90da707cd68a28c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  craftData:
+    positionX: 0
+    positionY: 0
+    shotPower: 0
+    numberOfEnabledOptions: 0
+    optionsLayout: 0
+    beamFiring: 0
+    beamPower: 0
+    beamCharge: 0
+    beamTimer: 0
+    smallBombs: 3
+    largeBombs: 3
   config: {fileID: 11400000, guid: d03286b1d031bb94aac68851ece782f4, type: 2}
   playerIndex: 0
   AftFlame1: {fileID: 1772116043999628311}

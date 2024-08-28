@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,8 +51,6 @@ public class Craft : MonoBehaviour
         layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("PlayerBombs") & ~LayerMask.GetMask("Player") & ~LayerMask.GetMask("GroundEnemy");
 
         pickUpLayer = LayerMask.NameToLayer("PickUp");
-
-        craftData.beamCharge = (char)100;
     }
 
     public void SetInvulnerable()
@@ -86,19 +85,41 @@ public class Craft : MonoBehaviour
         //Hit Detection
         int maxColliders = 10;
         Collider[] hits = new Collider[maxColliders];
+
+        //Bullet hits
         Vector2 halfSize = new Vector2(3f, 4f); //Acts as hitbox
         int noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
-        foreach(Collider hit in hits)
+        if (noOfHits > 0)
         {
-            if (hit)
+            foreach (Collider hit in hits)
             {
-                if (hit.gameObject.layer == pickUpLayer)
+                if (hit)
                 {
-                    PickUp(hit.GetComponent<PickUp>());
+                    if (hit.gameObject.layer != pickUpLayer)
+                    {
+                        Hit();
+                    }
                 }
-                else
+            }
+        }
+
+        //Pickups & Bullet Grazing
+        halfSize = new Vector2(15f, 21f); //Acts as hitbox
+        noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
+        if (noOfHits > 0)
+        {
+            foreach (Collider hit in hits)
+            {
+                if (hit)
                 {
-                    Hit();
+                    if (hit.gameObject.layer == pickUpLayer)
+                    {
+                        PickUp(hit.GetComponent<PickUp>());
+                    }
+                    else //Bullet graze
+                    {
+                        craftData.beamCharge++;
+                    }
                 }
             }
         }
@@ -198,7 +219,7 @@ public class Craft : MonoBehaviour
                 craftData.optionsLayout++;
                 if (craftData.optionsLayout > 3)
                 {
-                    craftData.optionsLayout = (char)0;
+                    craftData.optionsLayout = 0;
                 }
 
                 SetOptionsLayout(craftData.optionsLayout);
@@ -311,17 +332,21 @@ public class Craft : MonoBehaviour
 
     void FireBomb()
     {
-        Vector3 pos = transform.position;
-        pos.y += 100;
-        Instantiate(bombPrefab, pos, Quaternion.identity);
+        if (craftData.smallBombs > 0)
+        {
+            craftData.smallBombs--;
+            Vector3 pos = transform.position;
+            pos.y += 100;
+            Instantiate(bombPrefab, pos, Quaternion.identity);
+        }
     }
 
-    public void PowerUp(char powerLevel)
+    public void PowerUp(byte powerLevel)
     {
         craftData.shotPower += powerLevel;
         if (craftData.shotPower > 8)
         {
-            craftData.shotPower = (char)8;
+            craftData.shotPower = 8;
         }
     }
 
@@ -329,19 +354,49 @@ public class Craft : MonoBehaviour
     {
         GameManager.instance.playerDatas[playerIndex].score += value;
     }
+
+    public void OneUp()
+    {
+        GameManager.instance.playerDatas[playerIndex].lives++;
+    }
+
+    public void AddBomb(int power)
+    {
+        if (power == 1)
+        {
+            craftData.smallBombs++;
+        }
+        else if (power == 2)
+        {
+            craftData.largeBombs++;
+        }
+        else
+        {
+            Debug.LogError("Invalid Bomb Power Pickup");
+        }
+    }
+
+    public void AddMedal(int level, int value)
+    {
+        IncreaseScore(value);
+    }
 }
 
+[Serializable]
 public class CraftData
 {
     public float positionX;
     public float positionY;
 
-    public char shotPower;
-    public char numberOfEnabledOptions;
-    public char optionsLayout;
+    public byte shotPower;
+    public byte numberOfEnabledOptions;
+    public byte optionsLayout;
 
     public bool beamFiring;
-    public char beamPower;    // Damage and Width
-    public char beamCharge;   // Max Charge - Upgradeable
-    public char beamTimer;    // Current Charge Level - How Much Beam is Left
+    public byte beamPower;    // Damage and Width
+    public byte beamCharge;   // Picked by charge
+    public byte beamTimer;    // Current Charge Level - How Much Beam is Left
+
+    public byte smallBombs;
+    public byte largeBombs;
 }

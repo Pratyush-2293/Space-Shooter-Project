@@ -50,7 +50,51 @@ MonoBehaviour:
   twoPlayer: 0
   craftPrefabs:
   - {fileID: 1520049054882664807, guid: 12c71e89bef76594880d9e8598ac0af6, type: 3}
-  playerOneCraft: {fileID: 0}
+  playerCrafts:
+  - {fileID: 0}
+  - {fileID: 0}
+  bulletManager: {fileID: 0}
+  progressWindow: {fileID: 0}
+  gameSession:
+    hardness: 1
+    stage: 1
+    practice: 0
+    arenaPractice: 0
+    stagePractice: 0
+    infiniteLives: 0
+    infiniteContinues: 0
+    infiniteBombs: 0
+    invincible: 0
+    halfSpeed: 0
+    doubleSpeed: 0
+  playerDatas: []
+  cyclicDrops:
+  - {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: -9056223016932683868, guid: e0f18f0155b7775458be6673a7ad31b1, type: 3}
+  - {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: -9056223016932683868, guid: e0f18f0155b7775458be6673a7ad31b1, type: 3}
+  - {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: 6326004562930033486, guid: 87afb7453e168aa47a6b618b89e706a3, type: 3}
+  medals:
+  - {fileID: -7982644339166713325, guid: 1ff67c67127f27545ac433f6dfa29278, type: 3}
+  - {fileID: 1671015229285225193, guid: 7e84cb3097fb76c49b67c9ceb4d7050e, type: 3}
+  - {fileID: -1123752095936646011, guid: 938fd821a883f2f4bbe6548d5476307f, type: 3}
+  - {fileID: 5080753936730138562, guid: 68b555981bc9e154abdd16ea81deb334, type: 3}
+  - {fileID: 8232811517371971714, guid: 21b5fdc02ce65874eb85daa5ed7de28e, type: 3}
+  - {fileID: -5829430834012656373, guid: d5bed7bb7500e04489c05248102c2a0d, type: 3}
+  - {fileID: -5390724233540696188, guid: 2728a3d8f5d31fb4c83a2769ddfd842c, type: 3}
+  - {fileID: -1347375132274129301, guid: 483e7ad052860ee49abbc06440e98ba2, type: 3}
+  - {fileID: -2729169345352685252, guid: a43bb47bbd6dd154d8ac7223f0bb70fd, type: 3}
+  - {fileID: -4183171173269451024, guid: 04703aca267550a46a1428f8f8f61714, type: 3}
 --- !u!114 &-4788296126084840385
 MonoBehaviour:
   m_ObjectHideFlags: 0
