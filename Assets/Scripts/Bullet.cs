@@ -6,6 +6,7 @@ using System;
 public class Bullet : MonoBehaviour
 {
     public int index; // Index into the bullet pool
+    public byte playerIndex; // player that shot this bullet
 }
 
 [Serializable]

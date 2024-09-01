@@ -29,7 +29,8 @@ public class BulletSpawner : MonoBehaviour
 
     public bool homing = false;
 
-    public bool isPlayer = false;
+    //public bool isPlayer = false;
+    public byte playerIndex = 2;  // values > 2 are enemy
 
     public void Shoot(int size)
     {
@@ -38,7 +39,7 @@ public class BulletSpawner : MonoBehaviour
             return;
         }
 
-        if (!isPlayer)  // Preventing enemy firing from behind
+        if (playerIndex>1)  // Preventing enemy firing from behind
         {
             float y = transform.position.y;
             if(GameManager.instance && GameManager.instance.progressWindow)
@@ -80,7 +81,7 @@ public class BulletSpawner : MonoBehaviour
                 Quaternion myRotation = Quaternion.AngleAxis(angle, Vector3.forward);
                 Vector3 velocity = myRotation * primaryDirection * speed;
                 BulletManager.BulletType bulletToShoot = bulletType + size;
-                GameManager.instance.bulletManager.SpawnBullet(bulletToShoot, transform.position.x, transform.position.y, velocity.x, velocity.y, angle, dAngle, homing);
+                GameManager.instance.bulletManager.SpawnBullet(bulletToShoot, transform.position.x, transform.position.y, velocity.x, velocity.y, angle, dAngle, homing, playerIndex);
 
                 angle = angle + ((endAngle - startAngle) / (radialNumber - 1));
             }

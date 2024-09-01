@@ -34,6 +34,12 @@ public class HUD : MonoBehaviour
         UpdateLives(0);
         UpdateBombs(0);
         UpdatePower(0);
+        UpdateBeam(0);
+        UpdateControls(0);
+        UpdateStats(0);
+        UpdateStageScore(0);
+        UpdateProgress(0);
+        UpdateChain(0);
 
         if (GameManager.instance.twoPlayer)
         {
@@ -50,6 +56,12 @@ public class HUD : MonoBehaviour
                 UpdateLives(1);
                 UpdateBombs(1);
                 UpdatePower(1);
+                UpdateBeam(1);
+                UpdateControls(1);
+                UpdateStats(1);
+                UpdateStageScore(1);
+                UpdateProgress(1);
+                UpdateChain(1);
             }
             else
             {
@@ -160,6 +172,206 @@ public class HUD : MonoBehaviour
                 hud.powerMarks[i].SetActive(false);
             }
         }
+    }
+
+    private void UpdateBeam(int playerIndex)
+    {
+        Debug.Assert(playerIndex < 2);
+        PlayerHUD hud = playerHUDs[playerIndex];
+
+        if (!GameManager.instance.playerCrafts[playerIndex])
+        {
+            for(int i = 0; i < 5; i++)
+            {
+                hud.beamMarks[i].SetActive(false);
+                hud.beamGradient.fillAmount = 0;
+            }
+            return;
+        }
+
+        CraftData data = GameManager.instance.playerCrafts[playerIndex].craftData;
+        int beam = data.beamPower;
+
+        for(int i = 0; i < 5; i++)
+        {
+            if (beam > i)
+            {
+                hud.beamMarks[i].SetActive(true);
+            }
+            else
+            {
+                hud.beamMarks[i].SetActive(false);
+            }
+        }
+
+        hud.beamGradient.fillAmount = (float)data.beamTimer / (float)Craft.MAXIMUMBEAMCHARGE;
+    }
+
+    private void UpdateControls(int playerIndex)
+    {
+        Debug.Assert(playerIndex < 2);
+        PlayerHUD hud = playerHUDs[playerIndex];
+
+        if (!GameManager.instance.playerCrafts[playerIndex])
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                hud.buttons[i].SetActive(false);
+                hud.left.SetActive(false);
+                hud.right.SetActive(false);
+                hud.up.SetActive(false);
+                hud.down.SetActive(false);
+            }
+            return;
+        }
+
+        InputState state = InputManager.instance.playerState[playerIndex];
+
+        if (state.shoot)
+        {
+            hud.buttons[0].SetActive(true);
+        }
+        else
+        {
+            hud.buttons[0].SetActive(false);
+        }
+
+        if (state.beam)
+        {
+            hud.buttons[1].SetActive(true);
+        }
+        else
+        {
+            hud.buttons[1].SetActive(false);
+        }
+
+        if (state.bomb)
+        {
+            hud.buttons[2].SetActive(true);
+        }
+        else
+        {
+            hud.buttons[2].SetActive(false);
+        }
+
+        if (state.options)
+        {
+            hud.buttons[3].SetActive(true);
+        }
+        else
+        {
+            hud.buttons[3].SetActive(false);
+        }
+
+        if (state.left)
+        {
+            hud.left.SetActive(true);
+        }
+        else
+        {
+            hud.left.SetActive(false);
+        }
+
+        if (state.right)
+        {
+            hud.right.SetActive(true);
+        }
+        else
+        {
+            hud.right.SetActive(false);
+        }
+
+        if (state.up)
+        {
+            hud.up.SetActive(true);
+        }
+        else
+        {
+            hud.up.SetActive(false);
+        }
+
+        if (state.down)
+        {
+            hud.down.SetActive(true);
+        }
+        else
+        {
+            hud.down.SetActive(false);
+        }
+
+        hud.joystick.SetActive(true);
+        hud.joystick.transform.localPosition = new Vector2(-296, -147) + state.movement * 3;
+    }
+
+    private void UpdateStats(int playerIndex)
+    {
+        Debug.Assert(playerIndex < 2);
+        PlayerHUD hud = playerHUDs[playerIndex];
+
+        if (!GameManager.instance.playerCrafts[playerIndex])
+        {
+            hud.speedStat.fillAmount = 0;
+            hud.powerStat.fillAmount = 0;
+            hud.beamStat.fillAmount = 0;
+            hud.optionStat.fillAmount = 0;
+            hud.bombStat.fillAmount = 0;
+
+            return;
+        }
+
+        CraftConfiguration config = GameManager.instance.playerCrafts[playerIndex].config;
+
+        hud.speedStat.fillAmount = config.speed / (float)CraftConfiguration.MAX_SPEED;
+        hud.powerStat.fillAmount = config.bulletStrength / (float)CraftConfiguration.MAX_SHOT_POWER;
+        hud.beamStat.fillAmount = config.beamPower / (float)CraftConfiguration.MAX_BEAM_POWER;
+        hud.optionStat.fillAmount = config.optionPower / (float)CraftConfiguration.MAX_OPTION_POWER;
+        hud.bombStat.fillAmount = config.bombPower / (float)CraftConfiguration.MAX_BOMB_POWER;
+    }
+
+    private void UpdateStageScore(int playerIndex)
+    {
+        Debug.Assert(playerIndex < 2);
+        PlayerHUD hud = playerHUDs[playerIndex];
+
+        if (!GameManager.instance.playerCrafts[playerIndex])
+        {
+            hud.stageScore.UpdateNumber(0);
+            return;
+        }
+
+        hud.stageScore.UpdateNumber(GameManager.instance.playerDatas[playerIndex].stageScore);
+    }
+
+    private void UpdateProgress(int playerIndex)
+    {
+        Debug.Assert(playerIndex < 2);
+        PlayerHUD hud = playerHUDs[playerIndex];
+
+        if (!GameManager.instance || !GameManager.instance.progressWindow)
+        {
+            hud.progressGradient.fillAmount = 1;
+            return;
+        }
+
+        float progress = GameManager.instance.progressWindow.data.positionY / (float)GameManager.instance.progressWindow.levelSize;
+
+        hud.progressGradient.fillAmount = 1 - progress;
+    }
+
+    private void UpdateChain(int playerIndex)
+    {
+        Debug.Assert(playerIndex < 2);
+        PlayerHUD hud = playerHUDs[playerIndex];
+
+        if (!GameManager.instance.playerCrafts[playerIndex])
+        {
+            hud.chainScore.UpdateNumber(0);
+            return;
+        }
+
+        hud.chainScore.UpdateNumber(GameManager.instance.playerDatas[playerIndex].chain);
+
+        hud.chainGradient.fillAmount = GameManager.instance.playerDatas[playerIndex].chainTimer / (float)PlayerData.MAXCHAINTIMER;
     }
 
     [Serializable]

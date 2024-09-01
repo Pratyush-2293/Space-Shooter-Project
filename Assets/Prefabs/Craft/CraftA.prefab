@@ -162,7 +162,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &333739892569695548
 GameObject:
   m_ObjectHideFlags: 0
@@ -633,7 +633,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &1520049054882664807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &2054710740725056907
 GameObject:
   m_ObjectHideFlags: 0
@@ -2131,7 +2131,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &5429681781523479107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,7 +2535,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &6008603045436229651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2656,7 +2656,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &6377718917361155504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2839,6 +2839,7 @@ MonoBehaviour:
   - {fileID: 9055062746567376203}
   - {fileID: 566808086723132124}
   - {fileID: 5113318334127036151}
+  playerIndex: 0
 --- !u!1 &6523797809113827130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3160,7 +3161,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &7109882464555916487
 GameObject:
   m_ObjectHideFlags: 0
@@ -3323,7 +3324,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &7369020490642495361
 GameObject:
   m_ObjectHideFlags: 0
@@ -3690,7 +3691,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
-  isPlayer: 1
+  playerIndex: 0
 --- !u!1 &8968338509832408624
 GameObject:
   m_ObjectHideFlags: 0

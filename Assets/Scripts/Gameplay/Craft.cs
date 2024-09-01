@@ -62,65 +62,78 @@ public class Craft : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Invulnerable Flashing
-        if (invulnerable)
+        if(InputManager.instance && alive)
         {
-            if (invulnerableTimer % 12 < 6)
+            //Chain Drop
+            if (GameManager.instance.playerDatas[playerIndex].chainTimer > 0)
             {
-                spriteRenderer.material.SetColor("_Overbright", Color.black);
-            }
-            else
-            {
-                spriteRenderer.material.SetColor("_Overbright", Color.white);
-            }
-
-            invulnerableTimer--;
-
-            if (invulnerableTimer <= 0)
-            {
-                invulnerable = false;
-                spriteRenderer.material.SetColor("_Overbright", Color.black);
-            }
-        }
-
-        //Hit Detection
-        int maxColliders = 10;
-        Collider[] hits = new Collider[maxColliders];
-
-        //Bullet hits
-        Vector2 halfSize = new Vector2(3f, 4f); //Acts as hitbox
-        int noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
-        if (noOfHits > 0)
-        {
-            foreach (Collider hit in hits)
-            {
-                if (hit)
+                GameManager.instance.playerDatas[playerIndex].chainTimer--;
+                if (GameManager.instance.playerDatas[playerIndex].chainTimer == 0)
                 {
-                    if (hit.gameObject.layer != pickUpLayer)
+                    GameManager.instance.playerDatas[playerIndex].chain = 0;
+                }
+            }
+
+            //Invulnerable Flashing
+            if (invulnerable)
+            {
+                if (invulnerableTimer % 12 < 6)
+                {
+                    spriteRenderer.material.SetColor("_Overbright", Color.black);
+                }
+                else
+                {
+                    spriteRenderer.material.SetColor("_Overbright", Color.white);
+                }
+
+                invulnerableTimer--;
+
+                if (invulnerableTimer <= 0)
+                {
+                    invulnerable = false;
+                    spriteRenderer.material.SetColor("_Overbright", Color.black);
+                }
+            }
+
+            //Hit Detection
+            int maxColliders = 10;
+            Collider[] hits = new Collider[maxColliders];
+
+            //Bullet hits
+            Vector2 halfSize = new Vector2(3f, 4f); //Acts as hitbox
+            int noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
+            if (noOfHits > 0)
+            {
+                foreach (Collider hit in hits)
+                {
+                    if (hit)
                     {
-                        Hit();
+                        if (hit.gameObject.layer != pickUpLayer)
+                        {
+                            Hit();
+                        }
                     }
                 }
             }
-        }
 
-        //Pickups & Bullet Grazing
-        halfSize = new Vector2(15f, 21f); //Acts as hitbox
-        noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
-        if (noOfHits > 0)
-        {
-            foreach (Collider hit in hits)
+            //Pickups & Bullet Grazing
+            halfSize = new Vector2(15f, 21f); //Acts as hitbox
+            noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfSize, hits, Quaternion.identity, layerMask);
+            if (noOfHits > 0)
             {
-                if (hit)
+                foreach (Collider hit in hits)
                 {
-                    if (hit.gameObject.layer == pickUpLayer)
+                    if (hit)
                     {
-                        PickUp(hit.GetComponent<PickUp>());
-                    }
-                    else if(craftData.beamCharge < MAXIMUMBEAMCHARGE) //Bullet graze
-                    {
-                        craftData.beamCharge++;
-                        craftData.beamTimer++;
+                        if (hit.gameObject.layer == pickUpLayer)
+                        {
+                            PickUp(hit.GetComponent<PickUp>());
+                        }
+                        else if (craftData.beamCharge < MAXIMUMBEAMCHARGE) //Bullet graze
+                        {
+                            craftData.beamCharge++;
+                            craftData.beamTimer++;
+                        }
                     }
                 }
             }
@@ -339,7 +352,11 @@ public class Craft : MonoBehaviour
             craftData.smallBombs--;
             Vector3 pos = transform.position;
             pos.y += 100;
-            Instantiate(bombPrefab, pos, Quaternion.identity);
+            Bomb bomb = Instantiate(bombPrefab, pos, Quaternion.identity).GetComponent<Bomb>();
+            if (bomb)
+            {
+                bomb.playerIndex = (byte)playerIndex;
+            }
         }
     }
 
@@ -355,6 +372,7 @@ public class Craft : MonoBehaviour
     public void IncreaseScore(int value)
     {
         GameManager.instance.playerDatas[playerIndex].score += value;
+        GameManager.instance.playerDatas[playerIndex].stageScore += value;
     }
 
     public void OneUp()

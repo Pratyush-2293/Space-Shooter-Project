@@ -50,7 +50,7 @@ public class Shootable : MonoBehaviour
                     Bullet b = hits[h].GetComponent<Bullet>();
                     if (b != null)
                     {
-                        TakeDamage(1);
+                        TakeDamage(1, b.playerIndex);
                         GameManager.instance.bulletManager.DeActivateBullet(b.index);
                     }
                 }
@@ -59,18 +59,24 @@ public class Shootable : MonoBehaviour
                     Bomb bomb = hits[h].GetComponent<Bomb>();
                     if (bomb != null)
                     {
-                        TakeDamage(bomb.power);
+                        TakeDamage(bomb.power, bomb.playerIndex);
                     }
                 }
             }
         }
     }
 
-    public void TakeDamage(int ammount)
+    public void TakeDamage(int ammount, byte fromPlayer)
     {
         health -= ammount;
         if (health <= 0)
         {
+            if (fromPlayer < 2)
+            {
+                GameManager.instance.playerDatas[fromPlayer].chain++;
+                GameManager.instance.playerDatas[fromPlayer].chainTimer = PlayerData.MAXCHAINTIMER;
+            }
+
             Vector2 pos = transform.position;
             if (spawnCyclicPickup)
             {

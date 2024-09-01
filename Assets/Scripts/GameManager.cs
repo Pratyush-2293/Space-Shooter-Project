@@ -87,14 +87,6 @@ public class GameManager : MonoBehaviour
             EnemyPattern testPattern =  GameObject.FindObjectOfType<EnemyPattern>();
             testPattern.Spawn();
         }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            if (bulletManager)
-            {
-                bulletManager.SpawnBullet(BulletManager.BulletType.Bullet1_Size3, 0, 150, Random.Range(-10f, 10f), Random.Range(-10f, 10f), 0, 0, false);
-            }
-        }
     }
 
     public void StartGame()
