@@ -24,6 +24,7 @@ public class Craft : MonoBehaviour
     bool invulnerable = true;
     int invulnerableTimer = 120;
     const int INVULNERABLENGTH = 120;
+    public static int MAXIMUMBEAMCHARGE = 64;
 
     public SpriteRenderer spriteRenderer = null;
     public BulletSpawner[] bulletSpawner = new BulletSpawner[5];
@@ -116,9 +117,10 @@ public class Craft : MonoBehaviour
                     {
                         PickUp(hit.GetComponent<PickUp>());
                     }
-                    else //Bullet graze
+                    else if(craftData.beamCharge < MAXIMUMBEAMCHARGE) //Bullet graze
                     {
                         craftData.beamCharge++;
+                        craftData.beamTimer++;
                     }
                 }
             }

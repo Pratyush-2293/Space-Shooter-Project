@@ -11,7 +11,7 @@ public class AnimatedNumber : MonoBehaviour
         UpdateNumber(numberToDisplay);
     }
 
-    void UpdateNumber(int newNumberToDiplay)
+    public void UpdateNumber(int newNumberToDiplay)
     {
         numberToDisplay = newNumberToDiplay;
         string numbers = numberToDisplay.ToString();

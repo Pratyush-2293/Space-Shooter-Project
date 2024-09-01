@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimatedChar : MonoBehaviour
 {
     public Sprite[] charSprites;
-    public SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer;
+    private Image image;
     public int digit = 0;
     private int frame = 0;
     public int offset = 0;
@@ -16,7 +18,12 @@ public class AnimatedChar : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        Debug.Assert(spriteRenderer!=null);
+        if (!spriteRenderer)
+        {
+            image = GetComponent<Image>();
+            Debug.Assert(image != null);
+        }
+
         timer = 1f / FPS;
         UpdateSprite(0);
     }
@@ -25,7 +32,14 @@ public class AnimatedChar : MonoBehaviour
     {
         int loopedFrame = (newFrame+offset) % noOfFrames;
         int spriteIndex = digit + (loopedFrame * noOfCharacters);
-        spriteRenderer.sprite = charSprites[spriteIndex];
+        if (spriteRenderer)
+        {
+            spriteRenderer.sprite = charSprites[spriteIndex];
+        }
+        else if (image)
+        {
+            image.sprite = charSprites[spriteIndex];
+        }
     }
 
     void Update()
