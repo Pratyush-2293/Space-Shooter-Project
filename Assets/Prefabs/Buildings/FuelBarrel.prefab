@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4060781211393295242}
   - component: {fileID: 2175699449780782257}
   - component: {fileID: 2653027252809434361}
-  - component: {fileID: 8365834714054307751}
+  - component: {fileID: 8751272631566130300}
   m_Layer: 11
   m_Name: FuelBarrel
   m_TagString: Untagged
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4858900662698474315}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -55.1, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -100,6 +100,7 @@ MonoBehaviour:
   radiusOrWidth: 10
   height: 10
   box: 0
+  polygon: 0
   damagedByBullets: 1
   damagedByBeams: 0
   damagedByBombs: 1
@@ -107,16 +108,19 @@ MonoBehaviour:
   spawnSpecificPickup:
   - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
   - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
---- !u!135 &8365834714054307751
-SphereCollider:
+--- !u!58 &8751272631566130300
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4858900662698474315}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -3.1260834, y: 2.8798323}
   serializedVersion: 2
-  m_Radius: 11.710191
-  m_Center: {x: -3.0804129, y: 2.84793, z: 0}
+  m_Radius: 11.71211

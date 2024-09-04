@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class EnemyState
 {
     public string stateName;
-    private bool active = false;
+    //private bool active = false; not used yet
 
     [Space(10)]
     [Header("--Start Events--")]
@@ -27,7 +27,7 @@ public class EnemyState
 
     public bool usesTimer = false;
     public float timer = 0;
-    private float currentTime = 0;
+    //private float currentTime = 0; not used yet
 
     public void Enable()
     {

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2545575271392703647}
   - component: {fileID: 3211002293695244308}
   - component: {fileID: 7989327785048510338}
-  - component: {fileID: 6847838657784074439}
+  - component: {fileID: 795017633772020679}
   m_Layer: 12
   m_Name: MediumCoin
   m_TagString: Untagged
@@ -97,16 +97,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   config: {fileID: 11400000, guid: 1135d05d2193cf043ababea1060ba46c, type: 2}
---- !u!135 &6847838657784074439
-SphereCollider:
+  position: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
+--- !u!58 &795017633772020679
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3593519040365807719}
+  m_Enabled: 1
+  m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}

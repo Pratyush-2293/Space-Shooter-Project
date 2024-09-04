@@ -8,6 +8,9 @@ public class Shootable : MonoBehaviour
     public float radiusOrWidth = 10;
     public float height = 10;
     public bool box = false;
+    public bool polygon = false;
+
+    private Collider2D polyCollider;
 
     private int layerMask = 0;
 
@@ -24,21 +27,37 @@ public class Shootable : MonoBehaviour
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets");
 
-        halfExtent = new Vector3(radiusOrWidth / 2, height / 2, 1);
+        if (polygon)
+        {
+            polyCollider = GetComponent<PolygonCollider2D>();
+            Debug.Assert(polyCollider);
+        }
+        else
+        {
+            halfExtent = new Vector3(radiusOrWidth / 2, height / 2, 1);
+        }
     }
 
     private void FixedUpdate()
     {
         int maxColliders = 10;
-        Collider[] hits = new Collider[maxColliders];
+        Collider2D[] hits = new Collider2D[maxColliders];
         int noOfHits = 0;
         if (box)
         {
-            noOfHits = Physics.OverlapBoxNonAlloc(transform.position, halfExtent, hits, transform.rotation, layerMask);
+            noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position, halfExtent, 0, hits, layerMask); //here 0 is representing transform.rotation
+        }
+        else if (polygon)
+        {
+            ContactFilter2D contactFilter = new ContactFilter2D();
+            contactFilter.useTriggers = false;
+            contactFilter.SetLayerMask(layerMask);
+            contactFilter.useLayerMask = true;
+            noOfHits = Physics2D.OverlapCollider(polyCollider, contactFilter, hits);
         }
         else
         {
-            noOfHits = Physics.OverlapSphereNonAlloc(transform.position, radiusOrWidth, hits, layerMask);
+            noOfHits = Physics2D.OverlapCircleNonAlloc(transform.position, radiusOrWidth, hits, layerMask);
         }
 
         if (noOfHits > 0)
