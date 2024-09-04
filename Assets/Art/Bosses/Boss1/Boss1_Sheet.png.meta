@@ -1,0 +1,1020 @@
+fileFormatVersion: 2
+guid: 23180a7fb9d546949a2ad8814a1a08ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 578840580397503167
+    second: MainBody
+  - first:
+      213: 8380482760444015705
+    second: Cockpit
+  - first:
+      213: -1072893449876018052
+    second: MainHatch
+  - first:
+      213: 8843166445011965485
+    second: SmallHatch
+  - first:
+      213: 2143118808656068956
+    second: Wing
+  - first:
+      213: 4000735139339834301
+    second: RoundPanel
+  - first:
+      213: 2097830995681351075
+    second: Cannon
+  - first:
+      213: -5484069765917901130
+    second: Cannon_Damaged
+  - first:
+      213: 8790088784118720141
+    second: Nozzle
+  - first:
+      213: 7368260282960445397
+    second: Cockpit_Damaged
+  - first:
+      213: 4097760132148989798
+    second: EngineJoint
+  - first:
+      213: -4303470962789489957
+    second: Dome
+  - first:
+      213: -2368490869608872305
+    second: Dome_Damaged
+  - first:
+      213: -6834138164815377629
+    second: Burner
+  - first:
+      213: 703278886409440396
+    second: Wing_Damaged
+  - first:
+      213: -4510219766855057144
+    second: NozzleTilted
+  - first:
+      213: 4983611749429606535
+    second: SmallHatch_1
+  - first:
+      213: -857307829553397075
+    second: SmallHatch_2
+  - first:
+      213: 5624407547457571698
+    second: SmallHatch_3
+  - first:
+      213: 5977645051924430790
+    second: SmallHatch_4
+  - first:
+      213: 3916694242485023355
+    second: SmallHatch_5
+  - first:
+      213: -843820432214288395
+    second: SmallHatch_6
+  - first:
+      213: 1636598610257455300
+    second: Burner_Damaged
+  - first:
+      213: -7068145502867748297
+    second: Crown
+  - first:
+      213: 2665588726145034218
+    second: NozzleTilted_Damaged
+  - first:
+      213: -776355332354507819
+    second: Crown_Damaged
+  - first:
+      213: 9222218131529024681
+    second: Nozzle_Damaged
+  - first:
+      213: 1769190449306370117
+    second: BlackAfterburner
+  - first:
+      213: -6835667359648863175
+    second: Turret
+  - first:
+      213: 1864078620868148886
+    second: EngineJoin_Damaged
+  - first:
+      213: -3634428673689977158
+    second: BigHatch_1
+  - first:
+      213: -2495080462664093934
+    second: BigHatch_2
+  - first:
+      213: -1403218943472579756
+    second: BigHatch_3
+  - first:
+      213: -6372037525824190
+    second: BigHatch_4
+  - first:
+      213: -7079648442397043275
+    second: BigHatch_5
+  - first:
+      213: 1589145637959625055
+    second: BigHatch_6
+  - first:
+      213: -5455509134919458465
+    second: BigHatch_7
+  - first:
+      213: -6259204377627936783
+    second: BigHatch_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 2
+    wrapV: 2
+    wrapW: 2
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MainBody
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 157
+        width: 121
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb29c28e074780800800000000000000
+      internalID: 578840580397503167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cockpit
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 211
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 954fc8e3ba47d4470800000000000000
+      internalID: 8380482760444015705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MainHatch
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 220
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ceb4e77115c11f0800000000000000
+      internalID: -1072893449876018052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 242
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d269794570d39ba70800000000000000
+      internalID: 8843166445011965485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wing
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 161
+        width: 143
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c514765a333edbd10800000000000000
+      internalID: 2143118808656068956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RoundPanel
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 224
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db316c49967758730800000000000000
+      internalID: 4000735139339834301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 170
+        width: 17
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a514600d2efc1d10800000000000000
+      internalID: 2097830995681351075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cannon_Damaged
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 170
+        width: 19
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bef00f8a9ba4e3b0800000000000000
+      internalID: -5484069765917901130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nozzle
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 211
+        width: 22
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86aa816d2bacf970800000000000000
+      internalID: 8790088784118720141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cockpit_Damaged
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 166
+        width: 52
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dff97a40b1514660800000000000000
+      internalID: 7368260282960445397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EngineJoint
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 194
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66f8f7b112b2ed830800000000000000
+      internalID: 4097760132148989798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dome
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 141
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd269b9c5fff644c0800000000000000
+      internalID: -4303470962789489957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Dome_Damaged
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 141
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8605375a1e612fd0800000000000000
+      internalID: -2368490869608872305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burner
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 153
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32b4d344c834821a0800000000000000
+      internalID: -6834138164815377629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wing_Damaged
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 65
+        width: 138
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8c877acb6c82c900800000000000000
+      internalID: 703278886409440396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NozzleTilted
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 128
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 801c8a9a40b7861c0800000000000000
+      internalID: -4510219766855057144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch_1
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 138
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 788f6375b78592540800000000000000
+      internalID: 4983611749429606535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 138
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da20f4c321b3a14f0800000000000000
+      internalID: -857307829553397075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch_3
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 138
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27b0c327dd8ed0e40800000000000000
+      internalID: 5624407547457571698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 138
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cfb359f08cd4f250800000000000000
+      internalID: 5977645051924430790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 138
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72332979a4ea5630800000000000000
+      internalID: 3916694242485023355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmallHatch_6
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 138
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f796a3a9c52a44f0800000000000000
+      internalID: -843820432214288395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Burner_Damaged
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 109
+        width: 22
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c82b44d3cd56b610800000000000000
+      internalID: 1636598610257455300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crown
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 124
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73a0bc02d17e8ed90800000000000000
+      internalID: -7068145502867748297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NozzleTilted_Damaged
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 96
+        width: 27
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae72923d2d21ef420800000000000000
+      internalID: 2665588726145034218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Crown_Damaged
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 110
+        width: 30
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5db778340f4d935f0800000000000000
+      internalID: -776355332354507819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Nozzle_Damaged
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 81
+        width: 24
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a444fa7786ebff70800000000000000
+      internalID: 9222218131529024681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BlackAfterburner
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 84
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5408bee075d6d8810800000000000000
+      internalID: 1769190449306370117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turret
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 81
+        width: 6
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ca569d0c4d221a0800000000000000
+      internalID: -6835667359648863175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EngineJoin_Damaged
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 64
+        width: 24
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69efe3e11a98ed910800000000000000
+      internalID: 1864078620868148886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_1
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abef637906aef8dc0800000000000000
+      internalID: -3634428673689977158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fa3e8e981bf5dd0800000000000000
+      internalID: -2495080462664093934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_3
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45bc7343ec3c68ce0800000000000000
+      internalID: -1403218943472579756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_4
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d17c66aac59eff0800000000000000
+      internalID: -6372037525824190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_5
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5d640504900cd90800000000000000
+      internalID: -7079648442397043275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_6
+      rect:
+        serializedVersion: 2
+        x: 253
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f59e1feb987cd0610800000000000000
+      internalID: 1589145637959625055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_7
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f512a38a8532a44b0800000000000000
+      internalID: -5455509134919458465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: BigHatch_8
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 3
+        width: 49
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7baeef7c6d229a0800000000000000
+      internalID: -6259204377627936783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

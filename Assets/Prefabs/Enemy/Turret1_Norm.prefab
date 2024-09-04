@@ -318,6 +318,11 @@ MonoBehaviour:
   radiusOrWidth: 10
   height: 10
   box: 0
+  damagedByBullets: 1
+  damagedByBeams: 1
+  damagedByBombs: 1
+  spawnCyclicPickup: 1
+  spawnSpecificPickup: []
 --- !u!65 &8008595226166442334
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -390,6 +395,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  playerIndex: 2
 --- !u!1 &5119934549122601408
 GameObject:
   m_ObjectHideFlags: 0

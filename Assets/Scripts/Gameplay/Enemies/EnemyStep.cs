@@ -57,7 +57,7 @@ public class EnemyStep
     public Spline spline;
 
     [SerializeField]
-    [Range(1, 20)]
+    [Range(0.5f, 20)]
     public float movementSpeed = 4;
 
     [SerializeField]
