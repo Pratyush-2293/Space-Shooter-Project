@@ -8,10 +8,21 @@ public class Enemy : MonoBehaviour
     public EnemyData data;
     private EnemyPattern pattern;
     private EnemySection[] sections;
+    public EnemyRule[] rules;
+
+    public bool isBoss = false;
+    private int timer;
+    public int timeOut = 3600;
+    private bool timedOut = false;
+
+    Animator animator = null;
+    public string timeOutParameterName = null;
 
     private void Start()
     {
         sections = gameObject.GetComponentsInChildren<EnemySection>();
+        animator = gameObject.GetComponentInChildren<Animator>();
+        timer = timeOut;
     }
 
     public void SetPattern(EnemyPattern inPattern)
@@ -21,6 +32,24 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //timeout
+        if (isBoss)
+        {
+            if(timer<=0 && !timedOut)
+            {
+                timedOut = true;
+                if (animator)
+                {
+                    animator.SetTrigger(timeOutParameterName);
+                }
+                sections[0].EnableState("TimeOut");
+            }
+            else
+            {
+                timer--;
+            }
+        }
+
         data.ProgressTimer++;
         if (pattern)
         {
@@ -38,6 +67,16 @@ public class Enemy : MonoBehaviour
             OutOfBounds();
         }
 
+        //Update state time
+        foreach(EnemySection section in sections)
+        {
+            section.UpdateStateTimers();
+        }
+    }
+
+    public void TimeOutDestruct()
+    {
+        Destroy(gameObject);
     }
 
     void OutOfBounds()
@@ -49,7 +88,7 @@ public class Enemy : MonoBehaviour
     {
         foreach(EnemySection section in sections)
         {
-            section.EnableSection(name);
+            section.EnableState(name);
         }
     }
 
@@ -57,7 +96,31 @@ public class Enemy : MonoBehaviour
     {
         foreach (EnemySection section in sections)
         {
-            section.DisableSection(name);
+            section.DisableState(name);
+        }
+    }
+
+    public void PartDestroyed()
+    {
+        // Go through all rules and check for parts matching ruleset.
+        foreach(EnemyRule rule in rules)
+        {
+            if (!rule.triggered)
+            {
+                int noOfDestroyedParts = 0;
+                foreach(EnemyPart part in rule.partsToCheck)
+                {
+                    if (part.destroyed)
+                    {
+                        noOfDestroyedParts++;
+                    }
+                }
+                if (noOfDestroyedParts >= rule.noOfPartsRequired)
+                {
+                    rule.triggered = true;
+                    rule.ruleEvents.Invoke();
+                }
+            }
         }
     }
 }

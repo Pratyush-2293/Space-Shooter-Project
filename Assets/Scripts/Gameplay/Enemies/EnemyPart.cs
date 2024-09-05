@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class EnemyPart : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool destroyed = false;
+    public bool damaged = false;
+
+    public void Destroyed()
     {
-        
+        destroyed = true;
+        Enemy enemy = transform.root.GetComponent<Enemy>();
+        if (enemy)
+        {
+            enemy.PartDestroyed();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Damaged()
     {
-        
+        damaged = true;
     }
 }

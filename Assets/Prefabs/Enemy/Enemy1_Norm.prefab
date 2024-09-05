@@ -160,6 +160,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece4e010e0219fc49ab281fc9c2ad065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
+  damaged: 0
 --- !u!114 &8903364767848967563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,6 +259,10 @@ MonoBehaviour:
     positionX: 0
     positionY: 0
     patternUID: 0
+  rules: []
+  isBoss: 0
+  timeOut: 3600
+  timeOutParameterName: 
 --- !u!1 &2521787523570565664
 GameObject:
   m_ObjectHideFlags: 0
@@ -450,6 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: Nothing
+    active: 0
     eventOnStart:
       m_PersistentCalls:
         m_Calls: []
@@ -462,6 +469,7 @@ MonoBehaviour:
     usesTimer: 0
     timer: 0
   - stateName: Shooting
+    active: 0
     eventOnStart:
       m_PersistentCalls:
         m_Calls:
