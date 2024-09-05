@@ -130,9 +130,57 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2511302010507487985, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010547666996, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010547666998, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damaged
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010547666998, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 1636598610257455300, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302010547666998, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: destroyedVersion
+      value: 
+      objectReference: {fileID: 1769190449306370117, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302010708633457, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010708633459, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 1864078620868148886, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302010829861491, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010871093745, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010907377833, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010907377835, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 9222218131529024681, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
     - target: {fileID: 2511302010973987065, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_Name
       value: Boss1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302010973987065, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2511302010973987065, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_IsActive
@@ -220,11 +268,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2511302010973987067, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 57.2
       objectReference: {fileID: 0}
     - target: {fileID: 2511302010973987067, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2511302010973987067, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -253,6 +301,54 @@ PrefabInstance:
     - target: {fileID: 2511302010973987067, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011151126125, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011272091344, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011285708381, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011286601833, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 703278886409440396, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302011286601839, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011324867084, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011324867086, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: -5484069765917901130, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302011416962520, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011573044208, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 9222218131529024681, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302011573044214, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011580353974, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011676862941, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 2511302011676862942, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -962,6 +1058,66 @@ PrefabInstance:
       propertyPath: states.Array.data[7].eventOnStart.m_PersistentCalls.m_Calls.Array.data[6].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2511302011814516506, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302011914707340, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012021856240, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012021856242, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 1636598610257455300, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302012021856242, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: destroyedVersion
+      value: 
+      objectReference: {fileID: 1769190449306370117, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302012285209320, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 7368260282960445397, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302012285209326, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012317951052, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012354366480, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: -5484069765917901130, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302012354366486, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012355058949, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 703278886409440396, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302012355058954, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012474414532, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2511302012505953956, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: damagedVersion
+      value: 
+      objectReference: {fileID: 1864078620868148886, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+    - target: {fileID: 2511302012505953962, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
 --- !u!1001 &33513548
@@ -974,6 +1130,10 @@ PrefabInstance:
     - target: {fileID: 5172525327123139179, guid: 8ad19387a41f5194493480db818b3ead, type: 3}
       propertyPath: m_Name
       value: LargeTank
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172525327123139179, guid: 8ad19387a41f5194493480db818b3ead, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5343108064859760014, guid: 8ad19387a41f5194493480db818b3ead, type: 3}
       propertyPath: m_RootOrder
@@ -1821,6 +1981,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank2_Norm
       objectReference: {fileID: 0}
+    - target: {fileID: 5119934549122601408, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
 --- !u!1 &73745897
@@ -1834,7 +1998,7 @@ GameObject:
   - component: {fileID: 73745898}
   - component: {fileID: 73745899}
   - component: {fileID: 73745900}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BeamSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1981,7 +2145,7 @@ GameObject:
   m_Component:
   - component: {fileID: 89242910}
   - component: {fileID: 89242911}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,13 +2159,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89242909}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -16.4, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0, y: -16.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1846604510}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &89242911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,7 +2178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -2041,7 +2205,7 @@ GameObject:
   m_Component:
   - component: {fileID: 98889747}
   - component: {fileID: 98889746}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2060,7 +2224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -2084,13 +2248,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98889745}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0, y: -11.2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1507896273}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &100262330 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 642237027119864417, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
@@ -2271,6 +2435,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -2292,6 +2458,22 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 11
+--- !u!114 &148535655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 148535650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece4e010e0219fc49ab281fc9c2ad065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: 0
+  damaged: 0
+  damagedVersion: {fileID: -2368490869608872305, guid: 23180a7fb9d546949a2ad8814a1a08ce, type: 3}
+  destroyedVersion: {fileID: 0}
 --- !u!1001 &149773780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2375,7 +2557,7 @@ GameObject:
   m_Component:
   - component: {fileID: 202403306}
   - component: {fileID: 202403307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2389,13 +2571,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 202403305}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 3.3, y: -22.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2099729984}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &202403307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2408,7 +2590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -3274,6 +3456,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3301,6 +3485,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3576,7 +3762,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387726365}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: EndPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3607,7 +3793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 388733707}
   - component: {fileID: 388733706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3626,7 +3812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -3650,13 +3836,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 388733705}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0.4, y: -16.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2021008097}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1001 &425677891
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4423,6 +4609,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -4558,6 +4746,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -5440,6 +5630,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -5719,6 +5911,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -6361,6 +6555,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -6416,7 +6612,7 @@ GameObject:
   m_Component:
   - component: {fileID: 971679532}
   - component: {fileID: 971679533}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6430,13 +6626,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971679531}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0.1, y: -0.2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 247554001}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &971679533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6449,7 +6645,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -6667,6 +6863,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -6710,6 +6908,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -41848,6 +42048,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -41915,6 +42117,10 @@ PrefabInstance:
     - target: {fileID: 4050311116007991155, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
       propertyPath: m_Name
       value: BeamFlash
+      objectReference: {fileID: 0}
+    - target: {fileID: 4050311116007991155, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4050311116007991155, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
       propertyPath: m_IsActive
@@ -41991,6 +42197,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank2_Norm (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5119934549122601408, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
 --- !u!1 &1450935376
@@ -42003,7 +42213,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1450935377}
   - component: {fileID: 1450935378}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42017,13 +42227,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1450935376}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -3.7, y: -22.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 963521236}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &1450935378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42036,7 +42246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -42111,6 +42321,10 @@ PrefabInstance:
     - target: {fileID: 5119934549122601408, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
       propertyPath: m_Name
       value: Tank2_Norm (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5119934549122601408, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
@@ -51252,7 +51466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1788043516}
   - component: {fileID: 1788043515}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -51271,7 +51485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -51295,13 +51509,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788043514}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: 0.1, y: -0.3, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1171326107}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!4 &1806094851 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2511302010871093746, guid: 5ddf7d0d798cfbd4d8b1a229bb2fac0b, type: 3}
@@ -51374,6 +51588,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -53019,6 +53235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank2_Norm (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 5119934549122601408, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a4a6ebbe6d334f44942cdcf73f6d87f, type: 3}
 --- !u!1 &1979884584
@@ -53104,7 +53324,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1980301266}
   - component: {fileID: 1980301267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53118,13 +53338,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980301265}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
   m_LocalPosition: {x: -0.1, y: -11.2, z: 10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1806094851}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!114 &1980301267
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53137,7 +53357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b19da882539a6a5428edb8940925ae76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletType: 15
+  bulletType: 25
   muzzleFlash: {fileID: 0}
   sequence:
     emmitFrames: 010000000f000000
@@ -53192,6 +53412,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -53224,6 +53446,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -53480,6 +53704,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -53596,6 +53822,8 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 1
+  remainDestroy: 0
+  damageHealth: 5
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1

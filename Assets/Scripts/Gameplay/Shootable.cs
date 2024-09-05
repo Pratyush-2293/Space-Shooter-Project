@@ -10,6 +10,10 @@ public class Shootable : MonoBehaviour
     public bool box = false;
     public bool polygon = false;
 
+    public bool remainDestroy = false;
+    private bool destroyed = false;
+    public int damageHealth = 5;      //at what health the damaged sprite is displayed.
+
     private Collider2D polyCollider;
 
     private int layerMask = 0;
@@ -40,6 +44,11 @@ public class Shootable : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (destroyed)
+        {
+            return;
+        }
+
         int maxColliders = 10;
         Collider2D[] hits = new Collider2D[maxColliders];
         int noOfHits = 0;
@@ -87,9 +96,31 @@ public class Shootable : MonoBehaviour
 
     public void TakeDamage(int ammount, byte fromPlayer)
     {
+        if (destroyed)
+        {
+            return;
+        }
+
         health -= ammount;
+
+        EnemyPart part = GetComponent<EnemyPart>();
+        if (health <= damageHealth)
+        {
+            part.Damaged(true);
+        }
+        else
+        {
+            part.Damaged(false);
+        }
+
         if (health <= 0)
         {
+            destroyed = true;
+            if (part)
+            {
+                part.Destroyed();
+            }
+
             if (fromPlayer < 2)
             {
                 GameManager.instance.playerDatas[fromPlayer].chain++;
@@ -120,7 +151,14 @@ public class Shootable : MonoBehaviour
                 }
             }
 
-            Destroy(gameObject);
+            if (remainDestroy)
+            {
+                destroyed = true;
+            }
+            else
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }
