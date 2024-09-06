@@ -1,7 +1,40 @@
 fileFormatVersion: 2
 guid: d13bc50d2de56404c957be209d413d78
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5910949306077222114
+    second: EnemyExplosion0
+  - first:
+      213: -7005909672795890238
+    second: EnemyExplosion3
+  - first:
+      213: -211357867460353496
+    second: EnemyExplosion6
+  - first:
+      213: -3143810615115040823
+    second: EnemyExplosion8
+  - first:
+      213: 7963209011870657082
+    second: EnemyExplosion10
+  - first:
+      213: 1626706038145046118
+    second: EnemyExplosion1
+  - first:
+      213: 4602677228393084205
+    second: EnemyExplosion4
+  - first:
+      213: -6131908116831977966
+    second: EnemyExplosion7
+  - first:
+      213: 254757761784654154
+    second: EnemyExplosion9
+  - first:
+      213: 7127433735502665367
+    second: EnemyExplosion2
+  - first:
+      213: 1736019750961229173
+    second: EnemyExplosion5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +74,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 0
   alignment: 0
@@ -89,7 +122,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: EnemyExplosion0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 197
+        width: 55
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4131a8319e70250800000000000000
+      internalID: 5910949306077222114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 191
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd1780854206ce90800000000000000
+      internalID: -7005909672795890238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion6
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 189
+        width: 71
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822aa8da32b111df0800000000000000
+      internalID: -211357867460353496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion8
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 155
+        width: 96
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c737f4f6e0fe54d0800000000000000
+      internalID: -3143810615115040823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion10
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 146
+        width: 109
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a6db8c760038e60800000000000000
+      internalID: 7963209011870657082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 130
+        width: 61
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6665e95e588339610800000000000000
+      internalID: 1626706038145046118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion4
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 121
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25362e9d8effdf30800000000000000
+      internalID: 4602677228393084205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion7
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 100
+        width: 86
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21e35e45e0617eaa0800000000000000
+      internalID: -6131908116831977966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion9
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 46
+        width: 105
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49a2f6a5d4198300800000000000000
+      internalID: 254757761784654154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion2
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 64
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79695cc383bb9e260800000000000000
+      internalID: 7127433735502665367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: EnemyExplosion5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 48
+        width: 68
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d2b1304c4971810800000000000000
+      internalID: 1736019750961229173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
