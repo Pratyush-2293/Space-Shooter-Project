@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
             OutOfBounds();
         }
 
-        //Update state time
+        //Update state timers
         foreach(EnemySection section in sections)
         {
             section.UpdateStateTimers();
@@ -122,6 +122,11 @@ public class Enemy : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Destroyed()
+    {
+        Destroy(gameObject);
     }
 }
 

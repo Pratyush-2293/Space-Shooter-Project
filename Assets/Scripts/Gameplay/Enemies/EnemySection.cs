@@ -28,15 +28,6 @@ public class EnemySection : MonoBehaviour
         }
     }
 
-    public void TimeOutMessage()
-    {
-        Enemy enemy = transform.parent.GetComponent<Enemy>();
-        if (enemy)
-        {
-            enemy.TimeOutDestruct();
-        }
-    }
-
     public void UpdateStateTimers()
     {
         foreach(EnemyState state in states)
@@ -45,6 +36,15 @@ public class EnemySection : MonoBehaviour
             {
                 state.IncrementTime();
             }
+        }
+    }
+
+    public void TimeOutMessage()
+    {
+        Enemy enemy = transform.parent.GetComponent<Enemy>();
+        if (enemy)
+        {
+            enemy.TimeOutDestruct();
         }
     }
 }
