@@ -106,11 +106,17 @@ public class Shootable : MonoBehaviour
         EnemyPart part = GetComponent<EnemyPart>();
         if (health <= damageHealth)
         {
-            part.Damaged(true);
+            if (part)
+            {
+                part.Damaged(true);
+            }
         }
         else
         {
-            part.Damaged(false);
+            if (part)
+            {
+                part.Damaged(false);
+            }
         }
 
         if (health <= 0)

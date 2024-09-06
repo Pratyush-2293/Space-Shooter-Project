@@ -263,7 +263,7 @@ MonoBehaviour:
   radialNumber: 1
   dAngle: 0
   autoFireActive: 0
-  fireAtPlayer: 0
+  fireAtPlayer: 1
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
@@ -653,7 +653,7 @@ MonoBehaviour:
   radialNumber: 1
   dAngle: 0
   autoFireActive: 0
-  fireAtPlayer: 0
+  fireAtPlayer: 1
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
@@ -953,7 +953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -1182,6 +1182,8 @@ GameObject:
   - component: {fileID: 2511302010871093746}
   - component: {fileID: 2511302010871093747}
   - component: {fileID: 2511302010871093740}
+  - component: {fileID: 156590326816819470}
+  - component: {fileID: 8799643998226177178}
   m_Layer: 7
   m_Name: LeftTurretGun
   m_TagString: Untagged
@@ -1274,6 +1276,45 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &156590326816819470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511302010871093745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  radiusOrWidth: 10
+  height: 10
+  box: 0
+  polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  damagedByBullets: 1
+  damagedByBeams: 1
+  damagedByBombs: 1
+  spawnCyclicPickup: 0
+  spawnSpecificPickup: []
+--- !u!114 &8799643998226177178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511302010871093745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28fd4e69899a704c967ded708276dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facePlayer: 1
+  faceTarget: 0
+  target: {fileID: 0}
 --- !u!1 &2511302010907377833
 GameObject:
   m_ObjectHideFlags: 0
@@ -1766,7 +1807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 200
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -1923,7 +1964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 800
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -2106,7 +2147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -3108,6 +3149,8 @@ GameObject:
   - component: {fileID: 2511302011814516507}
   - component: {fileID: 2511302011814516500}
   - component: {fileID: 2511302011814516501}
+  - component: {fileID: 7037981919774107187}
+  - component: {fileID: 6027844083509830440}
   m_Layer: 7
   m_Name: RightTurretGun
   m_TagString: Untagged
@@ -3200,6 +3243,45 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7037981919774107187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511302011814516506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  radiusOrWidth: 10
+  height: 10
+  box: 0
+  polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  damagedByBullets: 1
+  damagedByBeams: 1
+  damagedByBombs: 1
+  spawnCyclicPickup: 0
+  spawnSpecificPickup: []
+--- !u!114 &6027844083509830440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511302011814516506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e28fd4e69899a704c967ded708276dc6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  facePlayer: 1
+  faceTarget: 0
+  target: {fileID: 0}
 --- !u!1 &2511302011914707340
 GameObject:
   m_ObjectHideFlags: 0
@@ -3495,7 +3577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -3678,7 +3760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -4005,7 +4087,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 300
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -4162,7 +4244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 800
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -4307,7 +4389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1a80249f7426e849ac8c01d6c36e13d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 200
   radiusOrWidth: 10
   height: 10
   box: 0
@@ -4537,14 +4619,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
---- !u!4 &7646066248613286719 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
-  m_PrefabInstance: {fileID: 777106476}
-  m_PrefabAsset: {fileID: 0}
 --- !u!198 &8522247874820950716 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 8522247875530751632, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
+  m_PrefabInstance: {fileID: 777106476}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7646066248613286719 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
   m_PrefabInstance: {fileID: 777106476}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &934436732
@@ -4691,14 +4773,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
---- !u!4 &4050311117355851571 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4050311116007991152, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
-  m_PrefabInstance: {fileID: 1354201155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &4050311117355851568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4050311116007991155, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
+  m_PrefabInstance: {fileID: 1354201155}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4050311117355851571 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4050311116007991152, guid: bc68646ddfb63fb43bdc14ae8a5d6027, type: 3}
   m_PrefabInstance: {fileID: 1354201155}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1398972416
@@ -4833,14 +4915,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
---- !u!198 &8522247876135230991 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 8522247875530751632, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
-  m_PrefabInstance: {fileID: 1544052895}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7646066249992701836 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
+  m_PrefabInstance: {fileID: 1544052895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &8522247876135230991 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8522247875530751632, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
   m_PrefabInstance: {fileID: 1544052895}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1921760399

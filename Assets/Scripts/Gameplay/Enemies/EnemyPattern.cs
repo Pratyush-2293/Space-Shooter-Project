@@ -100,7 +100,12 @@ public class EnemyPattern : MonoBehaviour
         currentStateIndex = WhichStep(progressTimer);
         if (currentStateIndex < 0)
         {
-            return spawnedEnemy.transform.position;
+            if (spawnedEnemy)
+            {
+                return spawnedEnemy.transform.position;
+            }
+
+            return Vector2.zero;
         }
 
         lastPosition = currentPosition;
@@ -118,6 +123,11 @@ public class EnemyPattern : MonoBehaviour
     public Quaternion CalculateRotation(float progressTimer)
     {
         currentStateIndex = WhichStep(progressTimer);
+        if (currentStateIndex < 0)
+        {
+            return Quaternion.identity;
+        }
+
         float startRotation = 0;
         if (currentStateIndex > 0)
         {
