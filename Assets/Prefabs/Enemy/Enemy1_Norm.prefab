@@ -162,6 +162,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destroyed: 0
   damaged: 0
+  damagedVersion: {fileID: 0}
+  destroyedVersion: {fileID: 0}
+  triggerOnDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyedByPlayer: 2
 --- !u!114 &8903364767848967563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,6 +185,10 @@ MonoBehaviour:
   height: 18
   box: 1
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -259,7 +269,27 @@ MonoBehaviour:
     positionX: 0
     positionY: 0
     patternUID: 0
-  rules: []
+  rules:
+  - triggered: 0
+    noOfPartsRequired: 1
+    partsToCheck:
+    - {fileID: 5765107658832201210}
+    ruleEvents:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2663116449067483935}
+          m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
+          m_MethodName: Destroyed
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    eventDelays: 
   isBoss: 0
   timeOut: 3600
   timeOutParameterName: 

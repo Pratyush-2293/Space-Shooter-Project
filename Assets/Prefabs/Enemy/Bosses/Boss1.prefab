@@ -233,7 +233,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 98889745}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0, y: -11.2, z: 10}
+  m_LocalPosition: {x: -0, y: -11.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302011814516507}
@@ -443,7 +443,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 971679531}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.1, y: -0.2, z: 10}
+  m_LocalPosition: {x: 0.1, y: -0.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302011285708382}
@@ -563,7 +563,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1788043514}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.1, y: -0.3, z: 10}
+  m_LocalPosition: {x: 0.1, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302012474414533}
@@ -623,7 +623,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1980301265}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: -0.1, y: -11.2, z: 10}
+  m_LocalPosition: {x: -0.1, y: -11.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302010871093746}
@@ -777,6 +777,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -810,7 +812,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302010547666996}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -82.2486, y: -35.915585, z: 23.370827}
+  m_LocalPosition: {x: -82.2486, y: -35.915585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 89242910}
@@ -900,10 +902,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 89242911}
-        m_TargetAssemblyTypeName: BulletSpawner, Assembly-CSharp
-        m_MethodName: DeActivate
-        m_Mode: 1
+      - m_Target: {fileID: 89242909}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -912,6 +914,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroyedByPlayer: 2
 --- !u!60 &1846604511
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -960,6 +963,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 1
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -993,7 +998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302010708633457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -117.2486, y: -1.9155846, z: 23.370827}
+  m_LocalPosition: {x: -117.2486, y: -1.9155846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302010829861484}
@@ -1069,6 +1074,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!60 &459222213
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1117,6 +1123,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -1147,7 +1155,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302010829861491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -16.751404, y: -31.584415, z: -13.370827}
+  m_LocalPosition: {x: -16.751404, y: -31.584415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2511302012355058955}
@@ -1276,6 +1284,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!114 &156590326816819470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1295,6 +1304,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -1343,7 +1354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302010907377833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -117.2486, y: 11.084415, z: 23.370827}
+  m_LocalPosition: {x: -117.2486, y: 11.084415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302010829861484}
@@ -1419,6 +1430,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!60 &276134932
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1467,6 +1479,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -1497,7 +1511,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302010973987065}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2511302011676862942}
@@ -1650,7 +1664,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302011272091344}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 205.2486, y: -32.084415, z: -13.370827}
+  m_LocalPosition: {x: 205.2486, y: -32.084415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2511302011286601832}
@@ -1779,6 +1793,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!58 &247554002
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1814,6 +1829,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -1847,7 +1864,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302011286601839}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -102.2486, y: -6.9155846, z: 23.370827}
+  m_LocalPosition: {x: -102.2486, y: -6.9155846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302011272091345}
@@ -1923,6 +1940,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!60 &2072878986
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -1971,6 +1989,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 1
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -2004,7 +2024,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302011324867084}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -158.2486, y: -43.915585, z: 23.370827}
+  m_LocalPosition: {x: -158.2486, y: -43.915585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1450935377}
@@ -2094,10 +2114,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1450935378}
-        m_TargetAssemblyTypeName: BulletSpawner, Assembly-CSharp
-        m_MethodName: DeActivate
-        m_Mode: 1
+      - m_Target: {fileID: 1450935376}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2106,6 +2126,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroyedByPlayer: 2
 --- !u!60 &963521239
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2154,6 +2175,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 1
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -2263,6 +2286,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!1 &2511302011573044214
 GameObject:
   m_ObjectHideFlags: 0
@@ -2291,7 +2315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302011573044214}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -67.2486, y: 10.084415, z: 23.370827}
+  m_LocalPosition: {x: -67.2486, y: 10.084415, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302011272091345}
@@ -2367,6 +2391,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!60 &489063263
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -2415,6 +2440,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -2522,6 +2549,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!1 &2511302011676862941
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3136,7 @@ MonoBehaviour:
         - m_Target: {fileID: 2511302010973987066}
           m_TargetAssemblyTypeName: Enemy, Assembly-CSharp
           m_MethodName: Destroyed
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3243,6 +3271,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!114 &7037981919774107187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,6 +3291,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3401,6 +3432,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3434,7 +3467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302012021856240}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -105.2486, y: -34.915585, z: 23.370827}
+  m_LocalPosition: {x: -105.2486, y: -34.915585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 388733707}
@@ -3524,10 +3557,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 388733706}
-        m_TargetAssemblyTypeName: BulletSpawner, Assembly-CSharp
-        m_MethodName: DeActivate
-        m_Mode: 1
+      - m_Target: {fileID: 388733705}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3536,6 +3569,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroyedByPlayer: 2
 --- !u!60 &2021008100
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3584,6 +3618,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 1
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3617,7 +3653,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302012285209326}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -68, z: 10}
+  m_LocalPosition: {x: 0, y: -68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 73745898}
@@ -3719,6 +3755,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroyedByPlayer: 2
 --- !u!60 &1354242621
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3767,6 +3804,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3892,6 +3931,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -3916,6 +3957,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!1 &2511302012354366486
 GameObject:
   m_ObjectHideFlags: 0
@@ -3944,7 +3986,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302012354366486}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -29.248596, y: -42.915585, z: 23.370827}
+  m_LocalPosition: {x: -29.248596, y: -42.915585, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 202403306}
@@ -4034,10 +4076,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 202403307}
-        m_TargetAssemblyTypeName: BulletSpawner, Assembly-CSharp
-        m_MethodName: DeActivate
-        m_Mode: 1
+      - m_Target: {fileID: 202403305}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4046,6 +4088,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  destroyedByPlayer: 2
 --- !u!60 &2099729985
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4094,6 +4137,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 1
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -4127,7 +4172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302012355058954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -85.2486, y: -7.9155846, z: 23.370827}
+  m_LocalPosition: {x: -85.2486, y: -7.9155846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302010829861484}
@@ -4203,6 +4248,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!60 &649844927
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4251,6 +4297,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 1
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -4361,6 +4409,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!58 &1171326110
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4396,6 +4445,8 @@ MonoBehaviour:
   polygon: 0
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -4429,7 +4480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2511302012505953962}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -67.2486, y: -2.9155846, z: 23.370827}
+  m_LocalPosition: {x: -67.2486, y: -2.9155846, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2511302011272091345}
@@ -4505,6 +4556,7 @@ MonoBehaviour:
   triggerOnDestroyed:
     m_PersistentCalls:
       m_Calls: []
+  destroyedByPlayer: 2
 --- !u!60 &1192020901
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -4553,6 +4605,8 @@ MonoBehaviour:
   polygon: 1
   remainDestroy: 0
   damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
@@ -4587,7 +4641,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4658,7 +4712,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4812,7 +4866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4883,7 +4937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4950,7 +5004,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7646066249254004499, guid: eac35831df1cf364dbec344ca05b2e62, type: 3}
       propertyPath: m_LocalRotation.w

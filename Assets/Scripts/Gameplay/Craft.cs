@@ -26,6 +26,10 @@ public class Craft : MonoBehaviour
     const int INVULNERABLENGTH = 120;
     public static int MAXIMUMBEAMCHARGE = 64;
 
+    const byte MAXLIVES = 5;
+    const int MAXSMALLBOMBS = 8;
+    const int MAXLARGEBOMBS = 5;
+
     public SpriteRenderer spriteRenderer = null;
     public BulletSpawner[] bulletSpawner = new BulletSpawner[5];
     public Option[] options = new Option[4];
@@ -71,6 +75,7 @@ public class Craft : MonoBehaviour
                 if (GameManager.instance.playerDatas[playerIndex].chainTimer == 0)
                 {
                     GameManager.instance.playerDatas[playerIndex].chain = 0;
+                    ScoreManager.instance.UpdateChainMultiplier(playerIndex);
                 }
             }
 
@@ -294,12 +299,16 @@ public class Craft : MonoBehaviour
         yield return null;
     }
 
-    public void AddOption()
+    public void AddOption(int surplusValue)
     {
         if (craftData.numberOfEnabledOptions < 4)
         {
             options[craftData.numberOfEnabledOptions].gameObject.SetActive(true);
             craftData.numberOfEnabledOptions++;
+        }
+        else
+        {
+            ScoreManager.instance.PickupCollected(playerIndex, surplusValue);
         }
     }
 
@@ -331,12 +340,16 @@ public class Craft : MonoBehaviour
         }
     }
 
-    public void IncreaseBeamStrength()
+    public void IncreaseBeamStrength(int surplusValue)
     {
         if (craftData.beamPower<5)
         {
             craftData.beamPower++;
             UpdateBeam();
+        }
+        else
+        {
+            ScoreManager.instance.PickupCollected(playerIndex, surplusValue);
         }
     }
 
@@ -360,11 +373,12 @@ public class Craft : MonoBehaviour
         }
     }
 
-    public void PowerUp(byte powerLevel)
+    public void PowerUp(byte powerLevel, int surplusValue)
     {
         craftData.shotPower += powerLevel;
         if (craftData.shotPower > 8)
         {
+            ScoreManager.instance.PickupCollected(playerIndex, surplusValue);
             craftData.shotPower = 8;
         }
     }
@@ -375,20 +389,35 @@ public class Craft : MonoBehaviour
         GameManager.instance.playerDatas[playerIndex].stageScore += value;
     }
 
-    public void OneUp()
+    public void OneUp(int surplusValue)
     {
         GameManager.instance.playerDatas[playerIndex].lives++;
+        if (GameManager.instance.playerDatas[playerIndex].lives > MAXLIVES)
+        {
+            ScoreManager.instance.PickupCollected(playerIndex, surplusValue);
+            GameManager.instance.playerDatas[playerIndex].lives = MAXLIVES;
+        }
     }
 
-    public void AddBomb(int power)
+    public void AddBomb(int power, int surplusValue)
     {
         if (power == 1)
         {
             craftData.smallBombs++;
+            if (craftData.smallBombs > MAXSMALLBOMBS)
+            {
+                craftData.smallBombs = MAXSMALLBOMBS;
+                ScoreManager.instance.PickupCollected(playerIndex, surplusValue);
+            }
         }
         else if (power == 2)
         {
             craftData.largeBombs++;
+            if (craftData.largeBombs > MAXLARGEBOMBS)
+            {
+                craftData.largeBombs = MAXLARGEBOMBS;
+                ScoreManager.instance.PickupCollected(playerIndex, surplusValue);
+            }
         }
         else
         {
@@ -398,6 +427,7 @@ public class Craft : MonoBehaviour
 
     public void AddMedal(int level, int value)
     {
+        ScoreManager.instance.MedalCollected(playerIndex, value);
         IncreaseScore(value);
     }
 }

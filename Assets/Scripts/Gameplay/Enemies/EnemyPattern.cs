@@ -26,6 +26,8 @@ public class EnemyPattern : MonoBehaviour
     [HideInInspector]
     public Quaternion lastAngle = Quaternion.identity;
 
+    public WaveTrigger owningWave = null;
+
     #if UNITY_EDITOR
     [MenuItem("GameObject/SHMUP/EnemyPattern", false, 10)]
     static void CreateEnemyPatternObject(MenuCommand menuCommand)
@@ -62,6 +64,7 @@ public class EnemyPattern : MonoBehaviour
         if (spawnedEnemy == null)
         {
             spawnedEnemy = Instantiate(enemyPrefab, transform.position, transform.rotation).GetComponent<Enemy>();
+            spawnedEnemy.SetWave(owningWave);
             spawnedEnemy.SetPattern(this);
 
             lastPosition = spawnedEnemy.transform.position;

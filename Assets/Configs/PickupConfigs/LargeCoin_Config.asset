@@ -19,4 +19,4 @@ MonoBehaviour:
   fallSpeed: 0
   coinValue: 30
   medalLevel: 1
-  surplusValue: 100
+  surplusValue: 5000

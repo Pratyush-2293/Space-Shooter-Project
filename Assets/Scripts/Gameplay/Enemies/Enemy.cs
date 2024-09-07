@@ -18,11 +18,18 @@ public class Enemy : MonoBehaviour
     Animator animator = null;
     public string timeOutParameterName = null;
 
+    private WaveTrigger owningWave = null;
+
     private void Start()
     {
         sections = gameObject.GetComponentsInChildren<EnemySection>();
         animator = gameObject.GetComponentInChildren<Animator>();
         timer = timeOut;
+    }
+
+    public void SetWave(WaveTrigger wave)
+    {
+        owningWave = wave;
     }
 
     public void SetPattern(EnemyPattern inPattern)
@@ -124,8 +131,15 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void Destroyed()
+    public void Destroyed(int triggeredFromRuleIndex)
     {
+        EnemyRule triggeredRule = rules[triggeredFromRuleIndex];
+        int playerIndex = triggeredRule.partsToCheck[0].destroyedByPlayer; //todo: check that using just the first index is safe.
+
+        if (owningWave)
+        {
+            owningWave.EnemyDestroyed(transform.position, playerIndex);
+        }
         Destroy(gameObject);
     }
 }

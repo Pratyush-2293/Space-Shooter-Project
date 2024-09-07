@@ -66,22 +66,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            if (playerCrafts[0])
-            {
-                playerCrafts[0].AddOption();
-            }
-        }
-
-        if (Input.GetKeyDown(KeyCode.RightBracket))
-        {
-            if (playerCrafts[0])
-            {
-                playerCrafts[0].IncreaseBeamStrength();
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             EnemyPattern testPattern =  GameObject.FindObjectOfType<EnemyPattern>();

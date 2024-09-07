@@ -14,6 +14,9 @@ public class Shootable : MonoBehaviour
     private bool destroyed = false;
     public int damageHealth = 5;      //at what health the damaged sprite is displayed.
 
+    public int hitScore = 10;
+    public int destroyScore = 1000;
+
     private Collider2D polyCollider;
 
     private int layerMask = 0;
@@ -101,6 +104,8 @@ public class Shootable : MonoBehaviour
             return;
         }
 
+        ScoreManager.instance.ShootableHit(fromPlayer, hitScore);
+
         health -= ammount;
 
         EnemyPart part = GetComponent<EnemyPart>();
@@ -119,17 +124,20 @@ public class Shootable : MonoBehaviour
             }
         }
 
-        if (health <= 0)
+        if (health <= 0) // destroyed
         {
             destroyed = true;
             if (part)
             {
-                part.Destroyed();
+                part.Destroyed(fromPlayer);
             }
 
             if (fromPlayer < 2)
             {
+                ScoreManager.instance.ShootableDestroyed(fromPlayer, destroyScore);
+
                 GameManager.instance.playerDatas[fromPlayer].chain++;
+                ScoreManager.instance.UpdateChainMultiplier(fromPlayer);
                 GameManager.instance.playerDatas[fromPlayer].chainTimer = PlayerData.MAXCHAINTIMER;
             }
 
