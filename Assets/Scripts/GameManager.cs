@@ -71,6 +71,11 @@ public class GameManager : MonoBehaviour
             EnemyPattern testPattern =  GameObject.FindObjectOfType<EnemyPattern>();
             testPattern.Spawn();
         }
+
+        if (Input.GetKeyDown(KeyCode.BackQuote))
+        {
+            DebugManager.instance.ToggleHUD();
+        }
     }
 
     public void StartGame()

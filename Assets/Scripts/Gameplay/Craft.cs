@@ -269,7 +269,7 @@ public class Craft : MonoBehaviour
 
     public void Hit()
     {
-        if (!invulnerable)
+        if (!invulnerable && !GameManager.instance.gameSession.invincible)
         {
             Explode();
         }

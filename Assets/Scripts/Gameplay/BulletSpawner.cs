@@ -137,6 +137,9 @@ public class BulletSpawner : MonoBehaviour
     public void DeActivate()
     {
         autoFireActive = false;
+        //timer = 0;
+        //frame = 0;
+        //firing = false;
     }
 }
 
