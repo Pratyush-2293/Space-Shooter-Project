@@ -23,13 +23,14 @@ public class Beam : MonoBehaviour
 
     public void Fire()
     {
-        if (!craft.craftData.beamFiring)
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[craft.playerIndex];
+        if (!craftData.beamFiring)
         {
-            if (craft.craftData.beamCharge >= MINIMUMCHARGE)
+            if (craftData.beamCharge >= MINIMUMCHARGE)
             {
-                craft.craftData.beamFiring = true;
-                craft.craftData.beamTimer = craft.craftData.beamCharge;
-                craft.craftData.beamCharge = 0;
+                craftData.beamFiring = true;
+                craftData.beamTimer = craftData.beamCharge;
+                craftData.beamCharge = 0;
                 UpdateBeam();
                 float scale = beamWidth / 30f;
                 beamFlash.transform.localScale = new Vector3(scale, scale, 1);
@@ -50,7 +51,8 @@ public class Beam : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (craft.craftData.beamFiring)
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[craft.playerIndex];
+        if (craftData.beamFiring)
         {
             UpdateBeam();
         } 
@@ -66,17 +68,18 @@ public class Beam : MonoBehaviour
 
     void UpdateBeam()
     {
-        if (craft.craftData.beamTimer > 0)
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[craft.playerIndex];
+        if (craftData.beamTimer > 0)
         {
-            craft.craftData.beamTimer--;
+            craftData.beamTimer--;
         }
-        if (craft.craftData.beamTimer==0) //Beam finished
+        if (craftData.beamTimer==0) //Beam finished
         {
             if (audioSource)
             {
                 audioSource.Stop();
             }
-            craft.craftData.beamFiring = false;
+            craftData.beamFiring = false;
             HideHits();
             gameObject.SetActive(false);
             beamFlash.SetActive(false);
@@ -140,7 +143,7 @@ public class Beam : MonoBehaviour
                         pos.y += Random.Range(-3f, 3f);
                         beamHits[h].transform.position = pos;
                         beamHits[h].SetActive(true);
-                        lowestShootable.TakeDamage(craft.craftData.beamPower+1, playerIndex);
+                        lowestShootable.TakeDamage(craftData.beamPower+1, playerIndex);
                     }
                     else
                     {

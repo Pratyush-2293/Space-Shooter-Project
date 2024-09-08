@@ -58,14 +58,6 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (playerCrafts[0] && playerCrafts[0].craftData.shotPower < CraftConfiguration.MAX_SHOT_POWER)
-            {
-                playerCrafts[0].craftData.shotPower++;
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.E))
         {
             EnemyPattern testPattern =  GameObject.FindObjectOfType<EnemyPattern>();

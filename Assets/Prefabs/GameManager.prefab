@@ -61,6 +61,29 @@ MonoBehaviour:
   bulletManager: {fileID: 0}
   progressWindow: {fileID: 0}
   gameSession:
+    craftDatas:
+    - positionX: 0
+      positionY: 0
+      shotPower: 0
+      numberOfEnabledOptions: 0
+      optionsLayout: 0
+      beamFiring: 0
+      beamPower: 0
+      beamCharge: 0
+      beamTimer: 0
+      smallBombs: 3
+      largeBombs: 3
+    - positionX: 0
+      positionY: 0
+      shotPower: 0
+      numberOfEnabledOptions: 0
+      optionsLayout: 0
+      beamFiring: 0
+      beamPower: 0
+      beamCharge: 0
+      beamTimer: 0
+      smallBombs: 0
+      largeBombs: 0
     hardness: 1
     stage: 1
     practice: 0

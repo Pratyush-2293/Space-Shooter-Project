@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Craft : MonoBehaviour
 {
-    public CraftData craftData = new CraftData();
     Vector3 newPosition = new Vector3();
     public CraftConfiguration config;
     public int playerIndex;
@@ -69,7 +68,9 @@ public class Craft : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(InputManager.instance && alive)
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
+        if (InputManager.instance && alive)
         {
             //Chain Drop
             if (GameManager.instance.playerDatas[playerIndex].chainTimer > 0)
@@ -264,6 +265,8 @@ public class Craft : MonoBehaviour
 
     public void PickUp(PickUp pickUp)
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         if (pickUp)
         {
             pickUp.ProcessPickup(playerIndex, craftData);
@@ -310,6 +313,8 @@ public class Craft : MonoBehaviour
 
     public void AddOption(int surplusValue)
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         if (craftData.numberOfEnabledOptions < 4)
         {
             options[craftData.numberOfEnabledOptions].gameObject.SetActive(true);
@@ -351,6 +356,8 @@ public class Craft : MonoBehaviour
 
     public void IncreaseBeamStrength(int surplusValue)
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         if (craftData.beamPower<5)
         {
             craftData.beamPower++;
@@ -364,11 +371,15 @@ public class Craft : MonoBehaviour
 
     void UpdateBeam()
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         beam.beamWidth = (craftData.beamPower + 2) * 8f;
     }
 
     void FireBomb()
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         if (craftData.smallBombs > 0)
         {
             craftData.smallBombs--;
@@ -388,6 +399,8 @@ public class Craft : MonoBehaviour
 
     public void PowerUp(byte powerLevel, int surplusValue)
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         craftData.shotPower += powerLevel;
         if (craftData.shotPower > 8)
         {
@@ -414,6 +427,8 @@ public class Craft : MonoBehaviour
 
     public void AddBomb(int power, int surplusValue)
     {
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+
         if (power == 1)
         {
             craftData.smallBombs++;
@@ -443,23 +458,4 @@ public class Craft : MonoBehaviour
         ScoreManager.instance.MedalCollected(playerIndex, value);
         IncreaseScore(value);
     }
-}
-
-[Serializable]
-public class CraftData
-{
-    public float positionX;
-    public float positionY;
-
-    public byte shotPower;
-    public byte numberOfEnabledOptions;
-    public byte optionsLayout;
-
-    public bool beamFiring;
-    public byte beamPower;    // Damage and Width
-    public byte beamCharge;   // Picked by charge
-    public byte beamTimer;    // Current Charge Level - How Much Beam is Left
-
-    public byte smallBombs;
-    public byte largeBombs;
 }

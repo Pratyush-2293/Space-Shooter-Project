@@ -114,10 +114,10 @@ public class HUD : MonoBehaviour
             return;
         }
 
-        CraftData data = GameManager.instance.playerCrafts[playerIndex].craftData;
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
 
-        int largeBombs = data.largeBombs;
-        int smallBombs = data.smallBombs;
+        int largeBombs = craftData.largeBombs;
+        int smallBombs = craftData.smallBombs;
 
         for(int i = 0; i < 5; i++) // Handling BigBombs
         {
@@ -158,9 +158,9 @@ public class HUD : MonoBehaviour
             return;
         }
 
-        CraftData data = GameManager.instance.playerCrafts[playerIndex].craftData;
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
 
-        int power = data.shotPower;
+        int power = craftData.shotPower;
         for(int i = 0; i < 8; i++)
         {
             if (power > i)
@@ -189,8 +189,8 @@ public class HUD : MonoBehaviour
             return;
         }
 
-        CraftData data = GameManager.instance.playerCrafts[playerIndex].craftData;
-        int beam = data.beamPower;
+        CraftData craftData = GameManager.instance.gameSession.craftDatas[playerIndex];
+        int beam = craftData.beamPower;
 
         for(int i = 0; i < 5; i++)
         {
@@ -204,7 +204,7 @@ public class HUD : MonoBehaviour
             }
         }
 
-        hud.beamGradient.fillAmount = (float)data.beamTimer / (float)Craft.MAXIMUMBEAMCHARGE;
+        hud.beamGradient.fillAmount = (float)craftData.beamTimer / (float)Craft.MAXIMUMBEAMCHARGE;
     }
 
     private void UpdateControls(int playerIndex)

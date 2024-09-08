@@ -5,6 +5,7 @@ using UnityEngine;
 public class Session
 {
     public enum Hardness { Easy, Normal, Hard, Insane};
+    public CraftData[] craftDatas = new CraftData[2];
 
     public Hardness hardness = Hardness.Normal;
     public int stage = 1;
@@ -19,4 +20,23 @@ public class Session
     public bool invincible = false;
     public bool halfSpeed = false;
     public bool doubleSpeed = false;
+}
+
+[Serializable]
+public class CraftData
+{
+    public float positionX;
+    public float positionY;
+
+    public byte shotPower;
+    public byte numberOfEnabledOptions;
+    public byte optionsLayout;
+
+    public bool beamFiring;
+    public byte beamPower;    // Damage and Width
+    public byte beamCharge;   // Picked by charge
+    public byte beamTimer;    // Current Charge Level - How Much Beam is Left
+
+    public byte smallBombs;
+    public byte largeBombs;
 }

@@ -11,6 +11,7 @@ public class LevelProgress : MonoBehaviour
     public GameObject midGroundTileGrid;
     public float midGroundRate = 0.75f;
     private Craft player1Craft;
+    CraftData craftData;
 
     public bool disableMovement = false;
 
@@ -27,6 +28,11 @@ public class LevelProgress : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (player1Craft)
+        {
+            craftData = GameManager.instance.gameSession.craftDatas[player1Craft.playerIndex];
+        }
+
         if (data.progress < levelSize)
         {
             if (player1Craft == null)
@@ -38,7 +44,7 @@ public class LevelProgress : MonoBehaviour
                 float ratio = (float)data.progress / (float)levelSize;
                 float movement = speedCurve.Evaluate(ratio);
                 data.progress++;
-                UpdateProgressWindow(player1Craft.craftData.positionX, movement);
+                UpdateProgressWindow(craftData.positionX, movement);
             }
         }
     }
