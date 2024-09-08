@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8140902620209459578}
   - component: {fileID: 1729381724545561225}
   - component: {fileID: 7190667810998973945}
+  - component: {fileID: -783750948744067373}
   m_Layer: 12
   m_Name: 1up
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: d871c1e150795d943a0ae0190525b01b, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
+  pickupSound: {fileID: -783750948744067373}
 --- !u!61 &7190667810998973945
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 29, y: 29}
   m_EdgeRadius: 0
+--- !u!114 &-783750948744067373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2976549628369662858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 15dc96afc0b990f47aa1ff01f6fb4670, type: 3}

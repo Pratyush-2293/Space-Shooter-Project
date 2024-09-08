@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7261597547562291079}
   - component: {fileID: 4990103666359882644}
   - component: {fileID: 6369493765324255233}
+  - component: {fileID: -1203992340387989833}
   m_Layer: 12
   m_Name: SmallCoin
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 8aa59db9e42c55d47a07bf33029f2d7f, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
+  pickupSound: {fileID: -1203992340387989833}
 --- !u!58 &6369493765324255233
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,3 +117,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 4
+--- !u!114 &-1203992340387989833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8163691867461974360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 22a7b275617606a42b69b718f125f733, type: 3}

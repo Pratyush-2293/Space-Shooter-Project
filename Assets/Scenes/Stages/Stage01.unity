@@ -5249,6 +5249,7 @@ MonoBehaviour:
   levelSize: 4500
   midGroundTileGrid: {fileID: 2021531073}
   midGroundRate: 0.5
+  disableMovement: 0
 --- !u!1 &617715119
 GameObject:
   m_ObjectHideFlags: 0

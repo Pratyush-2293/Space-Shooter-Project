@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2175699449780782257}
   - component: {fileID: 2653027252809434361}
   - component: {fileID: 8751272631566130300}
+  - component: {fileID: 4485113568357334101}
   m_Layer: 11
   m_Name: FuelBarrel
   m_TagString: Untagged
@@ -101,6 +102,10 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 0
   damagedByBombs: 1
@@ -108,6 +113,7 @@ MonoBehaviour:
   spawnSpecificPickup:
   - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
   - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
+  destroyedSounds: {fileID: 4485113568357334101}
 --- !u!58 &8751272631566130300
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -124,3 +130,18 @@ CircleCollider2D:
   m_Offset: {x: -3.1260834, y: 2.8798323}
   serializedVersion: 2
   m_Radius: 11.71211
+--- !u!114 &4485113568357334101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4858900662698474315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ab02eb23ce8a4134cb66a544c0ab3c17, type: 3}
+  - {fileID: 8300000, guid: 0028887c046a76441ae04c1af4c8f9d4, type: 3}

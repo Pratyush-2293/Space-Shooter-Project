@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1427792318016698561}
   - component: {fileID: 6198388720426442556}
   - component: {fileID: 8904492321295467755}
+  - component: {fileID: -2171549992896459541}
   m_Layer: 12
   m_Name: SmallBomb
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 27cdfb3c3b7691c4e86712f759a190bf, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
+  pickupSound: {fileID: -2171549992896459541}
 --- !u!61 &8904492321295467755
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 18, y: 11}
   m_EdgeRadius: 0
+--- !u!114 &-2171549992896459541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659445055892212309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 4ae19778145371c4e9f0919583aa2dee, type: 3}

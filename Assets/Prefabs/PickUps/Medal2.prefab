@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2538812175799484879}
   - component: {fileID: 1671015229285225193}
   - component: {fileID: 2681957883037757544}
+  - component: {fileID: -3119014114988447700}
   m_Layer: 12
   m_Name: Medal2
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: fc4e2562e58b90940b189c4427f252ae, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
+  pickupSound: {fileID: -3119014114988447700}
 --- !u!61 &2681957883037757544
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -125,3 +127,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 8, y: 13}
   m_EdgeRadius: 0
+--- !u!114 &-3119014114988447700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401556681912018758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 22a7b275617606a42b69b718f125f733, type: 3}

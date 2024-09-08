@@ -145,6 +145,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   states:
   - stateName: Shooting
+    active: 0
     eventOnStart:
       m_PersistentCalls:
         m_Calls:
@@ -217,6 +218,7 @@ GameObject:
   - component: {fileID: 6594091411798378201}
   - component: {fileID: 1799458181545689803}
   - component: {fileID: 1109136771816170286}
+  - component: {fileID: 8265371392670558162}
   m_Layer: 11
   m_Name: TurretBase
   m_TagString: Untagged
@@ -302,6 +304,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ece4e010e0219fc49ab281fc9c2ad065, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destroyed: 0
+  damaged: 0
+  damagedVersion: {fileID: 0}
+  destroyedVersion: {fileID: 0}
+  triggerOnDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyedByPlayer: 2
 --- !u!114 &1799458181545689803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,11 +329,16 @@ MonoBehaviour:
   height: 10
   box: 0
   polygon: 0
+  remainDestroy: 0
+  damageHealth: 5
+  hitScore: 10
+  destroyScore: 1000
   damagedByBullets: 1
   damagedByBeams: 1
   damagedByBombs: 1
   spawnCyclicPickup: 1
   spawnSpecificPickup: []
+  destroyedSounds: {fileID: 8265371392670558162}
 --- !u!61 &1109136771816170286
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -350,6 +365,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 22, y: 23}
   m_EdgeRadius: 0
+--- !u!114 &8265371392670558162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704683491717679330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ab02eb23ce8a4134cb66a544c0ab3c17, type: 3}
+  - {fileID: 8300000, guid: 0028887c046a76441ae04c1af4c8f9d4, type: 3}
 --- !u!1 &4681231143159222848
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +439,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 2
 --- !u!1 &5119934549122601408
 GameObject:
@@ -459,3 +490,7 @@ MonoBehaviour:
     positionX: 0
     positionY: 0
     patternUID: 0
+  rules: []
+  isBoss: 0
+  timeOut: 3600
+  timeOutParameterName: 

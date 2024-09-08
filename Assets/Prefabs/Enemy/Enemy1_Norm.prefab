@@ -59,6 +59,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 2
 --- !u!1 &811328204375240654
 GameObject:
@@ -73,6 +74,7 @@ GameObject:
   - component: {fileID: 5765107658832201210}
   - component: {fileID: 8903364767848967563}
   - component: {fileID: 3789099392464907873}
+  - component: {fileID: 7842198368479673104}
   m_Layer: 7
   m_Name: MainPart
   m_TagString: Untagged
@@ -194,6 +196,7 @@ MonoBehaviour:
   damagedByBombs: 1
   spawnCyclicPickup: 1
   spawnSpecificPickup: []
+  destroyedSounds: {fileID: 7842198368479673104}
 --- !u!61 &3789099392464907873
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -220,6 +223,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 25.280703, y: 27.19766}
   m_EdgeRadius: 0
+--- !u!114 &7842198368479673104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811328204375240654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: ab02eb23ce8a4134cb66a544c0ab3c17, type: 3}
+  - {fileID: 8300000, guid: 0028887c046a76441ae04c1af4c8f9d4, type: 3}
 --- !u!1 &843621282448340565
 GameObject:
   m_ObjectHideFlags: 0

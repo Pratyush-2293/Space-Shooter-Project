@@ -14,6 +14,8 @@ public class Beam : MonoBehaviour
 
     const int MINIMUMCHARGE = 10;
 
+    public AudioSource audioSource = null;
+
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("PlayerBullets") & ~LayerMask.GetMask("Player");
@@ -33,6 +35,10 @@ public class Beam : MonoBehaviour
                 beamFlash.transform.localScale = new Vector3(scale, scale, 1);
                 gameObject.SetActive(true);
                 beamFlash.SetActive(true);
+                if (audioSource)
+                {
+                    audioSource.Play();
+                }
             }
             else
             {
@@ -66,6 +72,10 @@ public class Beam : MonoBehaviour
         }
         if (craft.craftData.beamTimer==0) //Beam finished
         {
+            if (audioSource)
+            {
+                audioSource.Stop();
+            }
             craft.craftData.beamFiring = false;
             HideHits();
             gameObject.SetActive(false);

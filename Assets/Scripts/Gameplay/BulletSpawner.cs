@@ -29,6 +29,8 @@ public class BulletSpawner : MonoBehaviour
 
     public bool homing = false;
 
+    public SoundFX shootSounds = null;
+
     //public bool isPlayer = false;
     public byte playerIndex = 2;  // values > 2 are enemy
 
@@ -89,6 +91,10 @@ public class BulletSpawner : MonoBehaviour
             if (muzzleFlash)
             {
                 muzzleFlash.SetActive(true);
+            }
+            if (shootSounds)
+            {
+                shootSounds.Play();
             }
         }
     }

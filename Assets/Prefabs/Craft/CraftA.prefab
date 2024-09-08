@@ -162,6 +162,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &333739892569695548
 GameObject:
@@ -633,6 +634,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &1520049054882664807
 GameObject:
@@ -647,6 +649,8 @@ GameObject:
   - component: {fileID: 1520049054882664806}
   - component: {fileID: 8655027750514915545}
   - component: {fileID: 1519274574626890555}
+  - component: {fileID: 6087202104649722555}
+  - component: {fileID: 995628903772281724}
   m_Layer: 6
   m_Name: CraftA
   m_TagString: Untagged
@@ -813,6 +817,8 @@ MonoBehaviour:
   - {fileID: 1691766907556498446}
   beam: {fileID: 3175303287926300319}
   bombPrefab: {fileID: 6023031918159866742, guid: 4008929f8552a8b47bb59035765992be, type: 3}
+  explodingNoise: {fileID: 6087202104649722555}
+  bombSound: {fileID: 995628903772281724}
 --- !u!95 &8655027750514915545
 Animator:
   serializedVersion: 3
@@ -858,6 +864,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 6.124564, y: 7.967889}
   m_EdgeRadius: 0
+--- !u!114 &6087202104649722555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520049054882664807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 57149d1610069a544b8d455342b1189a, type: 3}
+--- !u!114 &995628903772281724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520049054882664807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 15fd18020b93573498a6cd5c7afa249b, type: 3}
 --- !u!1 &1543468114268186679
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,6 +1278,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &2054710740725056907
 GameObject:
@@ -2144,6 +2179,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &5429681781523479107
 GameObject:
@@ -2548,6 +2584,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &6008603045436229651
 GameObject:
@@ -2669,6 +2706,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &6377718917361155504
 GameObject:
@@ -2711,6 +2749,7 @@ GameObject:
   - component: {fileID: 2831818073913008491}
   - component: {fileID: 7212556134631488600}
   - component: {fileID: 3175303287926300319}
+  - component: {fileID: 1532636478390545838}
   m_Layer: 6
   m_Name: Beam
   m_TagString: Untagged
@@ -2853,6 +2892,103 @@ MonoBehaviour:
   - {fileID: 566808086723132124}
   - {fileID: 5113318334127036151}
   playerIndex: 0
+  audioSource: {fileID: 1532636478390545838}
+--- !u!82 &1532636478390545838
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6392453369106423353}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 2344312882301799113, guid: b39bc273196cd414c9d1125775236989, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 464b423512db3ff459ab717688a7333b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6523797809113827130
 GameObject:
   m_ObjectHideFlags: 0
@@ -3174,6 +3310,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &7109882464555916487
 GameObject:
@@ -3337,6 +3474,7 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 0}
   playerIndex: 0
 --- !u!1 &7369020490642495361
 GameObject:
@@ -3654,6 +3792,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8556109007748886921}
   - component: {fileID: 3966518383268518096}
+  - component: {fileID: 8014041674942739425}
   m_Layer: 0
   m_Name: BulletSpawnerCenter
   m_TagString: Untagged
@@ -3704,7 +3843,22 @@ MonoBehaviour:
   fireAtTarget: 0
   target: {fileID: 0}
   homing: 0
+  shootSounds: {fileID: 8014041674942739425}
   playerIndex: 0
+--- !u!114 &8014041674942739425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8585683748794560659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: d900f666f9f533d4685db4116f333b29, type: 3}
 --- !u!1 &8968338509832408624
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6365390970322837001}
   - component: {fileID: 6466016976575918580}
-  - component: {fileID: 7170985352676379968}
   - component: {fileID: 5562621255646560908}
   - component: {fileID: 1924420179826787310}
   - component: {fileID: 1441612803803861763}
+  - component: {fileID: 5804165161968438285}
   m_Layer: 8
   m_Name: Bomb1
   m_TagString: Untagged
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!135 &7170985352676379968
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6023031918159866742}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 99
-  m_Center: {x: 3.1611557, y: 0, z: 0}
 --- !u!95 &5562621255646560908
 Animator:
   serializedVersion: 3
@@ -144,3 +131,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 50
   power: 50
+  playerIndex: 2
+--- !u!58 &5804165161968438285
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6023031918159866742}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 2.7707214, y: 0}
+  serializedVersion: 2
+  m_Radius: 101.21652

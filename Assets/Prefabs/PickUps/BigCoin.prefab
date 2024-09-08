@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4066708801882525535}
   - component: {fileID: -7360289521382002004}
   - component: {fileID: 5992529852052893175}
+  - component: {fileID: 2809564561807861121}
   m_Layer: 12
   m_Name: BigCoin
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: 356ea85b652619048b43ac09d7a7979b, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
+  pickupSound: {fileID: 2809564561807861121}
 --- !u!58 &5992529852052893175
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,3 +117,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 7
+--- !u!114 &2809564561807861121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8317685833781463424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 22a7b275617606a42b69b718f125f733, type: 3}

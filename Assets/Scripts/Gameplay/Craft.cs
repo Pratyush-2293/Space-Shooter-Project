@@ -44,6 +44,9 @@ public class Craft : MonoBehaviour
     int layerMask = 0;
     int pickUpLayer = 0;
 
+    public SoundFX explodingNoise = null;
+    public SoundFX bombSound = null;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -279,6 +282,8 @@ public class Craft : MonoBehaviour
     {
         alive = false;
         StartCoroutine(Exploding());
+
+        //experimental
     }
 
     IEnumerator Exploding()
@@ -293,6 +298,10 @@ public class Craft : MonoBehaviour
         }
 
         EffectSystem.instance.CraftExplosion(transform.position);
+        if (explodingNoise)
+        {
+            explodingNoise.Play();
+        }
         Destroy(gameObject);
         GameManager.instance.playerCrafts[playerIndex] = null;
 
@@ -365,6 +374,10 @@ public class Craft : MonoBehaviour
             craftData.smallBombs--;
             Vector3 pos = transform.position;
             pos.y += 100;
+            if (bombSound)
+            {
+                bombSound.Play();
+            }
             Bomb bomb = Instantiate(bombPrefab, pos, Quaternion.identity).GetComponent<Bomb>();
             if (bomb)
             {

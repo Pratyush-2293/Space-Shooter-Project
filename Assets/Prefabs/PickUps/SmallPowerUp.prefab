@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5817630099846044258}
   - component: {fileID: 6783933040941278263}
   - component: {fileID: 3552899874380832619}
+  - component: {fileID: 5357705890905290263}
   m_Layer: 12
   m_Name: SmallPowerUp
   m_TagString: Untagged
@@ -99,6 +100,7 @@ MonoBehaviour:
   config: {fileID: 11400000, guid: dd69fdec49bb7414493ea49c02dc8583, type: 2}
   position: {x: 0, y: 0}
   velocity: {x: 0, y: 0}
+  pickupSound: {fileID: 5357705890905290263}
 --- !u!58 &3552899874380832619
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -115,3 +117,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 9
+--- !u!114 &5357705890905290263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6560714767380266440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8ee43c7413eff45beaa45d6cdff39f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - {fileID: 8300000, guid: 4ae19778145371c4e9f0919583aa2dee, type: 3}
