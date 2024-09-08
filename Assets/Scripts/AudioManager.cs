@@ -61,7 +61,7 @@ public class AudioManager : MonoBehaviour
             if (fade)
             {
                 StartCoroutine(Fade(1, fadeDuration, 0, 1));
-                if(activeMusicSource == 2)
+                if(activeMusicSource == 2 || activeMusicSource == 1)  //Experimental (activeMusicSource == 1)
                 {
                     StartCoroutine(Fade(2, fadeDuration, 1, 0));
                 }
