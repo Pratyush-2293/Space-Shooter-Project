@@ -25,8 +25,8 @@ public class Session
 [Serializable]
 public class CraftData
 {
-    public float positionX;
-    public float positionY;
+    public float positionX = 0;
+    public float positionY = 0;
 
     public byte shotPower;
     public byte numberOfEnabledOptions;

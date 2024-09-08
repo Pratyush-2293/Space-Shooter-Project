@@ -16,6 +16,8 @@ public class GameInitialiser : MonoBehaviour
     private bool menuLoaded = false;
 
     private Scene displayScene;
+
+    public AudioManager.Tracks playMusicTrack = AudioManager.Tracks.None;
     
     void Start()
     {
@@ -52,6 +54,16 @@ public class GameInitialiser : MonoBehaviour
                     MenuManager.instance.SwitchToGameplayMenus();
                     break;
             };
+
+            if(playMusicTrack != AudioManager.Tracks.None)
+            {
+                AudioManager.instance.PlayMusic(playMusicTrack, true, 1);
+            }
+
+            if(gameMode == GameMode.Gameplay)
+            {
+                GameManager.instance.SpawnPlayers();
+            }
 
             menuLoaded = true;
         }

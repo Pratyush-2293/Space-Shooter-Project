@@ -82,8 +82,8 @@ MonoBehaviour:
       beamPower: 0
       beamCharge: 0
       beamTimer: 0
-      smallBombs: 0
-      largeBombs: 0
+      smallBombs: 3
+      largeBombs: 3
     hardness: 1
     stage: 1
     practice: 0

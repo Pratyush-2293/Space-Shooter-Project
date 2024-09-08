@@ -28,25 +28,29 @@ public class LevelProgress : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (player1Craft)
+        if (GameManager.instance)
         {
-            craftData = GameManager.instance.gameSession.craftDatas[player1Craft.playerIndex];
-        }
+            if (player1Craft)
+            {
+                craftData = GameManager.instance.gameSession.craftDatas[player1Craft.playerIndex];
+            }
 
-        if (data.progress < levelSize)
-        {
-            if (player1Craft == null)
+            if (data.progress < levelSize)
             {
-                player1Craft = GameManager.instance.playerCrafts[0];
-            }
-            if (player1Craft && !disableMovement)
-            {
-                float ratio = (float)data.progress / (float)levelSize;
-                float movement = speedCurve.Evaluate(ratio);
-                data.progress++;
-                UpdateProgressWindow(craftData.positionX, movement);
+                if (player1Craft == null)
+                {
+                    player1Craft = GameManager.instance.playerCrafts[0];
+                }
+                if (player1Craft && !disableMovement)
+                {
+                    float ratio = (float)data.progress / (float)levelSize;
+                    float movement = speedCurve.Evaluate(ratio);
+                    data.progress++;
+                    UpdateProgressWindow(craftData.positionX, movement);
+                }
             }
         }
+        
     }
 
     void UpdateProgressWindow(float shipX, float movement)

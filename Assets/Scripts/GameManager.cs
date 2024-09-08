@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public PickUp[] medals = new PickUp[10];
     private int currentDropIndex = 0;
     private int currentMedalIndex = 0;
+    public enum GameState { INVALID, InMenus, Playing, Paused};
+    public GameState gameState = GameState.INVALID;
 
     void Start()
     {
@@ -44,8 +46,51 @@ public class GameManager : MonoBehaviour
     {
         Debug.Assert(craftType < craftPrefabs.Length);
         Debug.Log("Spawning Player " + playerIndex);
-        playerCrafts[playerIndex] = Instantiate(craftPrefabs[craftType]).GetComponent<Craft>();
+        if (progressWindow == null)
+        {
+            progressWindow = GameObject.FindObjectOfType<LevelProgress>();
+        }
+        Vector3 pos = progressWindow.transform.position;
+        playerCrafts[playerIndex] = Instantiate(craftPrefabs[craftType], pos, Quaternion.identity).GetComponent<Craft>();
         playerCrafts[playerIndex].playerIndex = playerIndex;
+    }
+
+    public void SpawnPlayers()
+    {
+        SpawnPlayer(0, 0); //todo Craft Type
+        if (twoPlayer)
+        {
+            SpawnPlayer(1, 0);
+        }
+    }
+
+    public void ResetState(int playerIndex)
+    {
+        CraftData craftData = gameSession.craftDatas[playerIndex];
+        craftData.positionX = 0;
+        craftData.positionY = 0;
+        craftData.shotPower = 0;
+        craftData.numberOfEnabledOptions = 0;
+        craftData.optionsLayout = 0;
+        craftData.beamFiring = false;
+        craftData.beamCharge = 0;
+        craftData.beamPower = 0;
+        craftData.beamTimer = 0;
+        craftData.smallBombs = 3;
+        craftData.largeBombs = 0;
+    }
+
+    public void RestoreState(int playerIndex)
+    {
+        int number = gameSession.craftDatas[playerIndex].numberOfEnabledOptions;
+        gameSession.craftDatas[playerIndex].numberOfEnabledOptions = 0;
+        gameSession.craftDatas[playerIndex].positionX = 0;
+        gameSession.craftDatas[playerIndex].positionY = 0;
+
+        for(int o = 0; o < number; o++)
+        {
+            playerCrafts[playerIndex].AddOption(0);
+        }
     }
 
     private void Update()
@@ -81,6 +126,11 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
+        gameState = GameState.Playing;
+        ResetState(0);
+        ResetState(1);
+        playerDatas[0].score = 0;
+        playerDatas[1].score = 0;
         UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
     }
 
