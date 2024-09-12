@@ -111,6 +111,11 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             if (!playerCrafts[0])
@@ -137,6 +142,28 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
             AudioManager.instance.PlayMusic(AudioManager.Tracks.Boss, true, 2);
+        }
+    }
+
+    public void TogglePause()
+    {
+        if (gameState == GameState.Playing) //pause the game
+        {
+            gameState = GameState.Paused;
+            AudioManager.instance.PauseMusic();
+            PauseMenu.instance.TurnOn(null);
+            if (DebugManager.instance.displaying)
+            {
+                DebugManager.instance.ToggleHUD();
+            }
+            Time.timeScale = 0;
+        }
+        else //unpause
+        {
+            gameState = GameState.Playing;
+            AudioManager.instance.ResumeMusic();
+            PauseMenu.instance.TurnOff(false);
+            Time.timeScale = 1;
         }
     }
 

@@ -37,4 +37,10 @@ public class MainMenu : Menu
         TurnOff(true);
         OptionsMenu.instance.TurnOn(this);
     }
+
+    public void OnScoresButton()
+    {
+        TurnOff(true);
+        ScoresMenu.instance.TurnOn(this);
+    }
 }

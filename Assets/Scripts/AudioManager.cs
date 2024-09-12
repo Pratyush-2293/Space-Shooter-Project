@@ -140,4 +140,16 @@ public class AudioManager : MonoBehaviour
     {
         sfxSource.PlayOneShot(clip);
     }
+
+    public void PauseMusic()
+    {
+        musicSource1.Pause();
+        musicSource2.Pause();
+    }
+
+    public void ResumeMusic()
+    {
+        musicSource1.UnPause();
+        musicSource2.UnPause();
+    }
 }
