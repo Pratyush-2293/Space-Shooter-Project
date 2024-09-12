@@ -11,6 +11,9 @@ public class GameInitialiser : MonoBehaviour
         Menus,
         Gameplay
     }
+
+    public int stageNumber = 0;
+
     public GameMode gameMode;
     public GameObject gameManagerPrefab = null;
     private bool menuLoaded = false;
@@ -54,6 +57,7 @@ public class GameInitialiser : MonoBehaviour
                 case GameMode.Gameplay:
                     MenuManager.instance.SwitchToGameplayMenus();
                     GameManager.instance.gameState = GameManager.GameState.Playing;
+                    GameManager.instance.gameSession.stage = stageNumber;
                     break;
             };
 

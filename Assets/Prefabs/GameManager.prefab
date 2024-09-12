@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: -4392328597502287028}
   - component: {fileID: -3095094831586125930}
   - component: {fileID: -3483711363118995715}
+  - component: {fileID: 290774079835427907}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -127,7 +128,6 @@ MonoBehaviour:
   powerUp: {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
   option: {fileID: -9056223016932683868, guid: e0f18f0155b7775458be6673a7ad31b1, type: 3}
   beamUp: {fileID: 1460379785637180959, guid: 580d0e9ed9872f442b522e63f97d3daf, type: 3}
-  spawnOffset: {x: 0, y: -3000, z: 0}
 --- !u!114 &-4788296126084840385
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -587,3 +587,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &290774079835427907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092216254167470474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 804ed6e3d05a4574f88542bc8e8d60f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
