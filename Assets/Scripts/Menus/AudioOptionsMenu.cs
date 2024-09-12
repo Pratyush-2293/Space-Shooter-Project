@@ -21,6 +21,15 @@ public class AudioOptionsMenu : Menu
         }
 
         instance = this;
+
+        float volume = PlayerPrefs.GetFloat("MasterVolume");
+        masterVolSlider.value = volume;
+
+        volume = PlayerPrefs.GetFloat("EffectsVolume");
+        fxVolSlider.value = volume;
+
+        volume = PlayerPrefs.GetFloat("MusicVolume");
+        musicVolSlider.value = volume;
     }
 
     public void OnBackButton()

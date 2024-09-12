@@ -1502,9 +1502,9 @@ MonoBehaviour:
   ROOT: {fileID: 1894654324}
   previousMenu: {fileID: 0}
   previousItem: {fileID: 0}
-  masterVolSlider: {fileID: 0}
-  fxVolSlider: {fileID: 0}
-  musicVolSlider: {fileID: 0}
+  masterVolSlider: {fileID: 545979274}
+  fxVolSlider: {fileID: 1945190763}
+  musicVolSlider: {fileID: 1043727695}
 --- !u!4 &1631933231
 Transform:
   m_ObjectHideFlags: 0
