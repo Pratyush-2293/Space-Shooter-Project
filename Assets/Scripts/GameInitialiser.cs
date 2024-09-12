@@ -68,6 +68,7 @@ public class GameInitialiser : MonoBehaviour
 
             if(gameMode == GameMode.Gameplay)
             {
+                SaveManager.instance.SaveGame(0); //0 = autosave at beginning of the state
                 GameManager.instance.SpawnPlayers();
             }
 

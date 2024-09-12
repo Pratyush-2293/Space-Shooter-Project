@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 [Serializable]
@@ -16,4 +17,16 @@ public class PlayerData
     public const byte MAXCHAINTIMER = 200;
 
     //todo: add other playthrough stats
+
+    public void Save(BinaryWriter writer)
+    {
+        writer.Write(score);
+        writer.Write(lives);
+    }
+
+    public void Load(BinaryReader reader)
+    {
+        score = reader.ReadInt32();
+        lives = reader.ReadByte();
+    }
 }

@@ -218,4 +218,18 @@ public class GameManager : MonoBehaviour
 
         return p;
     }
+
+    public void ResumeGameFromLoad()
+    {
+        gameState = GameState.Playing;
+        switch (gameSession.stage)
+        {
+            case 1:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
+                break;
+            case 2:
+                UnityEngine.SceneManagement.SceneManager.LoadScene("Stage02");
+                break;
+        }
+    }
 }

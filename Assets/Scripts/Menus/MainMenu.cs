@@ -43,4 +43,13 @@ public class MainMenu : Menu
         TurnOff(true);
         ScoresMenu.instance.TurnOn(this);
     }
+
+    public void OnLoadButton()
+    {
+        if (SaveManager.instance.LoadExists(1))
+        {
+            TurnOff(false);
+            SaveManager.instance.LoadGame(1);
+        }
+    }
 }

@@ -42,12 +42,15 @@ public class PauseMenu : Menu
 
     public void OnLoadButton()
     {
-
+        if (SaveManager.instance.LoadExists(1))
+        {
+            SaveManager.instance.LoadGame(1);
+        }
     }
 
     public void OnSaveButton()
     {
-
+        SaveManager.instance.SaveGame(1);
     }
 
     public void OnOptionsButton()

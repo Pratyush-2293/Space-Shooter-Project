@@ -29,7 +29,12 @@ public class SaveManager : MonoBehaviour
 
         writer.Write(GameManager.instance.twoPlayer);
 
-        //more stuff in here <--
+        GameManager.instance.gameSession.Save(writer);
+        GameManager.instance.playerDatas[0].Save(writer);
+        if (GameManager.instance.twoPlayer)
+        {
+            GameManager.instance.playerDatas[1].Save(writer);
+        }
 
         string savePath = Application.persistentDataPath + "/slot" + slot + ".dat";
         Debug.Log("Savegame, savePath = " + savePath);
@@ -42,7 +47,7 @@ public class SaveManager : MonoBehaviour
         memStream.Close();
     }
 
-    public void LoadSave(int slot)
+    public void LoadGame(int slot)
     {
         string loadPath = Application.persistentDataPath + "/slot" + slot + ".dat";
 
@@ -60,8 +65,17 @@ public class SaveManager : MonoBehaviour
             {
                 GameManager.instance.twoPlayer = reader.ReadBoolean();
 
+                GameManager.instance.gameSession.Load(reader);
+                GameManager.instance.playerDatas[0].Load(reader);
+                if (GameManager.instance.twoPlayer)
+                {
+                    GameManager.instance.playerDatas[1].Load(reader);
+                }
+
                 reader.Close();
                 fileStream.Close();
+
+                GameManager.instance.ResumeGameFromLoad();
             }
             else
             {
@@ -70,5 +84,25 @@ public class SaveManager : MonoBehaviour
         }
 
         memStream.Close();
+    }
+
+    public void CopySaveToSlot(int slot)
+    {
+        Debug.Assert(slot > 0);
+
+        string loadPath = Application.persistentDataPath + "/slot0.dat";
+        string destPath = Application.persistentDataPath + "/slot" + slot + ".dat";
+        File.Copy(loadPath, destPath);
+    }
+
+    public bool LoadExists(int slot)
+    {
+        string loadPath = Application.persistentDataPath + "/slot" + slot + ".dat";
+        if (File.Exists(loadPath))
+        {
+            return true;
+        }
+
+        return false;
     }
 }

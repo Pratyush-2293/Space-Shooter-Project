@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using UnityEngine;
 
 [Serializable]
@@ -20,6 +21,30 @@ public class Session
     public bool invincible = false;
     public bool halfSpeed = false;
     public bool doubleSpeed = false;
+
+    public void Save(BinaryWriter writer)
+    {
+        craftDatas[0].Save(writer);
+        if (GameManager.instance.twoPlayer)
+        {
+            craftDatas[1].Save(writer);
+        }
+
+        writer.Write((byte)hardness);
+        writer.Write(stage);
+    }
+
+    public void Load(BinaryReader reader)
+    {
+        craftDatas[0].Load(reader);
+        if (GameManager.instance.twoPlayer)
+        {
+            craftDatas[1].Load(reader);
+        }
+
+        hardness = (Hardness)reader.ReadByte();
+        stage = reader.ReadInt32();
+    }
 }
 
 [Serializable]
@@ -39,4 +64,32 @@ public class CraftData
 
     public byte smallBombs;
     public byte largeBombs;
+
+    public void Save(BinaryWriter writer)
+    {
+        writer.Write(shotPower);
+
+        writer.Write(numberOfEnabledOptions);
+        writer.Write(optionsLayout);
+
+        writer.Write(beamPower);
+        writer.Write(beamCharge);
+
+        writer.Write(smallBombs);
+        writer.Write(largeBombs);
+    }
+
+    public void Load(BinaryReader reader)
+    {
+        shotPower = reader.ReadByte();
+
+        numberOfEnabledOptions = reader.ReadByte();
+        optionsLayout = reader.ReadByte();
+
+        beamPower = reader.ReadByte();
+        beamCharge = reader.ReadByte();
+
+        smallBombs = reader.ReadByte();
+        largeBombs = reader.ReadByte();
+    }
 }
