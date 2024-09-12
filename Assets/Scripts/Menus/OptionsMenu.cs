@@ -28,4 +28,10 @@ public class OptionsMenu : Menu
         TurnOff(false);
         ControlsOptionsMenu.instance.TurnOn(this);
     }
+
+    public void OnAudioButton()
+    {
+        TurnOff(false);
+        AudioOptionsMenu.instance.TurnOn(this);
+    }
 }

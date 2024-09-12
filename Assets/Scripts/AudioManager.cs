@@ -34,6 +34,16 @@ public class AudioManager : MonoBehaviour
             return;
         }
         instance = this;
+
+        //Restore Preferences
+        float volume = PlayerPrefs.GetFloat("MasterVolume");
+        mixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
+
+        volume = PlayerPrefs.GetFloat("EffectsVolume");
+        mixer.SetFloat("EffectsVolume", Mathf.Log10(volume) * 20);
+
+        volume = PlayerPrefs.GetFloat("MusicVolume");
+        mixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
 
     public void PlayMusic(Tracks track, bool fade, float fadeDuration)
