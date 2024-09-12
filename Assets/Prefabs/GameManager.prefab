@@ -123,6 +123,11 @@ MonoBehaviour:
   - {fileID: -1347375132274129301, guid: 483e7ad052860ee49abbc06440e98ba2, type: 3}
   - {fileID: -2729169345352685252, guid: a43bb47bbd6dd154d8ac7223f0bb70fd, type: 3}
   - {fileID: -4183171173269451024, guid: 04703aca267550a46a1428f8f8f61714, type: 3}
+  gameState: 0
+  powerUp: {fileID: 6783933040941278263, guid: 1fe4d2ce87726e644b8ecc1ea7211729, type: 3}
+  option: {fileID: -9056223016932683868, guid: e0f18f0155b7775458be6673a7ad31b1, type: 3}
+  beamUp: {fileID: 1460379785637180959, guid: 580d0e9ed9872f442b522e63f97d3daf, type: 3}
+  spawnOffset: {x: 0, y: -3000, z: 0}
 --- !u!114 &-4788296126084840385
 MonoBehaviour:
   m_ObjectHideFlags: 0

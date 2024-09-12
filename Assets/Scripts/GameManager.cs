@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour
     public enum GameState { INVALID, InMenus, Playing, Paused};
     public GameState gameState = GameState.INVALID;
 
+    public PickUp powerUp = null;
+    public PickUp option = null;
+    public PickUp beamUp = null;
+
     void Start()
     {
         if(instance != null)
@@ -62,6 +66,18 @@ public class GameManager : MonoBehaviour
         {
             SpawnPlayer(1, 0);
         }
+    }
+
+    public void DelayedRespawn(int playerIndex)
+    {
+        StartCoroutine(RespawnCoroutine(playerIndex));
+    }
+
+    IEnumerator RespawnCoroutine(int playerIndex)
+    {
+        yield return new WaitForSeconds(1.5f);
+        SpawnPlayer(playerIndex, 0); //todo get craft type.
+        yield return null;
     }
 
     public void ResetState(int playerIndex)
@@ -163,5 +179,16 @@ public class GameManager : MonoBehaviour
         }
 
         return result;
+    }
+
+    public PickUp SpawnPickup(PickUp pickUpPrefab, Vector2 pos)
+    {
+        PickUp p = Instantiate(pickUpPrefab, pos, Quaternion.identity);
+        if (p)
+        {
+            p.transform.SetParent(GameManager.instance.transform);
+        }
+
+        return p;
     }
 }

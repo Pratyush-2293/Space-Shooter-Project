@@ -152,24 +152,12 @@ public class Shootable : MonoBehaviour
             if (spawnCyclicPickup)
             {
                 PickUp spawn = GameManager.instance.GetNextDrop();
-                PickUp p = Instantiate(spawn, pos, Quaternion.identity);
-                if (p)
-                {
-                    p.transform.SetParent(GameManager.instance.transform);
-                }
+                GameManager.instance.SpawnPickup(spawn, pos);
             }
 
             foreach(PickUp pickup in spawnSpecificPickup)
             {
-                PickUp p = Instantiate(pickup, pos, Quaternion.identity);
-                if (p)
-                {
-                    p.transform.SetParent(GameManager.instance.transform);
-                }
-                else
-                {
-                    Debug.LogError("Failed to spawn pickup.");
-                }
+                GameManager.instance.SpawnPickup(pickup, pos);
             }
 
             if (remainDestroy)

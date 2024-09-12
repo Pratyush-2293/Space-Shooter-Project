@@ -77,4 +77,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/DebugHUDScene.unity
     guid: 87a70a1f278927240b85b57a6c9542b3
+  - enabled: 1
+    path: Assets/Scenes/Menus/GameOverMenu.unity
+    guid: 5d35cd5db4ddf7048a108d6e026c2465
   m_configObjects: {}
