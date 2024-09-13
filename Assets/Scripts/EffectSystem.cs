@@ -9,6 +9,8 @@ public class EffectSystem : MonoBehaviour
     public ParticleSystem craftParticlesPrefab = null;
     public ParticleSystem craftDebrisParticlesPrefab = null;
 
+    public ParticleSystem hitParticleSystem = null;
+
     void Start()
     {
         if (instance)
@@ -26,5 +28,11 @@ public class EffectSystem : MonoBehaviour
         Instantiate(craftExplosionPrefab, position, Quaternion.identity);
         Instantiate(craftParticlesPrefab, position, Quaternion.identity);
         Instantiate(craftDebrisParticlesPrefab, position, Quaternion.identity);
+    }
+
+    public void SpawnSparks(Vector3 position)
+    {
+        Quaternion angle = Quaternion.Euler(0, 0, 45);
+        Instantiate(hitParticleSystem, position, angle);
     }
 }

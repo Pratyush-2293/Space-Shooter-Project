@@ -149,13 +149,14 @@ public class BulletManager : MonoBehaviour
     public Bullet SpawnBullet(BulletType type, float x, float y, float dX, float dY, float angle, float dAngle, bool homing, byte playerIndex)
     {
         int bulletIndex = NextFreeBulletIndex(type);
-        if (bulletIndex >= 0)
+        if (bulletIndex > -1)
         {
             Bullet result = bullets[bulletIndex];
             result.playerIndex = playerIndex;
-            result.gameObject.SetActive(true);
             bulletData[bulletIndex] = new BulletData(x, y, dX, dY, angle, dAngle, (int)type, true, homing);
             bullets[bulletIndex].gameObject.transform.position = new Vector3(x, y, 0);
+            //bullets[bulletIndex].gameObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, new Vector3(dY, dX, 0));
+            result.gameObject.SetActive(true);
 
             SpriteRenderer renderer = bullets[bulletIndex].gameObject.GetComponent<SpriteRenderer>();
             if (renderer)

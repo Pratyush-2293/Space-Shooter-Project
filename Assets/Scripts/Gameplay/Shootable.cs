@@ -103,7 +103,7 @@ public class Shootable : MonoBehaviour
                     {
                         TakeDamage(1, b.playerIndex);
                         GameManager.instance.bulletManager.DeActivateBullet(b.index);
-                        Flash();
+                        FlashAndSpark(b.transform.position);
                     }
                 }
                 if (damagedByBombs)
@@ -112,20 +112,21 @@ public class Shootable : MonoBehaviour
                     if (bomb != null)
                     {
                         TakeDamage(bomb.power, bomb.playerIndex);
-                        Flash();
+                        FlashAndSpark(transform.position);
                     }
                 }
             }
         }
     }
 
-    private void Flash()
+    private void FlashAndSpark(Vector3 position)
     {
+        EffectSystem.instance.SpawnSparks(position);
+
         if (flashing)
         {
             return;
         }
-
         flashing = true;
         flashTimer = 0.01f;
         spriteRenderer.material.SetColor("_OverBright", Color.white);
