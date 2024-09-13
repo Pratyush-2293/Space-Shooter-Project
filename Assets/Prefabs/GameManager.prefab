@@ -171,6 +171,8 @@ MonoBehaviour:
   craftParticlesPrefab: {fileID: 7548326850561407954, guid: c21e638ceae5c474db491324f142d1a1, type: 3}
   craftDebrisParticlesPrefab: {fileID: 7548326850561407954, guid: bf60ad8052996d342a11080eaadd4038, type: 3}
   hitParticleSystem: {fileID: 1414078329005147566, guid: 44222f79fcf1a7f429281fa0ac4d389e, type: 3}
+  largeExplosion: {fileID: 3758721585322197983, guid: ce1087d841f948a42a2c4d68d0067b7e, type: 3}
+  smallExplosion: {fileID: 5931558584190075440, guid: ef60eeaadb1a97845b3e4d4f59c2c7e7, type: 3}
 --- !u!114 &-3309452583525986692
 MonoBehaviour:
   m_ObjectHideFlags: 0

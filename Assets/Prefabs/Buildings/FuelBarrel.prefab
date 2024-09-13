@@ -114,6 +114,8 @@ MonoBehaviour:
   - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
   - {fileID: 4990103666359882644, guid: 9868e069d73b7d043b1ff2991c90be1e, type: 3}
   destroyedSounds: {fileID: 4485113568357334101}
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!58 &8751272631566130300
 CircleCollider2D:
   m_ObjectHideFlags: 0

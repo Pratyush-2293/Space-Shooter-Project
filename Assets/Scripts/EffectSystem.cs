@@ -11,6 +11,9 @@ public class EffectSystem : MonoBehaviour
 
     public ParticleSystem hitParticleSystem = null;
 
+    public GameObject largeExplosion = null;
+    public GameObject smallExplosion = null;
+
     void Start()
     {
         if (instance)
@@ -34,5 +37,15 @@ public class EffectSystem : MonoBehaviour
     {
         Quaternion angle = Quaternion.Euler(0, 0, 45);
         Instantiate(hitParticleSystem, position, angle);
+    }
+
+    public void SpawnLargeExplosion(Vector3 position)
+    {
+        Instantiate(largeExplosion, position, Quaternion.identity);
+    }
+
+    public void SpawnSmallExplosion(Vector3 position)
+    {
+        Instantiate(smallExplosion, position, Quaternion.identity);
     }
 }

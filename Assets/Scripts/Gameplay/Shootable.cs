@@ -37,6 +37,9 @@ public class Shootable : MonoBehaviour
 
     private SpriteRenderer spriteRenderer = null;
 
+    public bool largeExplosion = false;
+    public bool smallExplosion = false;
+
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets");
@@ -191,6 +194,16 @@ public class Shootable : MonoBehaviour
             foreach(PickUp pickup in spawnSpecificPickup)
             {
                 GameManager.instance.SpawnPickup(pickup, pos);
+            }
+
+            if (smallExplosion)
+            {
+                EffectSystem.instance.SpawnSmallExplosion(transform.position);
+            }
+
+            if (largeExplosion)
+            {
+                EffectSystem.instance.SpawnLargeExplosion(transform.position);
             }
 
             if (remainDestroy)

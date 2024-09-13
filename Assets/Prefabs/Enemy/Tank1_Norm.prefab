@@ -339,6 +339,8 @@ MonoBehaviour:
   spawnCyclicPickup: 1
   spawnSpecificPickup: []
   destroyedSounds: {fileID: 8291264882320095440}
+  largeExplosion: 0
+  smallExplosion: 1
 --- !u!61 &295984895848653008
 BoxCollider2D:
   m_ObjectHideFlags: 0
