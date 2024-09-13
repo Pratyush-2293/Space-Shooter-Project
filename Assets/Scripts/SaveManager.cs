@@ -53,15 +53,15 @@ public class SaveManager : MonoBehaviour
 
         MemoryStream memStream = new MemoryStream();
 
-        FileStream fileStream = new FileStream(loadPath, FileMode.Open);
-        if(fileStream != null)
+        try
         {
+            FileStream fileStream = new FileStream(loadPath, FileMode.Open);
             BinaryReader reader = new BinaryReader(memStream);
             fileStream.CopyTo(memStream);
             memStream.Position = 0;
 
             int version = reader.ReadInt32();
-            if(version == SAVE_VERSION)
+            if (version == SAVE_VERSION)
             {
                 GameManager.instance.twoPlayer = reader.ReadBoolean();
 
@@ -77,10 +77,10 @@ public class SaveManager : MonoBehaviour
 
                 GameManager.instance.ResumeGameFromLoad();
             }
-            else
-            {
-                Debug.LogError("SaveFile version is not correct");
-            }
+        }
+        catch(System.Exception e)
+        {
+            Debug.LogWarning(e.Message + ", SaveFile version is not correct");
         }
 
         memStream.Close();

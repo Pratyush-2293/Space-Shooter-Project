@@ -32,6 +32,11 @@ public class Shootable : MonoBehaviour
 
     public SoundFX destroyedSounds = null;
 
+    private bool flashing = false;
+    private float flashTimer = 0;
+
+    private SpriteRenderer spriteRenderer = null;
+
     private void Start()
     {
         layerMask = ~LayerMask.GetMask("Enemy") & ~LayerMask.GetMask("EnemyBullets");
@@ -45,6 +50,8 @@ public class Shootable : MonoBehaviour
         {
             halfExtent = new Vector3(radiusOrWidth / 2, height / 2, 1);
         }
+
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -54,12 +61,23 @@ public class Shootable : MonoBehaviour
             return;
         }
 
+        if (flashing)
+        {
+            flashTimer -= Time.deltaTime;
+            if (flashTimer <= 0)
+            {
+                spriteRenderer.material.SetColor("_OverBright", Color.black);
+                flashing = false;
+            }
+        }
+
         int maxColliders = 10;
         Collider2D[] hits = new Collider2D[maxColliders];
         int noOfHits = 0;
         if (box)
         {
-            noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position, halfExtent, 0, hits, layerMask); //here 0 is representing transform.rotation
+            float angle = transform.eulerAngles.z;
+            noOfHits = Physics2D.OverlapBoxNonAlloc(transform.position, halfExtent, angle, hits, layerMask); //here 0 is representing transform.rotation
         }
         else if (polygon)
         {
@@ -85,6 +103,7 @@ public class Shootable : MonoBehaviour
                     {
                         TakeDamage(1, b.playerIndex);
                         GameManager.instance.bulletManager.DeActivateBullet(b.index);
+                        Flash();
                     }
                 }
                 if (damagedByBombs)
@@ -93,10 +112,23 @@ public class Shootable : MonoBehaviour
                     if (bomb != null)
                     {
                         TakeDamage(bomb.power, bomb.playerIndex);
+                        Flash();
                     }
                 }
             }
         }
+    }
+
+    private void Flash()
+    {
+        if (flashing)
+        {
+            return;
+        }
+
+        flashing = true;
+        flashTimer = 0.01f;
+        spriteRenderer.material.SetColor("_OverBright", Color.white);
     }
 
     public void TakeDamage(int ammount, byte fromPlayer)

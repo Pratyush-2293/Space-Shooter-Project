@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Enemy2
-  m_Shader: {fileID: -6465566751694194690, guid: bd1081778dfe444468f4f39dd624afd5, type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: d0f6c0078938f2e4d824146aa96fc981, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -46,6 +46,7 @@ Material:
     m_Floats: []
     m_Colors:
     - Color_06ee5021070849958103364979b9894b: {r: 1, g: 0.05929688, b: 0, a: 1}
-    - Color_bbd22c40ad934e0f87afafd48167cbaf: {r: 1, g: 0.750195, b: 0.3443396, a: 1}
-    - Color_eef45f92bfa544398b4c3ac4234aae6f: {r: 1, g: 0.9197526, b: 0, a: 0}
+    - Color_bbd22c40ad934e0f87afafd48167cbaf: {r: 1, g: 0.61983997, b: 0.34509802, a: 1}
+    - Color_eef45f92bfa544398b4c3ac4234aae6f: {r: 1, g: 0, b: 0, a: 0}
+    - _OverBright: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

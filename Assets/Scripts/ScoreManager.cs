@@ -88,15 +88,15 @@ public class ScoreManager : MonoBehaviour
         string savePath = Application.persistentDataPath + "/scrs.dat";
         Debug.Log("savePath = " + savePath);
 
-        FileStream fileStream = new FileStream(savePath, FileMode.OpenOrCreate);
-        if (fileStream != null)
+        try
         {
+            FileStream fileStream = new FileStream(savePath, FileMode.OpenOrCreate);
             BinaryWriter writer = new BinaryWriter(fileStream);
-            if(writer != null)
+            if (writer != null)
             {
-                for(int h = 0; h < 4; h++)
+                for (int h = 0; h < 4; h++)
                 {
-                    for(int s = 0; s < 8; s++)
+                    for (int s = 0; s < 8; s++)
                     {
                         writer.Write(names[s, h]);
                         writer.Write(scores[s, h]);
@@ -108,9 +108,9 @@ public class ScoreManager : MonoBehaviour
                 Debug.LogError("Failed to create binary writer for saving hiscores!");
             }
         }
-        else
+        catch(System.Exception e)
         {
-            Debug.LogError("Failed to create filestream for saving hiscores!");
+            Debug.LogWarning(e.Message + ", Failed to create filestream for saving hiscores!");
         }
     }
 
@@ -119,9 +119,9 @@ public class ScoreManager : MonoBehaviour
         string loadPath = Application.persistentDataPath + "/scrs.dat";
         Debug.Log("loadPath = " + loadPath);
 
-        FileStream fileStream = new FileStream(loadPath, FileMode.Open);
-        if (fileStream != null)
+        try
         {
+            FileStream fileStream = new FileStream(loadPath, FileMode.Open);
             BinaryReader reader = new BinaryReader(fileStream);
             if (reader != null)
             {
@@ -139,9 +139,9 @@ public class ScoreManager : MonoBehaviour
                 Debug.LogError("Failed to create binary writer for saving hiscores!");
             }
         }
-        else
+        catch(System.Exception e)
         {
-            Debug.LogError("Failed to create filestream for saving hiscores!");
+            Debug.LogWarning(e.Message + ", Failed to create filestream for saving hiscores!");
         }
     }
 
