@@ -22,13 +22,25 @@ public class AudioOptionsMenu : Menu
 
         instance = this;
 
-        float volume = PlayerPrefs.GetFloat("MasterVolume");
+        float volume = 1;
+        if (PlayerPrefs.HasKey("MasterVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("MasterVolume");
+        }
         masterVolSlider.value = volume;
 
-        volume = PlayerPrefs.GetFloat("EffectsVolume");
+        volume = 1;
+        if (PlayerPrefs.HasKey("EffectsVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("EffectsVolume");
+        }
         fxVolSlider.value = volume;
 
-        volume = PlayerPrefs.GetFloat("MusicVolume");
+        volume = 1;
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("MusicVolume");
+        }
         musicVolSlider.value = volume;
     }
 

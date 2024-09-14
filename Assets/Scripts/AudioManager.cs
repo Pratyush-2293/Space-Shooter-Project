@@ -36,13 +36,25 @@ public class AudioManager : MonoBehaviour
         instance = this;
 
         //Restore Preferences
-        float volume = PlayerPrefs.GetFloat("MasterVolume");
+        float volume = 1;
+        if (PlayerPrefs.HasKey("MasterVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("MasterVolume");
+        }
         mixer.SetFloat("MasterVolume", Mathf.Log10(volume) * 20);
 
-        volume = PlayerPrefs.GetFloat("EffectsVolume");
+        volume = 1;
+        if (PlayerPrefs.HasKey("EffectsVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("EffectsVolume");
+        }
         mixer.SetFloat("EffectsVolume", Mathf.Log10(volume) * 20);
 
-        volume = PlayerPrefs.GetFloat("MusicVolume");
+        volume = 1;
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            volume = PlayerPrefs.GetFloat("MusicVolume");
+        }
         mixer.SetFloat("MusicVolume", Mathf.Log10(volume) * 20);
     }
 

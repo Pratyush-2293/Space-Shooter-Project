@@ -1,7 +1,52 @@
 fileFormatVersion: 2
 guid: 05820324efa04e545923cba6e5b84aa0
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2338921163845302201
+    second: CraftButtons_0
+  - first:
+      213: -5566011203298903035
+    second: CraftButtons_1
+  - first:
+      213: 1012844926208783241
+    second: CraftButtons_2
+  - first:
+      213: -5602834784527169061
+    second: CraftButtons_3
+  - first:
+      213: -2513031137665037969
+    second: CraftButtons_4
+  - first:
+      213: -7864895973006676300
+    second: CraftButtons_5
+  - first:
+      213: -489728302047418081
+    second: CraftButtons_6
+  - first:
+      213: 65886902968785732
+    second: CraftButtons_7
+  - first:
+      213: 3918179119709749276
+    second: CraftButtons_8
+  - first:
+      213: -3660658535195043397
+    second: CraftButtons_9
+  - first:
+      213: -6223594000394071825
+    second: CraftButtons_10
+  - first:
+      213: 297761201982442522
+    second: CraftButtons_11
+  - first:
+      213: -5689382777794873989
+    second: CraftButtons_12
+  - first:
+      213: -4258766257204310014
+    second: CraftButtons_13
+  - first:
+      213: -1980147874689099586
+    second: CraftButtons_14
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -32,7 +77,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -41,14 +86,14 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 1
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -68,7 +113,19 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -77,7 +134,322 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CraftButtons_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 94
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b774a80864857020800000000000000
+      internalID: 2338921163845302201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_1
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 94
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50c3683fc4e81c2b0800000000000000
+      internalID: -5566011203298903035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_2
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 94
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9833b3718195e0e00800000000000000
+      internalID: 1012844926208783241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 94
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd94e05d27bbe32b0800000000000000
+      internalID: -5602834784527169061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_4
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 94
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69caf1be7bef1dd0800000000000000
+      internalID: -2513031137665037969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 59
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4be698558c64ad290800000000000000
+      internalID: -7864895973006676300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 59
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f19220834b22439f0800000000000000
+      internalID: -489728302047418081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 59
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44b1ec60ac31ae000800000000000000
+      internalID: 65886902968785732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_8
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 59
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1007a4662b206630800000000000000
+      internalID: 3918179119709749276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_9
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 59
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb992bd057ab23dc0800000000000000
+      internalID: -3660658535195043397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 24
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0524c0b3a51a9a0800000000000000
+      internalID: -6223594000394071825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_11
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 24
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1c8e005c3cd12400800000000000000
+      internalID: 297761201982442522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_12
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 24
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75bf4ad1804b01b0800000000000000
+      internalID: -5689382777794873989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_13
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 24
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 200dae927a2d5e4c0800000000000000
+      internalID: -4258766257204310014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CraftButtons_14
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 24
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb8596ecff91584e0800000000000000
+      internalID: -1980147874689099586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
