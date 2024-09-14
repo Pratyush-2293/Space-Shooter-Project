@@ -52,4 +52,10 @@ public class MainMenu : Menu
             SaveManager.instance.LoadGame(1);
         }
     }
+
+    public void OnQuitButton()
+    {
+        TurnOff(true);
+        YesNoMenu.instance.TurnOn(this);
+    }
 }

@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public static MenuManager instance = null;
     internal Menu activeMenu = null;
+    private bool titleMenuShown = false;
 
     private void Start()
     {
@@ -50,8 +51,26 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("AudioOptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControlsOptionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("YesNoMenu", LoadSceneMode.Additive);
-        SceneManager.LoadScene("TitleScreenMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControllerMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("DebugHUDScene", LoadSceneMode.Additive);
+
+        if (!titleMenuShown)
+        {
+            SceneManager.LoadScene("TitleScreenMenu", LoadSceneMode.Additive);
+            titleMenuShown = true;
+        }
+        else
+        {
+            StartCoroutine(ShowMainMenu());
+        }
+    }
+
+    IEnumerator ShowMainMenu()
+    {
+        while (MainMenu.instance == null)
+        {
+            yield return null;
+        }
+        MainMenu.instance.TurnOn(null);
     }
 }

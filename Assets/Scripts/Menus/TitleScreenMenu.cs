@@ -5,6 +5,7 @@ using UnityEngine;
 public class TitleScreenMenu : Menu
 {
     public static TitleScreenMenu instance = null;
+    //public ParticleSystem starParticles = null;
 
     private void Start()
     {
@@ -16,6 +17,8 @@ public class TitleScreenMenu : Menu
         }
 
         instance = this;
+
+        //starParticles.Play();
     }
 
     private void Update()

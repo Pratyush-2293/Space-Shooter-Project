@@ -17,4 +17,17 @@ public class YesNoMenu : Menu
 
         instance = this;
     }
+
+    public void OnYesButton()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+
+    public void OnNoButton()
+    {
+        TurnOff(true);
+    }
 }
