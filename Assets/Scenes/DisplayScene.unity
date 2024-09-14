@@ -9110,6 +9110,7 @@ MonoBehaviour:
   - {fileID: 693916243}
   topScore: {fileID: 1575404215}
   player2Start: {fileID: 635517910}
+  player2HUD: {fileID: 727914245}
   playerHUDs:
   - lives:
     - {fileID: 475573585}

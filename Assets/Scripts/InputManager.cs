@@ -60,11 +60,11 @@ public class InputManager : MonoBehaviour
         playerButtons[0] = new ButtonMapping();
         playerButtons[1] = new ButtonMapping();
 
-        playerKeyAxis[0] = new KeyAxisMapping();
-        playerKeyAxis[1] = new KeyAxisMapping();
+        playerKeyAxis[0] = new KeyAxisMapping(0);
+        playerKeyAxis[1] = new KeyAxisMapping(1);
 
-        playerKeyButtons[0] = new KeyButtonMapping();
-        playerKeyButtons[1] = new KeyButtonMapping();
+        playerKeyButtons[0] = new KeyButtonMapping(0);
+        playerKeyButtons[1] = new KeyButtonMapping(1);
 
         playerState[0] = new InputState();
         playerState[1] = new InputState();
@@ -133,9 +133,9 @@ public class InputManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        UpdatePlayerState(0);
-        if (GameManager.instance != null && GameManager.instance.twoPlayer)
+        if (GameManager.instance != null)
         {
+            UpdatePlayerState(0);
             UpdatePlayerState(1);
         }
     }
@@ -216,6 +216,11 @@ public class InputManager : MonoBehaviour
         playerPrevState[playerIndex].bomb = playerState[playerIndex].bomb;
         playerPrevState[playerIndex].options = playerState[playerIndex].options;
         playerPrevState[playerIndex].beam = playerState[playerIndex].beam;
+
+        playerPrevState[playerIndex].left = playerState[playerIndex].left;
+        playerPrevState[playerIndex].right = playerState[playerIndex].right;
+        playerPrevState[playerIndex].up = playerState[playerIndex].up;
+        playerPrevState[playerIndex].down = playerState[playerIndex].down;
 
         playerState[playerIndex].left = false;
         playerState[playerIndex].right = false;
@@ -629,6 +634,32 @@ public class KeyButtonMapping
     public KeyCode menu = KeyCode.J;
     public KeyCode extra2 = KeyCode.K;
     public KeyCode extra3 = KeyCode.L;
+
+    public KeyButtonMapping(int playerIndex)
+    {
+        if (playerIndex == 0) // player 1 controls
+        {
+            shoot = KeyCode.B;
+            bomb = KeyCode.N;
+            options = KeyCode.M;
+            auto = KeyCode.Comma;
+            beam = KeyCode.Period;
+            menu = KeyCode.Escape;
+            extra2 = KeyCode.K;
+            extra3 = KeyCode.L;
+        }
+        else // player 2 controls
+        {
+            shoot = KeyCode.Keypad0;
+            bomb = KeyCode.KeypadPeriod;
+            options = KeyCode.KeypadEnter;
+            auto = KeyCode.Comma;
+            beam = KeyCode.KeypadPlus;
+            menu = KeyCode.Escape;
+            extra2 = KeyCode.Keypad8;
+            extra3 = KeyCode.Keypad9;
+        }
+    }
 }
 
 public class KeyAxisMapping
@@ -637,4 +668,22 @@ public class KeyAxisMapping
     public KeyCode right = KeyCode.RightArrow;
     public KeyCode up = KeyCode.UpArrow;
     public KeyCode down = KeyCode.DownArrow;
+
+    public KeyAxisMapping(int playerIndex)
+    {
+        if (playerIndex == 0) // player 1 controls
+        {
+            left = KeyCode.A;
+            right = KeyCode.D;
+            up = KeyCode.W;
+            down = KeyCode.S;
+        }
+        else // player 2 controls
+        {
+            left = KeyCode.LeftArrow;
+            right = KeyCode.RightArrow;
+            up = KeyCode.UpArrow;
+            down = KeyCode.DownArrow;
+        }
+    }
 }

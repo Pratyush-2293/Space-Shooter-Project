@@ -13,7 +13,7 @@ public class ControllerMenu : Menu
     {
         if (instance)
         {
-            Debug.LogError("Trying to create more than one YesNoMenu");
+            Debug.LogError("Trying to create more than one ControllerMenu");
             Destroy(gameObject);
             return;
         }

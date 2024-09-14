@@ -4,49 +4,49 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 2338921163845302201
-    second: CraftButtons_0
+    second: CraftA_Selected
   - first:
       213: -5566011203298903035
-    second: CraftButtons_1
+    second: CraftB_Selected
   - first:
       213: 1012844926208783241
-    second: CraftButtons_2
+    second: CraftC_Selected
   - first:
       213: -5602834784527169061
-    second: CraftButtons_3
+    second: CraftX_Selected
   - first:
       213: -2513031137665037969
-    second: CraftButtons_4
+    second: CraftZ_Selected
   - first:
       213: -7864895973006676300
-    second: CraftButtons_5
+    second: CraftA
   - first:
       213: -489728302047418081
-    second: CraftButtons_6
+    second: CraftB
   - first:
       213: 65886902968785732
-    second: CraftButtons_7
+    second: CraftC
   - first:
       213: 3918179119709749276
-    second: CraftButtons_8
+    second: CraftX
   - first:
       213: -3660658535195043397
-    second: CraftButtons_9
+    second: CraftZ
   - first:
       213: -6223594000394071825
-    second: CraftButtons_10
+    second: CraftA_Disabled
   - first:
       213: 297761201982442522
-    second: CraftButtons_11
+    second: CraftB_Disabled
   - first:
       213: -5689382777794873989
-    second: CraftButtons_12
+    second: CraftC_Disabled
   - first:
       213: -4258766257204310014
-    second: CraftButtons_13
+    second: CraftX_Disabled
   - first:
       213: -1980147874689099586
-    second: CraftButtons_14
+    second: CraftZ_Disabled
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -136,7 +136,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CraftButtons_0
+      name: CraftA_Selected
       rect:
         serializedVersion: 2
         x: 0
@@ -144,7 +144,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -157,7 +157,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_1
+      name: CraftB_Selected
       rect:
         serializedVersion: 2
         x: 35
@@ -165,7 +165,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -178,7 +178,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_2
+      name: CraftC_Selected
       rect:
         serializedVersion: 2
         x: 70
@@ -186,7 +186,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -199,7 +199,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_3
+      name: CraftX_Selected
       rect:
         serializedVersion: 2
         x: 105
@@ -207,7 +207,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -220,7 +220,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_4
+      name: CraftZ_Selected
       rect:
         serializedVersion: 2
         x: 140
@@ -228,7 +228,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -241,7 +241,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_5
+      name: CraftA
       rect:
         serializedVersion: 2
         x: 0
@@ -249,7 +249,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,7 +262,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_6
+      name: CraftB
       rect:
         serializedVersion: 2
         x: 35
@@ -270,7 +270,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -283,7 +283,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_7
+      name: CraftC
       rect:
         serializedVersion: 2
         x: 70
@@ -291,7 +291,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -304,7 +304,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_8
+      name: CraftX
       rect:
         serializedVersion: 2
         x: 105
@@ -312,7 +312,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -325,7 +325,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_9
+      name: CraftZ
       rect:
         serializedVersion: 2
         x: 140
@@ -333,7 +333,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -346,7 +346,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_10
+      name: CraftA_Disabled
       rect:
         serializedVersion: 2
         x: 0
@@ -354,7 +354,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -367,7 +367,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_11
+      name: CraftB_Disabled
       rect:
         serializedVersion: 2
         x: 35
@@ -375,7 +375,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -388,7 +388,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_12
+      name: CraftC_Disabled
       rect:
         serializedVersion: 2
         x: 70
@@ -396,7 +396,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -409,7 +409,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_13
+      name: CraftX_Disabled
       rect:
         serializedVersion: 2
         x: 105
@@ -417,7 +417,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -430,7 +430,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CraftButtons_14
+      name: CraftZ_Disabled
       rect:
         serializedVersion: 2
         x: 140
@@ -438,7 +438,7 @@ TextureImporter:
         width: 34
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

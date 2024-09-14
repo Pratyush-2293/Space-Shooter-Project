@@ -6,11 +6,24 @@ using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    public static HUD instance = null;
     public AnimatedNumber[] playerScore = new AnimatedNumber[2];
     public AnimatedNumber topScore;
     public GameObject player2Start;
+    public GameObject player2HUD;
 
     public PlayerHUD[] playerHUDs = new PlayerHUD[2];
+
+    private void Start()
+    {
+        if (instance)
+        {
+            Debug.LogError("Trying to create more than one HUD instance!");
+            Destroy(gameObject);
+            return;
+        }
+        instance = this;
+    }
 
     private void FixedUpdate()
     {
@@ -372,6 +385,22 @@ public class HUD : MonoBehaviour
         hud.chainScore.UpdateNumber(GameManager.instance.playerDatas[playerIndex].chain);
 
         hud.chainGradient.fillAmount = GameManager.instance.playerDatas[playerIndex].chainTimer / (float)PlayerData.MAXCHAINTIMER;
+    }
+
+    public void TurnOnP2(bool turnOn)
+    {
+        if (turnOn)
+        {
+            player2Start.gameObject.SetActive(false);
+            playerScore[1].gameObject.SetActive(true);
+            player2HUD.gameObject.SetActive(true);
+        }
+        else
+        {
+            player2Start.gameObject.SetActive(true);
+            playerScore[1].gameObject.SetActive(false);
+            player2HUD.gameObject.SetActive(false);
+        }
     }
 
     [Serializable]

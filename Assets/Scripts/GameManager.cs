@@ -55,8 +55,21 @@ public class GameManager : MonoBehaviour
             progressWindow = GameObject.FindObjectOfType<LevelProgress>();
         }
         Vector3 pos = progressWindow.transform.position;
-        playerCrafts[playerIndex] = Instantiate(craftPrefabs[craftType], pos, Quaternion.identity).GetComponent<Craft>();
+        int whichPrefab = playerIndex; // TODO: needs to take into consideration the craftType
+        playerCrafts[playerIndex] = Instantiate(craftPrefabs[whichPrefab], pos, Quaternion.identity).GetComponent<Craft>();
         playerCrafts[playerIndex].playerIndex = playerIndex;
+
+        if (GameManager.instance.twoPlayer)
+        {
+            if (playerIndex == 0)
+            {
+                gameSession.craftDatas[0].positionX = -50;
+            }
+            else
+            {
+                gameSession.craftDatas[0].positionX = 50;
+            }
+        }
     }
 
     public void SpawnPlayers()
@@ -122,12 +135,6 @@ public class GameManager : MonoBehaviour
             {
                 SpawnPlayer(0, 0);
             }
-        }
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            EnemyPattern testPattern =  GameObject.FindObjectOfType<EnemyPattern>();
-            testPattern.Spawn();
         }
 
         if (Input.GetKeyDown(KeyCode.BackQuote))

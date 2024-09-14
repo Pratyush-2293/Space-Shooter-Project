@@ -40,6 +40,15 @@ public class CraftSelectMenu : Menu
     private float timer = 5.9f;
     private bool countdown = false;
 
+    private int selectedShip1 = 0;
+    private int selectedShip2 = 0;
+
+    public Sprite[] shipSprites = new Sprite[5];
+    public Sprite[] shipSpritesSelected = new Sprite[5];
+    public Sprite[] shipSpritesDisabled = new Sprite[5];
+
+    public CraftConfiguration[] crafts = new CraftConfiguration[5];
+
     private void Start()
     {
         if (instance)
@@ -54,9 +63,14 @@ public class CraftSelectMenu : Menu
 
     public void Reset()
     {
+        player2StartText.gameObject.SetActive(true);
+        player2Panel.gameObject.SetActive(false);
+        GameManager.instance.twoPlayer = false;
+
         countdownText.gameObject.SetActive(false);
         countdown = false;
         timer = 5.9f;
+        UpdateShipSelection();
     }
 
     public override void TurnOn(Menu previous)
@@ -67,6 +81,59 @@ public class CraftSelectMenu : Menu
 
     private void FixedUpdate()
     {
+        //Selecting Ships
+
+        if (InputManager.instance.playerState[0].shoot)
+        {
+            StartCountdown();
+        }
+
+        if (InputManager.instance.playerState[1].shoot)
+        {
+            player2StartText.gameObject.SetActive(false);
+            player2Panel.SetActive(true);
+            GameManager.instance.twoPlayer = true;
+            HUD.instance.TurnOnP2(true);
+            UpdateShipSelection();
+            StopCountdown();
+        }
+
+        if (!InputManager.instance.playerPrevState[0].left && InputManager.instance.playerState[0].left)
+        {
+            if (selectedShip1 > 0)
+            {
+                selectedShip1--;
+            }
+            UpdateShipSelection();
+        }
+
+        if (!InputManager.instance.playerPrevState[0].right && InputManager.instance.playerState[0].right)
+        {
+            if (selectedShip1 < 2)
+            {
+                selectedShip1++;
+            }
+            UpdateShipSelection();
+        }
+
+        if (!InputManager.instance.playerPrevState[1].left && InputManager.instance.playerState[1].left)
+        {
+            if (selectedShip2 > 0)
+            {
+                selectedShip2--;
+            }
+            UpdateShipSelection();
+        }
+
+        if (!InputManager.instance.playerPrevState[1].right && InputManager.instance.playerState[1].right)
+        {
+            if (selectedShip2 < 2)
+            {
+                selectedShip2++;
+            }
+            UpdateShipSelection();
+        }
+
         if (countdown)
         {
             float dUnscaled = Time.unscaledTime - lastUnscaledTime;
@@ -78,6 +145,80 @@ public class CraftSelectMenu : Menu
             {
                 GameManager.instance.StartGame();
             }
+        }
+    }
+
+    void UpdateShipSelection()
+    {
+        player1ShipA.sprite = shipSprites[0];
+        player1ShipB.sprite = shipSprites[1];
+        player1ShipC.sprite = shipSprites[2];
+        player1ShipX.sprite = shipSpritesDisabled[3];
+        player1ShipZ.sprite = shipSpritesDisabled[4];
+
+        if (selectedShip1 == 0)
+        {
+            player1ShipA.sprite = shipSpritesSelected[0];
+        }
+        else if(selectedShip1 == 1)
+        {
+            player1ShipB.sprite = shipSpritesSelected[1];
+        }
+        else if (selectedShip1 == 2)
+        {
+            player1ShipC.sprite = shipSpritesSelected[2];
+        }
+        else if (selectedShip1 == 3)
+        {
+            player1ShipX.sprite = shipSpritesSelected[3];
+        }
+        else if (selectedShip1 == 4)
+        {
+            player1ShipZ.sprite = shipSpritesSelected[4];
+        }
+
+        CraftConfiguration config1 = crafts[selectedShip1];
+        speedSlider1.value = config1.speed;
+        powerSlider1.value = config1.bulletStrength;
+        beamSlider1.value = config1.beamPower;
+        bombSlider1.value = config1.bombPower;
+        optionsSlider1.value = config1.optionPower;
+
+        if (GameManager.instance.twoPlayer) // Player 2
+        {
+            player2ShipA.sprite = shipSprites[0];
+            player2ShipB.sprite = shipSprites[1];
+            player2ShipC.sprite = shipSprites[2];
+            player2ShipX.sprite = shipSpritesDisabled[3];
+            player2ShipZ.sprite = shipSpritesDisabled[4];
+
+            if (selectedShip2 == 0)
+            {
+                player2ShipA.sprite = shipSpritesSelected[0];
+            }
+            else if (selectedShip2 == 1)
+            {
+                player2ShipB.sprite = shipSpritesSelected[1];
+            }
+            else if (selectedShip2 == 2)
+            {
+                player2ShipC.sprite = shipSpritesSelected[2];
+            }
+            else if (selectedShip2 == 3)
+            {
+                player2ShipX.sprite = shipSpritesSelected[3];
+            }
+            else if (selectedShip2 == 4)
+            {
+                player2ShipZ.sprite = shipSpritesSelected[4];
+            }
+
+            CraftConfiguration config2 = crafts[selectedShip2];
+            speedSlider2.value = config2.speed;
+            powerSlider2.value = config2.bulletStrength;
+            beamSlider2.value = config2.beamPower;
+            bombSlider2.value = config2.bombPower;
+            optionsSlider2.value = config2.optionPower;
         }
     }
 

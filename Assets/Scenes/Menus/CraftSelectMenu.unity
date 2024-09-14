@@ -282,7 +282,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1663172980}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 307579561}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2581,7 +2581,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1948814393}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -2671,7 +2671,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1066689862}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -3157,7 +3157,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1657035647}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -3437,7 +3437,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1196936240}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5358,7 +5358,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 531042770}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -5769,7 +5769,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1241438926}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -6490,6 +6490,30 @@ MonoBehaviour:
   countdownText: {fileID: 1729940999}
   player2StartText: {fileID: 564399440}
   player2Panel: {fileID: 1721154027}
+  shipSprites:
+  - {fileID: -7864895973006676300, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -489728302047418081, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: 65886902968785732, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: 3918179119709749276, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -3660658535195043397, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  shipSpritesSelected:
+  - {fileID: 2338921163845302201, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -5566011203298903035, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: 1012844926208783241, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -5602834784527169061, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -2513031137665037969, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  shipSpritesDisabled:
+  - {fileID: -6223594000394071825, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: 297761201982442522, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -5689382777794873989, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -4258766257204310014, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  - {fileID: -1980147874689099586, guid: 05820324efa04e545923cba6e5b84aa0, type: 3}
+  crafts:
+  - {fileID: 11400000, guid: d03286b1d031bb94aac68851ece782f4, type: 2}
+  - {fileID: 11400000, guid: bb09e5ece229eaa4baa2802c87e6ca7c, type: 2}
+  - {fileID: 11400000, guid: 453e4b7aeb679074eaf12aa1038c5739, type: 2}
+  - {fileID: 11400000, guid: 96068453277baa647a58b6705183a7a8, type: 2}
+  - {fileID: 11400000, guid: 5d774bbe48ef47644adcadf6b2781831, type: 2}
 --- !u!4 &1631933231
 Transform:
   m_ObjectHideFlags: 0
@@ -7436,7 +7460,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 2146971058}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
@@ -7752,7 +7776,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 378638276}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
+  m_MaxValue: 5
   m_WholeNumbers: 0
   m_Value: 0
   m_OnValueChanged:
