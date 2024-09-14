@@ -54,6 +54,9 @@ public class InputManager : MonoBehaviour
         playerController[0] = -1;
         playerController[1] = -1;
 
+        playerUsingKeys[0] = false;
+        playerUsingKeys[1] = false;
+
         playerAxis[0] = new AxisMapping();
         playerAxis[1] = new AxisMapping();
 
