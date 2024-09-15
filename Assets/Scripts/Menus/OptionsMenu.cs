@@ -34,4 +34,10 @@ public class OptionsMenu : Menu
         TurnOff(false);
         AudioOptionsMenu.instance.TurnOn(this);
     }
+
+    public void OnGraphicsButton()
+    {
+        TurnOff(false);
+        GraphicsOptionsMenu.instance.TurnOn(this);
+    }
 }

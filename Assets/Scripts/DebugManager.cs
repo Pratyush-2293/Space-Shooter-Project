@@ -36,6 +36,7 @@ public class DebugManager : MonoBehaviour
                 ROOT.SetActive(true);
                 displaying = true;
                 Time.timeScale = 0; // pause the game.
+                Cursor.visible = true;
             }
         }
         else // turn off
@@ -49,6 +50,7 @@ public class DebugManager : MonoBehaviour
                 ROOT.SetActive(false);
                 displaying = false;
                 Time.timeScale = 1; // resume the game.
+                Cursor.visible = false;
             }
         }
     }

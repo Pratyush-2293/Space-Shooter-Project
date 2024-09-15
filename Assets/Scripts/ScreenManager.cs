@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ScreenManager : MonoBehaviour
 {
-    public ScreenManager instance = null;
+    public static ScreenManager instance = null;
 
-    public bool fullScreen = false;
+    public bool fullScreen = true;
     Resolution currentResolution;
     Resolution[] allResolutions;
 
@@ -26,11 +26,45 @@ public class ScreenManager : MonoBehaviour
 
     public void SetResolution(Resolution res)
     {
-        Screen.SetResolution(res.width, res.height, FullScreenMode.ExclusiveFullScreen, res.refreshRate);
+        if (fullScreen)
+        {
+            Screen.SetResolution(res.width, res.height, FullScreenMode.ExclusiveFullScreen, res.refreshRate);
+        }
+        else
+        {
+            Screen.SetResolution(res.width, res.height, FullScreenMode.Windowed, res.refreshRate);
+        }
+
+        PlayerPrefs.SetInt("ScreenWidth", res.width);
+        PlayerPrefs.SetInt("ScreenHeight", res.height);
+        PlayerPrefs.SetInt("ScreenRate", res.refreshRate);
+
+        Cursor.visible = false;
     }
 
     void RestoreSettings()
     {
+        // Restore Resolution
+        int width = 1280;
+        int height = 720;
+        int rate = 60;
+        if (PlayerPrefs.HasKey("ScreenWidth"))
+        {
+            width = PlayerPrefs.GetInt("ScreenWidth");
+        }
+        if (PlayerPrefs.HasKey("ScreenHeight"))
+        {
+            height = PlayerPrefs.GetInt("ScreenHeight");
+        }
+        if (PlayerPrefs.HasKey("ScreenRate"))
+        {
+            rate = PlayerPrefs.GetInt("ScreenRate");
+        }
+
+        Resolution res = FindResolution(width, height, rate);
+        SetResolution(res);
+
+        // Restore Fullscreen Settings
         if (!PlayerPrefs.HasKey("FullScreen"))
         {
             int fullScreenInt = PlayerPrefs.GetInt("FullScreen");
@@ -48,5 +82,17 @@ public class ScreenManager : MonoBehaviour
             }
         }
         Screen.fullScreen = fullScreen;
+    }
+
+    Resolution FindResolution(int width, int height, int rate)
+    {
+        foreach(Resolution res in allResolutions)
+        {
+            if((res.width == width) && (res.height == height) && (res.refreshRate == rate))
+            {
+                return res;
+            }
+        }
+        return currentResolution;
     }
 }
