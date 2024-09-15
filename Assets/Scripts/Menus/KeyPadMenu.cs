@@ -9,7 +9,9 @@ public class KeyPadMenu : Menu
     public static KeyPadMenu instance = null;
 
     public Text nameText = null;
+    public Text enterText = null;
     public int playerIndex = 0;
+    public bool bothPlayers = false;
 
     private void Start()
     {
@@ -23,13 +25,29 @@ public class KeyPadMenu : Menu
         instance = this;
     }
 
+    public override void TurnOn(Menu previous)
+    {
+        base.TurnOn(previous);
+
+        enterText.text = "Enter name player " + (playerIndex+1);
+    }
+
     public void OnEnterButton()
     {
         ScoreManager.instance.AddScore(GameManager.instance.playerDatas[playerIndex].score, (int)GameManager.instance.gameSession.hardness, nameText.text);
         ScoreManager.instance.SaveScores();
 
-        TurnOff(false);
-        SceneManager.LoadScene("MainMenuScene");
+        if(bothPlayers && playerIndex == 0)
+        {
+            playerIndex = 1;
+            enterText.text = "Enter name player " + (playerIndex+1);
+            nameText.text = "";
+        }
+        else
+        {
+            TurnOff(false);
+            SceneManager.LoadScene("MainMenuScene");
+        }
     }
 
     public void OnKeyPress(int key)

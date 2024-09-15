@@ -40,10 +40,28 @@ public class HUD : MonoBehaviour
         }
 
         //Score
+        int p1Score = GameManager.instance.playerDatas[0].score;
+        int p2Score = GameManager.instance.playerDatas[1].score;
+
         if (playerScore[0]) //Player 1 Score
         {
-            int p1Score = GameManager.instance.playerDatas[0].score;
             playerScore[0].UpdateNumber(p1Score);
+        }
+
+        //Top Score
+        int hardness = (int)GameManager.instance.gameSession.hardness;
+        int highestScore = ScoreManager.instance.TopScore(hardness);
+        if (p1Score > highestScore)
+        {
+            topScore.UpdateNumber(p1Score);
+        }
+        else if (p2Score > highestScore)
+        {
+            topScore.UpdateNumber(p2Score);
+        }
+        else
+        {
+            topScore.UpdateNumber(highestScore);
         }
 
         UpdateLives(0);
@@ -64,8 +82,7 @@ public class HUD : MonoBehaviour
 
                 if (playerScore[1]) // Player 2 Score
                 {
-                    int p1Score = GameManager.instance.playerDatas[1].score;
-                    playerScore[1].UpdateNumber(p1Score);
+                    playerScore[1].UpdateNumber(p2Score);
                 }
 
                 UpdateLives(1);

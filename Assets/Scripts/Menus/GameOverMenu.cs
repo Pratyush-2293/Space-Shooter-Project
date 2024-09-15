@@ -25,8 +25,36 @@ public class GameOverMenu : Menu
 
     public void OnContinueButton()
     {
-        if (ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[0].score, (int)GameManager.instance.gameSession.hardness))
+        if (ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[0].score, (int)GameManager.instance.gameSession.hardness) ||
+            ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[1].score, (int)GameManager.instance.gameSession.hardness))
         {
+            if (GameManager.instance.twoPlayer)
+            {
+                if(ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[0].score, (int)GameManager.instance.gameSession.hardness))
+                {
+                    KeyPadMenu.instance.playerIndex = 0;
+                }
+                else
+                {
+                    KeyPadMenu.instance.playerIndex = 1;
+                }
+
+                if (ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[0].score, (int)GameManager.instance.gameSession.hardness) ||
+                    ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[1].score, (int)GameManager.instance.gameSession.hardness))
+                {
+                    KeyPadMenu.instance.bothPlayers = true;
+                }
+                else
+                {
+                    KeyPadMenu.instance.bothPlayers = false;
+                }
+            }
+            else
+            {
+                KeyPadMenu.instance.playerIndex = 0;
+                KeyPadMenu.instance.bothPlayers = false;
+            }
+
             KeyPadMenu.instance.TurnOn(null);
             TurnOff(false);
         }

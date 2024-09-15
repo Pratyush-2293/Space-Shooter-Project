@@ -180,4 +180,9 @@ public class ScoreManager : MonoBehaviour
         int chain = GameManager.instance.playerDatas[playerIndex].chain;
         currentMultiplier = (int)Math.Pow((chain + 1) , 1.5);
     }
+
+    public int TopScore(int hardness)
+    {
+        return scores[0, hardness];
+    }
 }

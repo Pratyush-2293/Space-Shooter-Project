@@ -5253,7 +5253,9 @@ MonoBehaviour:
   previousMenu: {fileID: 0}
   previousItem: {fileID: 0}
   nameText: {fileID: 1798677479}
+  enterText: {fileID: 1736637118}
   playerIndex: 0
+  bothPlayers: 0
 --- !u!4 &1631933231
 Transform:
   m_ObjectHideFlags: 0
