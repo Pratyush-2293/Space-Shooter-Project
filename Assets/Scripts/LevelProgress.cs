@@ -11,6 +11,7 @@ public class LevelProgress : MonoBehaviour
     public GameObject midGroundTileGrid;
     public float midGroundRate = 0.75f;
     private Craft player1Craft;
+    private Craft player2Craft;
 
     public bool disableMovement = false;
 
@@ -39,13 +40,21 @@ public class LevelProgress : MonoBehaviour
                 player1Craft = GameManager.instance.playerCrafts[0];
             }
 
-            if(player1Craft && !disableMovement)
+            if (player2Craft == null)
             {
-                float ratio = (float)data.progress / (float)levelSize;
-                float movement = speedCurve.Evaluate(ratio);
-                data.progress++;
-                CraftData craftData = GameManager.instance.gameSession.craftDatas[0];
-                UpdateProgressWindow(craftData.positionX, movement);
+                player2Craft = GameManager.instance.playerCrafts[1];
+            }
+
+            if (!disableMovement)
+            {
+                if(player1Craft || player2Craft)
+                {
+                    float ratio = (float)data.progress / (float)levelSize;
+                    float movement = speedCurve.Evaluate(ratio);
+                    data.progress++;
+                    CraftData craftData = GameManager.instance.gameSession.craftDatas[0];
+                    UpdateProgressWindow(craftData.positionX, movement);
+                }
             }
         }
     }

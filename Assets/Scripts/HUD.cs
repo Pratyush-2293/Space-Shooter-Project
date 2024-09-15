@@ -23,6 +23,8 @@ public class HUD : MonoBehaviour
             return;
         }
         instance = this;
+
+        TurnOnP2(GameManager.instance.twoPlayer);
     }
 
     private void FixedUpdate()
@@ -393,13 +395,13 @@ public class HUD : MonoBehaviour
         {
             player2Start.gameObject.SetActive(false);
             playerScore[1].gameObject.SetActive(true);
-            player2HUD.gameObject.SetActive(true);
+            player2HUD.SetActive(true);
         }
         else
         {
             player2Start.gameObject.SetActive(true);
             playerScore[1].gameObject.SetActive(false);
-            player2HUD.gameObject.SetActive(false);
+            player2HUD.SetActive(false);
         }
     }
 

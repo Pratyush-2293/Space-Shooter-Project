@@ -306,10 +306,26 @@ public class Craft : MonoBehaviour
 
         EffectSystem.instance.CraftExplosion(transform.position);
         
-        Destroy(gameObject);
         GameManager.instance.playerCrafts[playerIndex] = null;
+        Destroy(gameObject);
 
-        if (GameManager.instance.playerDatas[playerIndex].lives == 0)
+        bool allLivesGone = false;
+        if (GameManager.instance.twoPlayer)
+        {
+            if ((GameManager.instance.playerDatas[0].lives == 0) && (GameManager.instance.playerDatas[1].lives == 0))
+            {
+                allLivesGone = true;
+            }
+        }
+        else // single player
+        {
+            if(GameManager.instance.playerDatas[playerIndex].lives == 0)
+            {
+                allLivesGone = true;
+            }
+        }
+
+        if (allLivesGone)
         {
             //gameover
             GameOverMenu.instance.GameOver();
@@ -341,7 +357,10 @@ public class Craft : MonoBehaviour
                 pickUp.transform.position += new Vector3(UnityEngine.Random.Range(-128, 128), UnityEngine.Random.Range(-128, 128), 0);
             }
 
-            GameManager.instance.DelayedRespawn(playerIndex);
+            if(GameManager.instance.playerDatas[playerIndex].lives > 0)
+            {
+                GameManager.instance.DelayedRespawn(playerIndex);
+            }
         }
 
         yield return null;
