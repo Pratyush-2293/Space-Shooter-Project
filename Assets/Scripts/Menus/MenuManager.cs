@@ -31,8 +31,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("ControlsOPtionsMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("YesNoMenu", LoadSceneMode.Additive);
         SceneManager.LoadScene("ControllerMenu", LoadSceneMode.Additive);
+
         SceneManager.LoadScene("DebugHUDScene", LoadSceneMode.Additive);
         SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
+
+        SceneManager.LoadScene("KeyPadMenu", LoadSceneMode.Additive);
     }
 
     public void SwitchToMainMenus()

@@ -27,11 +27,13 @@ public class GameOverMenu : Menu
     {
         if (ScoreManager.instance.IsHiScore(GameManager.instance.playerDatas[0].score, (int)GameManager.instance.gameSession.hardness))
         {
-            ScoreManager.instance.AddScore(GameManager.instance.playerDatas[0].score, (int)GameManager.instance.gameSession.hardness, "Player");
-            ScoreManager.instance.SaveScores();
+            KeyPadMenu.instance.TurnOn(null);
+            TurnOff(false);
         }
-
-        SceneManager.LoadScene("MainMenuScene");
+        else
+        {
+            SceneManager.LoadScene("MainMenuScene");
+        }
     }
 
     public void GameOver()
