@@ -1328,6 +1328,9 @@ MonoBehaviour:
   previousMenu: {fileID: 0}
   previousItem: {fileID: 0}
   fullScreenToggle: {fileID: 770981400}
+  nextButton: {fileID: 1880000894}
+  prevButton: {fileID: 1718158717}
+  resolutionText: {fileID: 820671912}
 --- !u!4 &1631933231
 Transform:
   m_ObjectHideFlags: 0
@@ -1504,7 +1507,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1718158718}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1631933230}
+        m_TargetAssemblyTypeName: GraphicsOptionsMenu, Assembly-CSharp
+        m_MethodName: OnPrevResButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1718158718
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,7 +1730,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880000895}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1631933230}
+        m_TargetAssemblyTypeName: GraphicsOptionsMenu, Assembly-CSharp
+        m_MethodName: OnNextResButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1880000895
 MonoBehaviour:
   m_ObjectHideFlags: 0

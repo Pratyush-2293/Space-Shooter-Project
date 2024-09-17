@@ -7,8 +7,8 @@ public class ScreenManager : MonoBehaviour
     public static ScreenManager instance = null;
 
     public bool fullScreen = true;
-    Resolution currentResolution;
-    Resolution[] allResolutions;
+    public Resolution currentResolution;
+    public Resolution[] allResolutions;
 
     void Start()
     {
@@ -94,5 +94,47 @@ public class ScreenManager : MonoBehaviour
             }
         }
         return currentResolution;
+    }
+
+    public Resolution NextResolution(Resolution currentResolution)
+    {
+        int currentIndex = FindResolutionIndex(currentResolution);
+        currentIndex++;
+
+        if (currentIndex >= allResolutions.Length)
+        {
+            currentIndex = 0;
+        }
+
+        return allResolutions[currentIndex];
+    }
+
+    public Resolution PrevResolution(Resolution currentResolution)
+    {
+        int currentIndex = FindResolutionIndex(currentResolution);
+        currentIndex--;
+
+        if (currentIndex < 0)
+        {
+            currentIndex = allResolutions.Length - 1;
+        }
+
+        return allResolutions[currentIndex];
+    }
+
+    int FindResolutionIndex(Resolution currentResolution)
+    {
+        int index = 0;
+        foreach(Resolution res in allResolutions)
+        {
+            if(currentResolution.width == res.width && currentResolution.height == res.height && currentResolution.refreshRate == res.refreshRate)
+            {
+                return index;
+            }
+
+            index++;
+        }
+
+        return -1;
     }
 }

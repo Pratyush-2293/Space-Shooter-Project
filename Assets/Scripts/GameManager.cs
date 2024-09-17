@@ -179,8 +179,8 @@ public class GameManager : MonoBehaviour
         gameState = GameState.Playing;
         ResetState(0);
         ResetState(1);
-        playerDatas[0].score = 0;
-        playerDatas[1].score = 0;
+        playerDatas[0].ResetData();
+        playerDatas[1].ResetData();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Stage01");
     }
 
