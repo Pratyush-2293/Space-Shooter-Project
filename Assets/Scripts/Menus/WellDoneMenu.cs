@@ -24,7 +24,8 @@ public class WellDoneMenu : Menu
 
     public void OnContinueButton()
     {
-        SceneManager.LoadScene("MainMenuScene");
+        TurnOff(false);
+        KeyPadMenu.instance.TurnOn(null);
     }
 
     private void Update()

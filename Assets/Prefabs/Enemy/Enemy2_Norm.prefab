@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 8903364767848967563}
   - component: {fileID: 4298450784234758304}
   - component: {fileID: 7269088246974828859}
+  - component: {fileID: 7463036006972618302}
   m_Layer: 7
   m_Name: MainPart
   m_TagString: Untagged
@@ -240,6 +241,32 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: ab02eb23ce8a4134cb66a544c0ab3c17, type: 3}
   - {fileID: 8300000, guid: 0028887c046a76441ae04c1af4c8f9d4, type: 3}
+--- !u!61 &7463036006972618302
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811328204375240654}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 36, y: 33}
+    newSize: {x: 27, y: 28}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 36, y: 33}
+  m_EdgeRadius: 0
 --- !u!1 &843621282448340565
 GameObject:
   m_ObjectHideFlags: 0

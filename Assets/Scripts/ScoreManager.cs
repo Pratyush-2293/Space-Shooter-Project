@@ -152,6 +152,10 @@ public class ScoreManager : MonoBehaviour
 
     public void ShootableDestroyed(int playerIndex, int score)
     {
+        if (playerIndex > 1)
+        {
+            return;
+        }
         GameManager.instance.playerCrafts[playerIndex].IncreaseScore(score * currentMultiplier);
     }
 

@@ -219,6 +219,7 @@ GameObject:
   - component: {fileID: 1799458181545689803}
   - component: {fileID: 1109136771816170286}
   - component: {fileID: 8265371392670558162}
+  - component: {fileID: 5692939344656203856}
   m_Layer: 11
   m_Name: TurretBase
   m_TagString: Untagged
@@ -382,6 +383,32 @@ MonoBehaviour:
   sounds:
   - {fileID: 8300000, guid: ab02eb23ce8a4134cb66a544c0ab3c17, type: 3}
   - {fileID: 8300000, guid: 0028887c046a76441ae04c1af4c8f9d4, type: 3}
+--- !u!61 &5692939344656203856
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3704683491717679330}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 22, y: 23}
+    newSize: {x: 22, y: 23}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 22, y: 23}
+  m_EdgeRadius: 0
 --- !u!1 &4681231143159222848
 GameObject:
   m_ObjectHideFlags: 0
