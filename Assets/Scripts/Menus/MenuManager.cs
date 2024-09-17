@@ -36,6 +36,7 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("GameOverMenu", LoadSceneMode.Additive);
 
         SceneManager.LoadScene("KeyPadMenu", LoadSceneMode.Additive);
+        SceneManager.LoadScene("WellDoneMenu", LoadSceneMode.Additive);
     }
 
     public void SwitchToMainMenus()

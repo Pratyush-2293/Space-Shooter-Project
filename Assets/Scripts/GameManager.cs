@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -238,5 +239,22 @@ public class GameManager : MonoBehaviour
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Stage02");
                 break;
         }
+    }
+
+    public void NextStage()
+    {
+        HUD.instance.FadeOutScreen();
+
+        if(gameSession.stage == 1)
+        {
+            gameSession.stage = 2;
+            SceneManager.LoadScene("Stage02");
+        }
+        else if(gameSession.stage == 2)
+        {
+            WellDoneMenu.instance.TurnOn(null);
+        }
+
+        HUD.instance.FadeInScreen();
     }
 }

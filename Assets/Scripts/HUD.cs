@@ -11,6 +11,7 @@ public class HUD : MonoBehaviour
     public AnimatedNumber topScore;
     public GameObject player2Start;
     public GameObject player2HUD;
+    public Image fadeScreenImage;
 
     public PlayerHUD[] playerHUDs = new PlayerHUD[2];
 
@@ -420,6 +421,18 @@ public class HUD : MonoBehaviour
             playerScore[1].gameObject.SetActive(false);
             player2HUD.SetActive(false);
         }
+    }
+
+    public void FadeOutScreen()
+    {
+        fadeScreenImage.gameObject.SetActive(true);
+        fadeScreenImage.color = Color.black;
+    }
+
+    public void FadeInScreen()
+    {
+        fadeScreenImage.gameObject.SetActive(false);
+        fadeScreenImage.color = new Color(0, 0, 0, 0);
     }
 
     [Serializable]
