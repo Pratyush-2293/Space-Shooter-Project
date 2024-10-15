@@ -5359,7 +5359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f6f7f7b5ef841e4e809c5b759973f48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageNumber: 1
+  stageNumber: 2
   gameMode: 2
   gameManagerPrefab: {fileID: 1092216254167470474, guid: 59ddcd58186bf0e47a4321a28f29cdb0, type: 3}
   playMusicTrack: 0

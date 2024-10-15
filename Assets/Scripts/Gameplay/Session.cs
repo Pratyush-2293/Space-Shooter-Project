@@ -9,7 +9,7 @@ public class Session
     public CraftData[] craftDatas = new CraftData[2];
 
     public Hardness hardness = Hardness.Normal;
-    public int stage = 1;
+    public int stage = 2;
     public bool practice = false;
     public bool arenaPractice = false;
     public bool stagePractice = false;
